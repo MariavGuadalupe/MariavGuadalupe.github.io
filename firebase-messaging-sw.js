@@ -76,7 +76,7 @@ firebase.initializeApp(firebaseConfig);
 const messaging =  firebase.messaging();
 console.log("ingreso registrando mensaje 2 en SW");
 
-console.log('messagin', messaging.notification.title);
+//console.log('messagin', messaging.notification.title);
 
 //messaging.notification.icon= "https://mariavguadalupe.github.io/Alegra512.png";
 
