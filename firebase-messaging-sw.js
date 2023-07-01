@@ -101,20 +101,18 @@ messaging.onBackgroundMessage((payload) => {
   
 
   // Customize notification here
-	/*
+
 	self.registration.showNotification(notification.title, {
         body: notification.mensaje,
         icon: notification.image
     });   
-
-*/
     
 });
 
 
 
 
-
+/*
 self.addEventListener('push', function (event) {
   console.log('[Service Worker] Push Received.');
   const title = 'Nuevo Mensaje';
@@ -124,3 +122,5 @@ self.addEventListener('push', function (event) {
   };
 event.waitUntil(self.registration.showNotification(title, options));
 });
+
+*/
