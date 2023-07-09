@@ -46,7 +46,14 @@ h1 {
 img {
 	width: 100%;
 	}
-	
+
+	     
+  #ytplayer {
+  max-width: 580px;
+  max-height: 326px;
+ min-height:326px;
+}
+
 	
   </style>
 
@@ -79,9 +86,7 @@ img {
   <h1 class="alin">Santa María de Guadalupe en vivo</h1>
 
 	    </br>
-
-    
-<iframe width="90%" height="321" src="https://www.youtube.com/embed/h_-eWfj1ksY" title="Transmisión Virgen de Guadalupe en vivo." frameborder="0" allow="accelerometer; autoplay=1; muted=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ <div id="ytplayer"></div>
 
       </br>
   
@@ -92,7 +97,43 @@ img {
 
  
 <script>
+
+
+
+
+
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+	//Parametros del video
+	 playerVars: { 'autoplay': 1, 'controls': 1,'autohide':1,'wmode':'opaque', 'mute':1 },
+      height: '95%',
+      width: '95%',
+	  //Id del video
+      videoId: 'QtvSMRC1FIk',
+	  events: {
+            'onReady': onPlayerReady}
+    });
+  }
+  
+        function onPlayerReady() {
+		 //Ajustar volumen
+		// player.setVolume(10);
+
+}
+	  
+
+
+
+
 /*
+
+
 Alegra192.png" width="30" height="20" class="d-inline-block align-top" alt="">
 
 
