@@ -32,15 +32,9 @@
 
           <h1 class="alin">Nuestro Señor Jesús </h1>
 	    </br>
-
-
-      <iframe width="auto" height="444" src="https://www.youtube.com/embed/9PIOPjO5dQA" title="Transmisión del Santísimo en vivo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 	  
 	  <div id="ytplayer"></div>
-
-
-
-	      
+      
       </br>
 
 
@@ -78,9 +72,9 @@
   function onYouTubePlayerAPIReady() {
     player = new YT.Player('ytplayer', {
 	//Parametros del video
-	 playerVars: { 'autoplay': 1, 'controls': 1,'autohide':1,'wmode':'opaque' },
-      height: '326',
-      width: '580',
+	 playerVars: { 'autoplay': 1, 'controls': 1,'autohide':1,'wmode':'opaque', 'mute':1 },
+      height: '95%',
+      width: '95%',
 	  //Id del video
       videoId: 'LnlWZThgYM0',
 	  events: {
@@ -90,11 +84,9 @@
   
         function onPlayerReady() {
 		 //Ajustar volumen
-		 player.setVolume(10);
+		// player.setVolume(10);
 
 }
-
-
 	  
 
       </script>
