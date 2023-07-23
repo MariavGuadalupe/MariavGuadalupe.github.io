@@ -92,13 +92,8 @@
                 data: JSON.stringify({ op: "parametria"}),
                 async: true,
                 success: function (respuesta) {
-                    if (respuesta.status == '0') {
-                        firebaseConfig = respuesta.firebaseConfig;
-                        vapidKey = respuesta.vapidKey;
-                        console.log("Se consulto parametria correctamente");
 
-                    console.log(vapidKey);
-
+			alert("SI SE CONECTO");
                       
                     } else {
                         alert("No se conecto");
