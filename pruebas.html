@@ -14,60 +14,11 @@
 <div class="app-container">
 
   <header>
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-  <div class="container-fluid">
-
-    <a class="navbar-brand" href="#/index.html">Alegra</a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-
-      <span class="navbar-toggler-icon"></span>
-
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarText">
-
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-        <li class="nav-item">
-
-          <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
-
-        </li>
-
-	      
-
-      </ul>
-
-    
-
-    </div>
-
-  </div>
-
-</nav>
-  </header>
-	
-	
   
+  </header>  
       <div class="container" style="text-align:center;">
     
-
-
-
-
-
-
-
-        
-      </br>
-
-
       </div>
-
-
-  </br>
 
 </div>
 
@@ -95,102 +46,12 @@
 
 			alert("SI SE CONECTO");
                       
-                    } else {
-                        alert("No se conecto");
                     }
-                }
             });
    
 
 
-
-    /*
-        async function suscribirse_push() {
-            await firebase.initializeApp(firebaseConfig);
-            messaging = await firebase.messaging();
-            const serviceWorkerRegistration = await navigator.serviceWorker.register('/firebase-messaging-sw.js?config='+ encodeURIComponent(JSON.stringify(firebaseConfig)))
-//            const serviceWorkerRegistration = await navigator.serviceWorker.register('/firebase-messaging-sw.js')
-			.catch((err) => { return console.log('[Service Worker] Registration Error:', err) })
-            console.log('[Service Worker] Registered.Scope:', serviceWorkerRegistration.scope);
-            await navigator.serviceWorker.ready;
-            await messaging.getToken({ vapidKey: vapidKey, serviceWorkerRegistration: serviceWorkerRegistration })
-                .then((currentToken) => {
-                    if (currentToken) {
-                        console.log('current token for client: ', currentToken);
-                        $.ajax({
-                            url: api,
-                            jsonp: "callback",
-                            method: 'POST',
-                            data: JSON.stringify({ op: "suscribirse", subscription: currentToken }),
-                            async: true,
-                            success: function (respuesta) {
-                                if (respuesta.status == '0') {
-                                    console.log("Se genero el token");
-                                } else {
-                                    alert("No se suscribio");
-                                }
-                            }
-                        });
-                        
-                    } else {
-                        console.log('No registration token available. Request permission to generate one.');
-                    }
-                }).catch((err) => {
-                    console.log('An error occurred while retrieving token. ', err);
-                });
-
-            await messaging.onMessage((payload) => {
-           	 console.log('[messaging.js...] Received  message ', payload);
-           	  const notification = payload.data;
-
-			//	 notification.titulo= "Alegra en HTML";
-  			//		notification.mensaje= "Manual 2";
-  			//		notification.imagen= "https://mariavguadalupe.github.io/Alegra512.png";
-
-
-
-           	 // console.log('titulo 3', notification.titulo);
-           	  //console.log('mensaje 3', notification.mensaje);
-           	  //console.log('imagen 3', notification.imagen);
-           	     if (!("Notification" in window)) {
-           	    	 alert("This browser does not support desktop notification");
-   	      		 }else if (Notification.permission === "granted") {
-	      			 var notificacion= new Notification(notification.titulo, {
-   		      	        body: notification.mensaje,
-   		      	        icon: notification.imagen
-   		      	    });
-	    	      	 notification.onclick=function(ev){
-   	  	      	    	ev.preventDefault();    
-   	  	      	    	window.open(payload.notificacion.click_action,'_blank');
-   	  	      		notificacion.close();
-   	  	      		}
-   	      		 }else if (Notification.permission !== 'denied') {
-   	      		    Notification.requestPermission(function (permission) {
-   	      		    	if(!('permission' in Notification)) {
-   	      		        Notification.permission = permission;
-   	      		      }
-   	      		      if (permission === "granted") {
-   	  	      		    var notificacion= new Notification(notification.titulo, {
-   			      	        body: notification.mensaje,
-   			      	        icon: notification.imagen
-   			      	    });
-   	  	      			notification.onclick=function(ev){
-   		  	      	    	ev.preventDefault();    
-   		  	      	    	window.open(payload.notificacion.click_action,'_blank');
-   		  	      		notificacion.close();
-   		  	      		}
-   	      		      }
-   	      		    });
-   	      		  } else {
-   	      			  alert("Permission is "+Notification.permission);
-   	      		  }
-           });
-        }
-
-
-*/
-
-  </script>
+ </script>
 
 
 
