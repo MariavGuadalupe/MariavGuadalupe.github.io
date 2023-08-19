@@ -170,20 +170,6 @@ var actionbardata = {"siteID":"219610288","siteURL":"http:\/\/alegra58.wordpress
 
 <body class="home blog logged-in admin-bar no-customize-support wp-custom-logo wp-embed-responsive customizer-styles-applied jetpack-reblog-enabled highlander-enabled highlander-light has-marketing-bar has-marketing-bar-theme-blank-canvas">
 
-<script src="https://cdn.by.wonderpush.com/sdk/1.1/wonderpush-loader.min.js" async></script>
-<script>
-window.WonderPush = window.WonderPush || [];
-WonderPush.push(["init", {
-    webKey: "7352a4e8be2cb13bd8956817c310b34cf4c55274cd5ef332784f51559f1c30dd",
-}]);
-</script>
-
-
-
-	
-
-
-
 
 	
 	
@@ -1044,11 +1030,24 @@ if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
 
 	  */
 
-	  console.log("Service worker en espera de instalarse");
+	  console.log("Service worker tpush");
 
     </script>
 
 
+	
+    <script type="application/javascript" src="https://sdki.truepush.com/sdk/v2.0.4/app.js" async></script>
+    <script>
+    var truepush = window.truepush || [];
+            
+    truepush.push(function(){
+        truepush.Init({
+            id: "64e110cabdb78352b845fe0f"
+        },function(error){
+          if(error) console.error(error);
+        })
+    })
+    </script>
 
 
 </body>
