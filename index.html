@@ -53,6 +53,26 @@ img.emoji {
 	background: none !important;
 	padding: 0 !important;
 }
+
+
+#flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 25%;
+  padding: 5px;
+  font-size: 12px;
+  text-align: center;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  cursor: pointer;
+}
+
+
+
+	
 </style>
 
 <link rel="manifest" href="./manifest.json">
@@ -425,7 +445,7 @@ var actionbardata = {"siteID":"219610288","siteURL":"http:\/\/alegra58.wordpress
 
 <br>
 
-<button type="button" class="btn btn-info btn-lg" onclick="promptEvent.prompt()">Instalar aplicación</button>
+<button id="flotante" type="button" class="btn btn-info btn-lg" onclick="promptEvent.prompt()">Instalar aplicación</button>
 
 	<button id="notificationButton" class="btn btn-info btn-lg">Activar Notificaciones</button>
 
