@@ -85,19 +85,43 @@ img.emoji {
   cursor: pointer;
 }
 
-#notificationButton:hover:after {
-  content: "notificaciones";
+#notificationButton:before {
+  content: "\f0f3";
+  font-family: FontAwesome;
   position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  background-color: #333;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 20px;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+}
+
+#notificationButton:hover:before {
   color: #fff;
-  padding: 5px;
+}
+
+#notificationButton:hover:after {
+  content: "instalar";
+  position: absolute;
+  right: -60px;
+  top: 0;
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
   border-radius: 5px;
-  font-size: 12px;
-  font-weight: bold;
+  transition: all 0.5s ease;
+}
+
+#notificationButton:hover:after {
+  opacity: 1;
+  right: -10px;
+}
+
+#notificationButton:hover {
+  width: 200px;
 }
 
 	
