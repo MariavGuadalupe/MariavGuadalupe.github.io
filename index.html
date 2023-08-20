@@ -72,7 +72,7 @@ img.emoji {
 
 	#notificationButton {
   position: fixed;
-  bottom: 50px;
+  bottom: 70px;
   right: 20px;
   background-color: black;
   color: white;
@@ -85,7 +85,24 @@ img.emoji {
   cursor: pointer;
 }
 
+#notificationButton:hover .notification-text {
+  display: block;
+}
 
+#notificationButton .notification-text {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+}
 
 	
 </style>
