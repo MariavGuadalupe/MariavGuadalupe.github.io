@@ -197,7 +197,50 @@ transition: 1.5s;
 	transition: 2.5s;
 }
 
-
+#btn-mas{
+    display: none;
+}
+.container{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.redes a, .btn-mas label{
+    display: block;
+    text-decoration: none;
+    background: #cc2b2b;
+    color: #fff;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+    transition: all 500ms ease;
+}
+.redes a:hover{
+    background: #fff;
+    color: #cc2b2b;
+}
+.redes a{
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-mas:checked~ .redes a{
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+.btn-mas label{
+    cursor: pointer;
+    background: #f44141;
+    font-size: 23px;
+}
+#btn-mas:checked ~ .btn-mas label{
+    transform: rotate(135deg);
+    font-size: 25px;
+}
 
 	
 </style>
@@ -586,7 +629,20 @@ var actionbardata = {"siteID":"219610288","siteURL":"http:\/\/alegra58.wordpress
 </svg>&nbsp</button>
 	
 <br>
-<br>
+
+
+    <div class="container">
+	<input type="checkbox" id="btn-mas">
+	<div class="redes">
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-youtube"></a>
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-pinterest"></a>
+	</div>
+	<div class="btn-mas">
+		<label for="btn-mas" class="fa fa-plus"></label>
+	</div>
+</div>
 	
 </div>
 </div>
