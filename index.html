@@ -1244,7 +1244,7 @@ $("#notificationButton").hide();
 if (Notification.permission === 'denied') {
   Notification.requestPermission().then(permission => {
     if (permission === 'denied') {
-
+$("#notificationButton").hide();
 document.getElementById("notificationButton2").hidden = false;
 	    
     }
