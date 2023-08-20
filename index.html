@@ -1156,8 +1156,30 @@ $("#notificationButton").hide();
   });
 }
 
+
+		  
+
   </script>
 
+	<script>
+
+if (Notification.permission !== 'denied') {
+  Notification.requestPermission().then(permission => {
+    if (permission === 'denied') {
+
+
+	     const buttonN = document.querySelector('notificationButton');
+  const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16"><path d="M1 10h3v4H1v-4zm2.5-9C3.257 1 2.2 1.714 2.004 2.623L1.5 5h-1a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h1v1h9v-1h1a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5h-1.5L13 2.623C12.804 1.714 11.747 1 10.5 1h-8zm7.5 0a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-1v-6h1z"/></svg>';
+
+  buttonN.innerHTML = svg + ' Like';
+	    
+    }
+  });
+}
+
+		
+ 
+</script>
 
 
 
