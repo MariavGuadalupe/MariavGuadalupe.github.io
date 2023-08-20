@@ -90,15 +90,18 @@ img.emoji {
 
 #notificationButton:active {
   content: "Notificaciones";
-top: 0;
-  height: 12px;
-  background: #333;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+   background: #333;
   color: #fff;
-	 
-	  display: inline-block;
+  border-radius: 20px 0 0 20px;
   padding: 5px;
   font-size: 12px;
-  border-radius: 5px;
+  text-align: center;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  cursor: pointer;
   transition: all 1s ease;
 }
 
