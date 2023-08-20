@@ -85,23 +85,19 @@ img.emoji {
   cursor: pointer;
 }
 
-#notificationButton:hover .notification-text {
-  display: block;
-}
-
-#notificationButton .notification-text {
-  display: none;
+#notificationButton:hover:after {
+  content: "notificaciones";
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: 150px;
+  white-space: nowrap;
   background-color: #333;
   color: #fff;
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
-  text-align: center;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 	
