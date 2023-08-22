@@ -1382,15 +1382,13 @@ if (Notification.permission === 'denied') {
 }
 
     const notBtn = document.getElementById('ActNot');
-	    notBtn.addEventListener('click', async function() {
+	    notBtn.addEventListener('click', function() {
   Notification.requestPermission().then(permission => {
-alert("Aqui1");
+
+	
 	  
-    if (permission === "granted") {
-	    alert("Aqui2");
-      // Ahora se pueden enviar notificaciones
-    }
   });
+      alert("Aqui2");
     
       });
 		
