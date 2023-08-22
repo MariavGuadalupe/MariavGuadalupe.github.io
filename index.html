@@ -1338,7 +1338,7 @@ if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
 	 
 if ("Notification" in window) {
 
-	$("#notiDes").hide();	
+	
 	
   const notificationButton = document.getElementById('notiDes');
   notificationButton.addEventListener('click', async function() {
@@ -1354,7 +1354,7 @@ if ("Notification" in window) {
     }, 3000);
 
 
-	    
+	$("#notiDes").hide();	    
     }
 
 
@@ -1365,7 +1365,7 @@ if (Notification.permission === 'denied') {
 	    btnModal.click();
 
 	
-
+$("#notiDes").hide();	
 }
 
 	  
