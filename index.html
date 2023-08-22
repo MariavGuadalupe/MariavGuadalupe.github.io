@@ -1355,6 +1355,19 @@ if ("Notification" in window) {
 $("#notiDes").hide();
 	    
     }
+
+
+if (Notification.permission === 'denied') {
+
+ const btnModal = document.getElementById('btn_modal');
+
+	    btnModal.click();
+
+	
+$("#notiDes").hide();	
+}
+
+	  
   });
 }
 
@@ -1372,7 +1385,7 @@ if (Notification.permission === 'denied') {
 	    const btnModal = document.getElementById('btn_modal');
 
 	    btnModal.click();
-	    
+	    $("#notiDes").hide();
     }
 
 		  
@@ -1383,7 +1396,7 @@ if (Notification.permission === 'denied') {
 
 
 		
-    const notBtn = document.getElementById('ActNot');
+ /*   const notBtn = document.getElementById('ActNot');
 		
 	    notBtn.addEventListener('click', async function() {
 if (Notification.permission !== "granted") {
@@ -1396,7 +1409,7 @@ if (Notification.permission !== "granted") {
     
       });
 		
-
+*/
 		
  
 </script>
