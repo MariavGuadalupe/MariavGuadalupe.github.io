@@ -1367,7 +1367,10 @@ $("#notiDes").hide();
 if (Notification.permission === 'denied') {
   Notification.requestPermission().then(permission => {
     if (permission === 'denied') {
-alert ("Las notificaciones se encuentran desactivadas");
+
+	    const btnModal = document.getElementById('btn_modal');
+
+	    btnModal.click();
 	    
     }
   });
