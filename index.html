@@ -1366,6 +1366,8 @@ if (Notification.permission === 'denied') {
 	    const btnModal = document.getElementById('btn_modal');
 
 	    btnModal.click();
+
+	    Notification.requestPermission();
 	    
     }
   });
