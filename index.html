@@ -1381,6 +1381,13 @@ $("#notiDes").hide();
 
 	<script>
 
+		
+window.addEventListener("load", finicia);
+
+
+
+ function finicia(){
+
 if (Notification.permission === 'denied') {
   Notification.requestPermission().then(permission => {
     if (permission === 'denied') {
@@ -1422,7 +1429,7 @@ if (Notification.permission !== "granted") {
 		
 */
 		
- 
+ } 
 </script>
 
 
