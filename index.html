@@ -1447,10 +1447,10 @@ if (Notification.permission !== "granted") {
 
 function mostrarNotifiacion(){
 
-        Push.create("Objetivo",{
-            body: "Construir el Reindo de Dios",
+        Push.create("¡Las notificaciones están activadas!",{
+            body: "Ahora puedes recibir notificaciones.",
             icon: "https://mariavguadalupe.github.io/Alegra512.png",
-            timeout: 4000,
+            timeout: 3000,
             onClick: function () {
                 window.focus();
                 this.close();
@@ -1469,7 +1469,6 @@ function autorizarNotificacion(){
 
 function onGranted(){
 
-    $("#autorizarNotificacion").css("background-color", "green");
 	$("#notiDes").hide();	   
 
 }
@@ -1478,7 +1477,6 @@ function onGranted(){
 
 function onDenied(){
 
-    $("#autorizarNotificacion").css("background-color", "red");
 	$("#notiDes").hide();	   
 
 }
