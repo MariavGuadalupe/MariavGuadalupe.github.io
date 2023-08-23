@@ -1335,49 +1335,6 @@ if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
 
 
 
-	  <script>
-
-	 
-if ("Notification" in window) {
-
-	
-	
-  const notificationButton = document.getElementById('notiDes2');
-  notificationButton.addEventListener('click', async function() {
-    const permission = await Notification.requestPermission();
-    if (permission === "granted") {
-      const notification = new Notification("¡Las notificaciones están activadas!", {
-        icon: "https://mariavguadalupe.github.io/Alegra512.png",
-        body: "Ahora puedes recibir notificaciones.",
-      });
-
-	     setTimeout(function() {
-      notification.close();
-    }, 3000);
-
-
-	$("#notiDes").hide();	    
-    }
-
-
-if (Notification.permission === 'denied') {
-
- const btnModal = document.getElementById('btn_modal');
-
-	    btnModal.click();
-
-	
-$("#notiDes").hide();	
-}
-
-	  
-  });
-}
-
-
-		  
-
-  </script>
 
 	<script>
 
@@ -1389,19 +1346,13 @@ window.addEventListener("load", finicia);
  function finicia(){
 
 if (Notification.permission === 'denied') {
-  Notification.requestPermission().then(permission => {
-    if (permission === 'denied') {
 
 	    const btnModal = document.getElementById('btn_modal');
 
 	    btnModal.click();
 	    $("#notiDes").hide();
-    }
-
-		  
-  });
-
   
+ 
 }
 
 
@@ -1445,7 +1396,7 @@ if (Notification.permission !== "granted") {
 
     $("#autorizarNotificacion").on("click", function(){
 
-        autorizarNotificacion();
+     
 
     });
 
@@ -1461,19 +1412,7 @@ if (Notification.permission !== "granted") {
 
 function mostrarNotifiacion(){
 
-        Push.create("¡Las notificaciones están activadas!",{
-            body: "Ahora puedes recibir notificaciones.",
-            icon: "https://mariavguadalupe.github.io/Alegra512.png",
-            timeout: 3000,
-            onClick: function () {
-                window.focus();
-                this.close();
-        }
-    });
-$("#notiDes").hide();	 
-
-
-Toastify({
+	Toastify({
   text: "Notificaciones activadas!",
   duration: 2100,
   destination: "",
@@ -1487,6 +1426,20 @@ Toastify({
   },
   onClick: function(){} // Callback after click
 }).showToast();
+
+	
+        Push.create("¡Las notificaciones están activadas!",{
+            body: "Ahora puedes recibir notificaciones.",
+            icon: "https://mariavguadalupe.github.io/Alegra512.png",
+            timeout: 3000,
+            onClick: function () {
+                window.focus();
+                this.close();
+        }
+    });
+$("#notiDes").hide();	 
+
+
 
 	
 }
