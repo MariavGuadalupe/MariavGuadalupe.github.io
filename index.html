@@ -681,6 +681,9 @@ var actionbardata = {"siteID":"219610288","siteURL":"http:\/\/alegra58.wordpress
 	</div>
 </div>
 
+    </br>
+<button id="autorizarNotificacion">Autorizar notificaciones</button>
+<button id="mostrarNotificacion">Mostrar notificaciones</button>
 
 
 
@@ -1415,7 +1418,60 @@ if (Notification.permission !== "granted") {
  
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
 
+ $("#autorizarNotificacion").on("click", function(){
+
+        autorizarNotificacion();
+
+    });
+
+    $("#mostrarNotificacion").on("click", function(){
+
+        mostrarNotifiacion();
+
+    });
+
+});
+
+	
+function mostrarNotifiacion(){
+
+        Push.create("Objetivo",{
+            body: "Construir el Reindo de Dios",
+            icon: "/Alegra512.png",
+            timeout: 4000,
+            onClick: function () {
+                window.focus();
+                this.close();
+        }
+    });
+
+}
+
+function autorizarNotificacion(){
+
+    Push.Permission.request(onGranted, onDenied);
+
+}
+
+
+
+function onGranted(){
+
+    $("#autorizarNotificacion").css("background-color", "green");
+
+}
+
+
+
+function onDenied(){
+
+    $("#autorizarNotificacion").css("background-color", "red");
+
+}
+
+	
 
 	
 	
