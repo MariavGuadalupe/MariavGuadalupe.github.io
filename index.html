@@ -1343,7 +1343,7 @@ if ("Notification" in window) {
 
 	
 	
-  const notificationButton = document.getElementById('notiDes');
+  const notificationButton = document.getElementById('notiDes2');
   notificationButton.addEventListener('click', async function() {
     const permission = await Notification.requestPermission();
     if (permission === "granted") {
@@ -1435,7 +1435,7 @@ if (Notification.permission !== "granted") {
 
     });
 
-    $("#mostrarNotificacion").on("click", function(){
+    $("#notiDes").on("click", function(){
 
         mostrarNotifiacion();
 
@@ -1449,7 +1449,7 @@ function mostrarNotifiacion(){
 
         Push.create("Objetivo",{
             body: "Construir el Reindo de Dios",
-            icon: "/Alegra512.png",
+            icon: "https://mariavguadalupe.github.io/Alegra512.png",
             timeout: 4000,
             onClick: function () {
                 window.focus();
@@ -1470,6 +1470,7 @@ function autorizarNotificacion(){
 function onGranted(){
 
     $("#autorizarNotificacion").css("background-color", "green");
+	$("#notiDes").hide();	   
 
 }
 
@@ -1478,6 +1479,7 @@ function onGranted(){
 function onDenied(){
 
     $("#autorizarNotificacion").css("background-color", "red");
+	$("#notiDes").hide();	   
 
 }
 
