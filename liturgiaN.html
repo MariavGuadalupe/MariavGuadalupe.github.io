@@ -46,7 +46,25 @@
     async function openMenu() {
       await menuController.open();
     }
-  </script>
+  
+
+
+import { BackButtonEvent } from '@ionic/core';
+import { App } from '@capacitor/app';
+
+
+
+const routerEl = document.querySelector('ion-router');
+document.addEventListener('ionBackButton', (ev: BackButtonEvent) => {
+  ev.detail.register(-1, () => {
+    const path = window.location.pathname;
+    if (path === routerEl.root) {
+      App.exitApp();
+    }
+  });
+});
+</script>
+  
 </body>
 
 </html>
