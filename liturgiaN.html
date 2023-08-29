@@ -34,7 +34,7 @@
 <!-- header-toolbar.component.html -->
 <ion-toolbar>
   <ion-buttons slot="start">
-    <ion-back-button></ion-back-button>
+    <ion-back-button onclick="goBack()"  default-href="/"></ion-back-button>
   </ion-buttons>
    <ion-title> Liturgia</ion-title>
 </ion-toolbar>
@@ -66,6 +66,12 @@ document.addEventListener('ionBackButton', (ev: BackButtonEvent) => {
     }
   });
 });
+</script>
+
+<script>
+function goBack() {
+  window.history.back();
+}
 </script>
   
 </body>
