@@ -27,56 +27,26 @@
 <h1>Hola Católico</h1>
       
     </div>
-
-
+<!--
+Forked from:
+https://quasar.dev/vue-components/carousel#example--vertical-mode
+-->
 <div id="q-app" style="min-height: 100vh;">
 <div class="q-pa-md">
-    <q-toggle
-      v-model="padding"
-      label="Padding"
-      color="purple"
-      class="text-weight-bold"
-    ></q-toggle>
-
-    <q-toggle
-      v-model="vertical"
-      label="Vertical"
-      color="purple"
-    ></q-toggle>
-
-    <q-toggle
-      v-model="arrows"
-      label="Arrows"
-      color="purple"
-    ></q-toggle>
-
-    <q-toggle
-      v-model="navigation"
-      label="Navigation"
-      color="purple"
-    ></q-toggle>
-
-    <div class="row items-center q-mb-md">
-      <div>Navigation position:</div>
-      <q-option-group
-        v-model="navPos"
-        :options="navigationPositions"
-        color="purple"
-        inline
-      ></q-option-group>
-    </div>
-
     <q-carousel
       v-model="slide"
+      vertical
+      transition-prev="slide-down"
+      transition-next="slide-up"
       swipeable
       animated
-      :padding="padding"
-      :vertical="vertical"
-      :arrows="arrows"
-      :navigation="navigation"
-      :navigation-position="navPos"
+      control-color="white"
+      navigation-icon="radio_button_unchecked"
+      navigation
+      padding
+      arrows
       height="300px"
-      class="bg-purple text-white rounded-borders"
+      class="bg-purple text-white shadow-1 rounded-borders"
     >
       <q-carousel-slide name="style" class="column no-wrap flex-center">
         <q-icon name="style" size="56px"></q-icon>
@@ -106,7 +76,6 @@
   </div>
 </div>
 
-    
 
     <!-- Add the following at the end of your body tag -->
     <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
@@ -115,34 +84,11 @@
     <script src="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/icon-set/svg-ionicons-v6.umd.prod.js"></script>
     
     <script>
-    
-const { ref, watch } = Vue
+   const { ref } = Vue
 
 const app = Vue.createApp({
   setup () {
-    const navPos = ref('bottom')
-    const vertical = ref(false)
-
-    watch(vertical, val => {
-      navPos.value = val === true
-        ? 'right'
-        : 'bottom'
-    })
-
     return {
-      padding: ref(true),
-      vertical,
-      arrows: ref(true),
-      navigation: ref(true),
-
-      navPos,
-      navigationPositions: [
-        { value: 'top', label: 'top' },
-        { value: 'right', label: 'right' },
-        { value: 'bottom', label: 'bottom (default)' },
-        { value: 'left', label: 'left' }
-      ],
-
       slide: ref('style'),
       lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.'
     }
