@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quasar@2.0.0/dist/quasar.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/quasar@2.0.0/dist/quasar.umd.min.js"></script>
+  <title>Quasar Carousel Vertical</title>
+</head>
+<body>
+  <div id="app">
+    <q-page-container>
+      <q-carousel
+        arrows
+        vertical
+        height="400px"
+      >
+        <q-carousel-slide
+          v-for="slide in slides"
+          :key="slide"
+        >
+          <div class="q-pa-md">
+            Slide {{ slide }}
+          </div>
+        </q-carousel-slide>
+      </q-carousel>
+    </q-page-container>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        slides: [1, 2, 3, 4, 5]
+      }
+    })
+  </script>
+</body>
+</html>
