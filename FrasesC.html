@@ -18,6 +18,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 -->
 <div id="q-app" style="min-height: 100vh;">
 <div class="q-pa-md">
+  <q-responsive :ratio="16/9" style="width: 500px; max-width: 100%;">
     <q-carousel
       v-model="slide"
       vertical
@@ -58,6 +59,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
         </div>
       </q-carousel-slide>
     </q-carousel>
+    </q-responsive>
   </div>
 </div>
 
