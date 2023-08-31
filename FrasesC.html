@@ -21,67 +21,80 @@
   </head>
 
   <body>
-    <!-- example of injection point where you write your app template -->
-   
-<!--
+ <!--
 Forked from:
 https://quasar.dev/vue-components/carousel#example--vertical-mode
 -->
-<!--
-Forked from:
-https://quasar.dev/vue-components/responsive#example--on-qcarousel
--->
-<!--
-  Forked from:
-  https://v1.quasar.dev/vue-components/responsive#example--on-qcard
--->
-<!--
-Forked from:
-https://quasar.dev/vue-components/responsive#example--on-qcard
--->
 <div id="q-app" style="min-height: 100vh;">
 <div class="q-pa-md">
-    <div class="row items-start q-gutter-md">
-      <q-responsive :ratio="16/9" class="col">
-        <q-card class="column" flat bordered>
-          <q-img class="col" src="https://cdn.quasar.dev/img/parallax2.jpg"></q-img>
-
-          <q-card-section>
-            <div>Ratio 16:9</div>
-          </q-card-section>
-        </q-card>
-      </q-responsive>
-
-      <q-responsive :ratio="1" class="col">
-        <q-card class="column" flat bordered>
-          <q-img class="col" src="https://cdn.quasar.dev/img/parallax1.jpg"></q-img>
-
-          <q-card-section>
-            <div>Ratio 1:1</div>
-          </q-card-section>
-        </q-card>
-      </q-responsive>
-    </div>
+    <q-carousel
+      v-model="slide"
+      vertical
+      transition-prev="slide-down"
+      transition-next="slide-up"
+      swipeable
+      animated
+      control-color="white"
+      navigation-icon="radio_button_unchecked"
+      navigation
+      padding
+      arrows
+      height="500px"
+      class="bg-purple text-white shadow-1 rounded-borders"
+    >
+      <q-carousel-slide name="style" class="column no-wrap flex-center">
+        <q-icon name="style" size="56px"></q-icon>
+        <div class="q-mt-md text-center">
+          {{ lorem }}
+        </div>
+      </q-carousel-slide>
+      <q-carousel-slide name="tv" class="column no-wrap flex-center">
+        <q-icon name="live_tv" size="56px"></q-icon>
+        <div class="q-mt-md text-center">
+          {{ lorem }}
+        </div>
+      </q-carousel-slide>
+      <q-carousel-slide name="layers" class="column no-wrap flex-center">
+        <q-icon name="layers" size="30px"></q-icon>
+        <div class="q-mt-md text-center">
+          {{ lorem }}
+        </div>
+      </q-carousel-slide>
+      <q-carousel-slide name="map" class="column no-wrap flex-center">
+        <q-icon name="terrain" size="45px"></q-icon>
+        <div class="q-mt-md text-center">
+          {{ lorem }}
+        </div>
+      </q-carousel-slide>
+    </q-carousel>
   </div>
 </div>
+
+    
+    <script>
+const { ref } = Vue
+
+const app = Vue.createApp({
+  setup () {
+    return {
+      slide: ref('style'),
+      lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.'
+    }
+  }
+})
+
+app.use(Quasar, { config: {} })
+app.mount('#q-app')
+
+
+      
+    </script>
+
     <!-- Add the following at the end of your body tag -->
     <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/quasar.umd.prod.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/lang/es.umd.prod.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/icon-set/svg-ionicons-v6.umd.prod.js"></script>
-    
-    <script>
-import { ref } from 'vue'
-      export default {
-  data () {
-    return {
-      slide: 1
-    }
-  }
-}
-    </script>
-
-
 
 
     
