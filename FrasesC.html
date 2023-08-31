@@ -31,36 +31,35 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 Forked from:
 https://quasar.dev/vue-components/responsive#example--on-qcarousel
 -->
-<div id="q-app" style="min-height: 100vh;">
-<div class="q-pa-md">
-    <q-responsive :ratio="16/9" style="width: 500px; max-width: 100%;">
-      <q-carousel
-        swipeable
-        animated
-        arrows
-        v-model="slide"
-        infinite
-      >
-        <q-carousel-slide :name="1" img-src="https://cdn.quasar.dev/img/mountains.jpg"></q-carousel-slide>
-        <q-carousel-slide :name="2" img-src="https://cdn.quasar.dev/img/parallax1.jpg"></q-carousel-slide>
-        <q-carousel-slide :name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg"></q-carousel-slide>
-        <q-carousel-slide :name="4" img-src="https://cdn.quasar.dev/img/quasar.jpg"></q-carousel-slide>
+<!--
+  Forked from:
+  https://v1.quasar.dev/vue-components/responsive#example--on-qcard
+-->
+<div id="q-app">
+  <div class="q-pa-md">
+    <div class="row items-start q-gutter-md">
+      <q-responsive :ratio="16/9" class="col">
+        <q-card class="column">
+          <q-img class="col" src="https://cdn.quasar.dev/img/parallax2.jpg"></q-img>
 
-        <template v-slot:control>
-          <q-carousel-control
-            position="bottom"
-            :offset="[16, 8]"
-            class="text-white text-center rounded-borders"
-            style="background: rgba(255, 255, 255, .2); padding: 4px 8px;"
-          >
-            Ratio 16:9
-          </q-carousel-control>
-        </template>
-      </q-carousel>
-    </q-responsive>
+          <q-card-section>
+            <div>Ratio 16:9</div>
+          </q-card-section>
+        </q-card>
+      </q-responsive>
+
+      <q-responsive :ratio="1" class="col">
+        <q-card class="column">
+          <q-img class="col" src="https://cdn.quasar.dev/img/parallax1.jpg"></q-img>
+
+          <q-card-section>
+            <div>Ratio 1:1</div>
+          </q-card-section>
+        </q-card>
+      </q-responsive>
+    </div>
   </div>
 </div>
-
     <!-- Add the following at the end of your body tag -->
     <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/quasar.umd.prod.js"></script>
@@ -68,19 +67,14 @@ https://quasar.dev/vue-components/responsive#example--on-qcarousel
     <script src="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/icon-set/svg-ionicons-v6.umd.prod.js"></script>
     
     <script>
-const { ref } = Vue
-
-const app = Vue.createApp({
-  setup () {
+new Vue({
+  el: '#q-app',
+  data () {
     return {
-      slide: ref(1)
+      slide: 1
     }
   }
 })
-
-app.use(Quasar, { config: {} })
-app.mount('#q-app')
-
       
     </script>
 
