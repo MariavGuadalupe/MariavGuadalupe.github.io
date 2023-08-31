@@ -35,11 +35,15 @@ https://quasar.dev/vue-components/responsive#example--on-qcarousel
   Forked from:
   https://v1.quasar.dev/vue-components/responsive#example--on-qcard
 -->
-<div id="q-app">
-  <div class="q-pa-md">
+<!--
+Forked from:
+https://quasar.dev/vue-components/responsive#example--on-qcard
+-->
+<div id="q-app" style="min-height: 100vh;">
+<div class="q-pa-md">
     <div class="row items-start q-gutter-md">
       <q-responsive :ratio="16/9" class="col">
-        <q-card class="column">
+        <q-card class="column" flat bordered>
           <q-img class="col" src="https://cdn.quasar.dev/img/parallax2.jpg"></q-img>
 
           <q-card-section>
@@ -49,7 +53,7 @@ https://quasar.dev/vue-components/responsive#example--on-qcarousel
       </q-responsive>
 
       <q-responsive :ratio="1" class="col">
-        <q-card class="column">
+        <q-card class="column" flat bordered>
           <q-img class="col" src="https://cdn.quasar.dev/img/parallax1.jpg"></q-img>
 
           <q-card-section>
@@ -75,7 +79,6 @@ new Vue({
     }
   }
 })
-      
     </script>
 
 
