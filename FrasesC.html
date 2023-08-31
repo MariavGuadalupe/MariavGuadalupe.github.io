@@ -27,51 +27,39 @@
 Forked from:
 https://quasar.dev/vue-components/carousel#example--vertical-mode
 -->
+<!--
+Forked from:
+https://quasar.dev/vue-components/responsive#example--on-qcarousel
+-->
 <div id="q-app" style="min-height: 100vh;">
 <div class="q-pa-md">
-    <q-carousel
-      v-model="slide"
-      vertical
-      transition-prev="slide-down"
-      transition-next="slide-up"
-      swipeable
-      animated
-      control-color="white"
-      navigation-icon="radio_button_unchecked"
-      navigation
-      padding
-      arrows
-      height="300px"
-      class="bg-purple text-white shadow-1 rounded-borders"
-    >
-      <q-carousel-slide name="style" class="column no-wrap flex-center">
-        <q-icon name="style" size="56px"></q-icon>
-        <div class="q-mt-md text-center">
-          {{ lorem }}
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide name="tv" class="column no-wrap flex-center">
-        <q-icon name="live_tv" size="56px"></q-icon>
-        <div class="q-mt-md text-center">
-          {{ lorem }}
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide name="layers" class="column no-wrap flex-center">
-        <q-icon name="layers" size="56px"></q-icon>
-        <div class="q-mt-md text-center">
-          {{ lorem }}
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide name="map" class="column no-wrap flex-center">
-        <q-icon name="terrain" size="56px"></q-icon>
-        <div class="q-mt-md text-center">
-          {{ lorem }}
-        </div>
-      </q-carousel-slide>
-    </q-carousel>
+    <q-responsive :ratio="16/9" style="width: 500px; max-width: 100%;">
+      <q-carousel
+        swipeable
+        animated
+        arrows
+        v-model="slide"
+        infinite
+      >
+        <q-carousel-slide :name="1" img-src="https://cdn.quasar.dev/img/mountains.jpg"></q-carousel-slide>
+        <q-carousel-slide :name="2" img-src="https://cdn.quasar.dev/img/parallax1.jpg"></q-carousel-slide>
+        <q-carousel-slide :name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg"></q-carousel-slide>
+        <q-carousel-slide :name="4" img-src="https://cdn.quasar.dev/img/quasar.jpg"></q-carousel-slide>
+
+        <template v-slot:control>
+          <q-carousel-control
+            position="bottom"
+            :offset="[16, 8]"
+            class="text-white text-center rounded-borders"
+            style="background: rgba(255, 255, 255, .2); padding: 4px 8px;"
+          >
+            Ratio 16:9
+          </q-carousel-control>
+        </template>
+      </q-carousel>
+    </q-responsive>
   </div>
 </div>
-
 
     <!-- Add the following at the end of your body tag -->
     <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
@@ -80,13 +68,12 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
     <script src="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/icon-set/svg-ionicons-v6.umd.prod.js"></script>
     
     <script>
-   const { ref } = Vue
+const { ref } = Vue
 
 const app = Vue.createApp({
   setup () {
     return {
-      slide: ref('style'),
-      lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.'
+      slide: ref(1)
     }
   }
 })
