@@ -11,17 +11,8 @@
 
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu</title>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
-  <style>
-    :root {
-      --ion-safe-area-top: 20px;
-      --ion-safe-area-bottom: 22px;
-    }
-
-  </style>
+  <title>Frases</title>
+  
   <script type="module">
     import { menuController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
     window.menuController = menuController;
@@ -33,24 +24,6 @@
 
   <body>
 
-<ion-app>
-    
-
-    <div class="ion-page" id="main-content">
-   
-<ion-header>
-
-
-
-<!-- header-toolbar.component.html -->
-<ion-toolbar>
-  <ion-buttons slot="start">
-    <ion-back-button onclick="goBack()"  default-href="/"></ion-back-button>
-  </ion-buttons>
-   <ion-title> Liturgia</ion-title>
-</ion-toolbar>
-</ion-header>
-      <ion-content class="ion-padding">
 
     
     <!-- example of injection point where you write your app template -->
@@ -58,7 +31,7 @@
 Forked from:
 https://quasar.dev/vue-components/carousel#example--vertical-mode
 -->
-<div id="q-app" style="min-height: 50vh;">
+<div id="q-app" style="min-height: 100vh;">
 <div class="q-pa-md">
   <q-responsive :ratio="1" style="width: auto; max-width: 100%;">
     <q-carousel
@@ -105,31 +78,13 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
   </div>
 </div>
 
- </ion-content>
-    </div>
-  </ion-app>
-
+ 
   <script>
-    async function openMenu() {
-      await menuController.open();
-    }
-  
-
-
-import { BackButtonEvent } from '@ionic/core';
-import { App } from '@capacitor/app';
+    
+    
 
 
 
-const routerEl = document.querySelector('ion-router');
-document.addEventListener('ionBackButton', (ev: BackButtonEvent) => {
-  ev.detail.register(-1, () => {
-    const path = window.location.pathname;
-    if (path === routerEl.root) {
-      App.exitApp();
-    }
-  });
-});
 </script>
 
 <script>
