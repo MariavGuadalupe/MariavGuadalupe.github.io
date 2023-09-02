@@ -7,6 +7,15 @@
 </head>
 <body>
   <div id="app">
+
+<mt-header title="multiple button">
+  <div slot="left">
+    <mt-button v-link="'/'" icon="back">back</mt-button>
+    <mt-button @click="handleClose">close</mt-button>
+  </div>
+  <mt-button icon="more" slot="right"></mt-button>
+</mt-header>
+    
     <mt-button @click.native="handleClick">Button</mt-button>
   </div>
 </body>
