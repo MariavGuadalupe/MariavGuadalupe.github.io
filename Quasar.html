@@ -44,7 +44,11 @@
        */
       const app = Vue.createApp({
         setup () {
-          return {}
+          function retroceder() {
+      window.history.back();
+    }
+          
+          return {retroceder}
         }
       })
 
@@ -70,20 +74,18 @@ export default {
       leftDrawerOpen.value = !leftDrawerOpen.value
     }
 
+     
+    
+    
     return {
       leftDrawerOpen,
-      toggleLeftDrawer
+      toggleLeftDrawer,
+      retroceder
     }
   }
 }
       
-      setup(){
-   const retroceder = () => {
-       window.history.back();
-   }
-
-   return { retroceder } 
-}
+     
       
       
 </script>
