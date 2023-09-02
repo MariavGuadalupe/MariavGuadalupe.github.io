@@ -1,34 +1,80 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="es">
+
 <head>
+
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.rtl.min.css" integrity="sha512-xFXY3BDQhvR4QDdZWMXg6iUf+eQENeKd+h+IU0Nl+uwR20NT7Z9Ke+yZknkzbzUj8VIJlL4DNbDwPCa17HzkBQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" integrity="sha512-AZtJoEn5SfSZimv10x5NMO2gaZCdoU8nxtHJK8O4SbKNlQeb1ggkvf0b0QixuuXIjX3Tp5jzBbTWajki81Vl2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js" integrity="sha512-rXm6RiYDlz+aZC/ht75tGzeAmCg4gVfBA6Be5s5uENSahiXkgwEy10J2Cc+dxUAW4lRRQYbS5pugMOqBrs8ksw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.dark.min.css" integrity="sha512-C/Z74U+ioSrVHIrPuUqKIG9HmaV5Ut9QMzxNtyMP+IeBYb5H2Uhhaxy4R0yj0Jmr9vH88nNzl490qClqbitOjQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.dark.rtl.min.css" integrity="sha512-kLq4lqVGQGEmELNxCFHZcdGZBM7NhR3RGUondYNAxwR4N/OWedlxjuY7O+LWyr4ff73PCKFqneiElijWvqg8JA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML con Vuetify</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.6.3/dist/vuetify.min.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.6.3/dist/vuetify.min.js"></script>
+
 </head>
-  
+
 <body>
 
-<!-- Image and text -->
-<nav class="navbar navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-        class="me-2"
-        height="20"
-        alt="MDB Logo"
-        loading="lazy"
-      />
-      <small>MDBootstrap</small>
-    </a>
-  </div>
-</nav>
-<!-- Prerequisite=This example use ionicons(http://ionicons.com) to display icons. -->
+  <v-app>
 
-  
+    <v-app-bar color="primary" dark>
+
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
+      <v-toolbar-title>My App</v-toolbar-title>
+
+    </v-app-bar>
+
+    <v-container>
+
+      <v-btn color="primary" dark @click="showAlert">Show Alert</v-btn>
+
+      <v-alert v-if="show" type="success" dismissible>
+
+        This is an alert!
+
+      </v-alert>
+
+    </v-container>
+
+  </v-app>
+
+
+
+  <script>
+
+    new Vue({
+
+      el: '#app',
+
+      vuetify: new Vuetify(),
+
+      data: {
+
+        show: false
+
+      },
+
+      methods: {
+
+        showAlert() {
+
+          this.show = true;
+
+        }
+
+      }
+
+    })
+
+  </script>
+
 </body>
-  
+
 </html>
+
