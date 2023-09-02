@@ -13,41 +13,32 @@
   <body>
     <!-- example of injection point where you write your app template -->
    
+      
       <div id="q-app" style="min-height: 100vh;">
-<div class="q-pa-md">
-    <q-layout view="lHh lpr lFf" container style="height: 400px" class="shadow-2 rounded-borders">
-      <q-header elevated class="bg-cyan">
-        <q-toolbar>
-          <q-btn flat round dense icon="assignment_ind"></q-btn>
+<q-layout view="lHh Lpr lFf" class="bg-grey-9 text-white">
+    <q-header elevated class="bg-grey-6">
+      <q-toolbar>
+        <q-btn
+          flat
+          dense
+          round
+          @click="toggleLeftDrawer"
+          aria-label="Menu"
+          icon="menu"
+        />
 
-          <q-space></q-space>
+        <q-toolbar-title>
+          Quasar App
+        </q-toolbar-title>
+      </q-toolbar>
+    </q-header>
 
-          <q-btn flat round dense icon="sim_card" class="q-mr-xs"></q-btn>
-          <q-btn flat round dense icon="gamepad"></q-btn>
-        </q-toolbar>
-
-        <q-toolbar inset>
-          <q-breadcrumbs active-color="white" style="font-size: 16px">
-            <q-breadcrumbs-el label="Home" icon="home"></q-breadcrumbs-el>
-            <q-breadcrumbs-el label="Components" icon="widgets"></q-breadcrumbs-el>
-            <q-breadcrumbs-el label="Toolbar"></q-breadcrumbs-el>
-          </q-breadcrumbs>
-        </q-toolbar>
-      </q-header>
-
-      <q-page-container>
-        <q-page class="q-pa-md">
-          <p v-for="n in 15" :key="n">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nihil praesentium molestias a adipisci, dolore vitae odit, quidem consequatur optio voluptates asperiores pariatur eos numquam rerum delectus commodi perferendis voluptate?
-          </p>
-        </q-page>
-      </q-page-container>
-    </q-layout>
-  </div>
-</div>
-      
-      
-   
+    
+    <q-page-container>
+    
+    </q-page-container>
+  </q-layout>
+    </div>
 
     <!-- Add the following at the end of your body tag -->
     <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
@@ -67,5 +58,35 @@
       app.use(Quasar)
       app.mount('#q-app')
     </script>
+    
+    
+    
+    
+    
+    
+    <script>
+import { ref } from 'vue'
+
+export default {
+  name: 'MyLayout',
+
+  setup () {
+    const leftDrawerOpen = ref(false)
+
+    function toggleLeftDrawer () {
+      leftDrawerOpen.value = !leftDrawerOpen.value
+    }
+
+    return {
+      leftDrawerOpen,
+      toggleLeftDrawer
+    }
+  }
+}
+</script>
+    
+    
+    
+    
   </body>
 </html>
