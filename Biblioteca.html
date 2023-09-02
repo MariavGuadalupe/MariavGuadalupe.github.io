@@ -1,80 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1,minimal-ui" name="viewport">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/vue-material.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/theme/default.css">
+  </head>
 
-<html lang="es">
+  <body>
+    <div id="app">
+      <!-- Your code here -->
 
-<head>
+hola vero
+      
+    </div>
 
-  <meta charset="UTF-8">
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-material"></script>
+    <script>
+      Vue.use(VueMaterial.default)
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>HTML con Vuetify</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.6.3/dist/vuetify.min.css" rel="stylesheet">
-
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.6.3/dist/vuetify.min.js"></script>
-
-</head>
-
-<body>
-
-  <v-app>
-
-    <v-app-bar color="primary" dark>
-
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
-      <v-toolbar-title>My App</v-toolbar-title>
-
-    </v-app-bar>
-
-    <v-container>
-
-      <v-btn color="primary" dark @click="showAlert">Show Alert</v-btn>
-
-      <v-alert v-if="show" type="success" dismissible>
-
-        This is an alert!
-
-      </v-alert>
-
-    </v-container>
-
-  </v-app>
-
-
-
-  <script>
-
-    new Vue({
-
-      el: '#app',
-
-      vuetify: new Vuetify(),
-
-      data: {
-
-        show: false
-
-      },
-
-      methods: {
-
-        showAlert() {
-
-          this.show = true;
-
-        }
-
-      }
-
-    })
-
-  </script>
-
-</body>
-
+      new Vue({
+        el: '#app'
+      })
+    </script>
+  </body>
 </html>
-
