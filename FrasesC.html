@@ -39,7 +39,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       <q-header reveal elevated class="bg-white text-grey-8 q-py-xs" height-hint="58">
         <q-toolbar>
           
-        <q-btn label="" icon="keyboard_arrow_left" color="primary" @click="goBack()"></q-btn>
+        <q-btn label="Atrás" icon="keyboard_arrow_left" color="white" text-color="black"" @click="goBack()"></q-btn>
 
           <q-toolbar-title>Biblioteca </q-toolbar-title>
 
@@ -55,8 +55,8 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
     <q-carousel
       v-model="slide"
       vertical
-      transition-prev="slide-down"
-      transition-next="slide-up"
+      transition-prev="scale"
+      transition-next="scale"
       swipeable
       animated
       control-color="white"
@@ -114,9 +114,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 </script>
 
 <script>
-function goBack() {
-  window.history.back();
-}
+
 </script>
 
 
@@ -135,7 +133,14 @@ function goBack() {
 
 const app = Vue.createApp({
   setup () {
+    
+    function goBack() {
+  window.history.back();
+}
+    
     return {
+      
+      goBack,
       slide: ref('style'),
       lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.'
     }
