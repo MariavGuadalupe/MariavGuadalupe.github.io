@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<html>
-  <!--
-    WARNING! Make sure that you match all Quasar related
-    tags to the same version! (Below it's "@2.12.5")
-  -->
 
   <head>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
@@ -69,11 +64,30 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       <div class="row justify-center items-center">
 	  <div  id="ytplayer"></div>
       
-        
-        
       </div>
-      
+ 
+  
   <br>
+        
+   
+     <q-page-sticky position="bottom-right" :offset="[18, 18]">
+      <q-fab
+        v-model="fab1"
+        color="purple"
+        icon="keyboard_arrow_left"
+        direction="left"
+        padding="xs"
+      >
+        
+        <q-fab-action padding="5px" color="orange" @click="pausa" icon="pause" ></q-fab-action>
+        
+        <q-fab-action padding="5px" external-label label-position="top" color="primary" @click="musica" icon="play_arrow"></q-fab-action>
+        
+        
+      </q-fab>
+       </q-page-sticky>
+  
+        
   <q-responsive :ratio="1" style="width: auto; max-width: 100%; height: 300px;">
     <q-carousel
       v-model="slide"
@@ -118,7 +132,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
         </div>
       </q-carousel-slide>
       <q-carousel-slide name="map" class="column no-wrap flex-center">
-        <q-icon name="terrain" size="56px"></q-icon>
+        
         <div class="q-mt-md text-center">
         <h6>  "El amor produce en el hombre la perfecta alegría. En efecto, sólo disfruta de veras el que vive en caridad (SANTO TOMÁS, Sobre la caridad, 1. c., 205).
 "</h6>
@@ -133,19 +147,23 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 	    
     </q-carousel>
     </q-responsive>
-  
-  
+       
 
+        
       </q-page-container>
     </q-layout>
   
 </div>
   
           </div>
-  
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1E4B2LHWlcuSrU?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
- 
 
+
+<audio id="cancion" src="https://asisapp.github.io/Asisapp/asistencia_registrada.mp3"></audio>
+ 
+<script>
+ document.getElementById("cancion");
+
+</script>
         
     <!-- Add the following at the end of your body tag -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
@@ -197,13 +215,35 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 const app = Vue.createApp({
   setup () {
     
+     const dialog = ref(false)
+    const position = ref('top')
+   
+    function musica() { 
+    cancion.play();
+ 
+                    }
+    
+    function pausa() { 
+   cancion.pause();
+ 
+                    }
+    
+    
     function goBack() {
  window.location.href = "https://mariavguadalupe.github.io/";
 }
     
     return {
-      
+       dialog,
+      position,
+
+      open (pos) {
+        position.value = pos
+        dialog.value = true
+      },
       goBack,
+      musica,
+      pausa,
        slide: ref('style'),
       lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.',
         autoplay: ref(true)
