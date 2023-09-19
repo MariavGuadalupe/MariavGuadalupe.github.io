@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+
+  <head>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/quasar.prod.css" rel="stylesheet" type="text/css">
 
@@ -70,24 +71,19 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
   <br>
         
    
-     <q-page-sticky position="bottom-right" :offset="[18, 18]">
       <q-fab
         v-model="fab1"
         color="purple"
-        icon="keyboard_arrow_left"
-        direction="left"
+        icon="music_note"
+        direction="right"
         padding="xs"
-      >
-        
-        <q-fab-action padding="5px" color="orange" @click="pausa" icon="pause" ></q-fab-action>
-        
+      >        
         <q-fab-action padding="5px" external-label label-position="top" color="primary" @click="musica" icon="play_arrow"></q-fab-action>
         
+         <q-fab-action padding="5px" color="orange" @click="pausa" icon="pause" ></q-fab-action>
         
       </q-fab>
-       </q-page-sticky>
-  
-        
+               
   <q-responsive :ratio="1" style="width: auto; max-width: 100%; height: 300px;">
     <q-carousel
       v-model="slide"
