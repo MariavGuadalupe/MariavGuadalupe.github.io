@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+
+<style>
+
+#myButton {
+  position: fixed;
+  bottom: 0.1cm;
+  right: 0.5cm;
+  animation: moveButton 9s infinite;
+}
+
+@keyframes moveButton {
+  0% {
+    transform: translateY(50%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(500%);
+  }
+}
+
+  .pwa-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .pwa-button svg {
+    width: 16px;
+    height: 16px;
+    fill: white;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+	
+  </style>
+
+
+  </head>
+  <body>
+
+<div class="app-container">
+
+<button id="myButton" class="pwa-button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M12 2C6.48 2 2 6.48 2 12c0 2.69 1.03 5.14 2.71 7.01L12 22l7.29-2.99C20.97 17.14 22 14.69 22 12c0-5.52-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8 0-4.41 3.59-8 8-8s8 3.59 8 8c0 4.41-3.59 8-8 8zm-1-9h2v3h3v2h-3v3h-2v-3H8v-2h3z"/>
+  </svg>
+  Instalar App
+</button>
+
+</div>
+
+<script>
+  let deferredPrompt;
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    document.getElementById('install-button').style.display = 'block';
+  });
+
+  document.getElementById('myButton').addEventListener('click', () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('La página se ha instalado correctamente');
+          document.getElementById('install-button').style.display = 'none';
+        }
+        deferredPrompt = null;
+      });
+    }
+  });
+</script>
+
+
+  </body>
