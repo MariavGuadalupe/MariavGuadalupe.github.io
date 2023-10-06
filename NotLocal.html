@@ -40,9 +40,47 @@
             // Por fin, si el usuario ha denegado notificaciones, y usted
             // Quiere ser respetuoso no hay necesidad de preocuparse más sobre ellos.
         }
+
+
+
+
+
+
+   function notifyMe2() {
+
+ var body2 = "Hola2";
+                var icon2 = "http://www.quecodigo.com/img/qc_logo.jpg";
+                var title2 = "Notificación";
+                var options2 = {
+                    body: body2,
+                    icon: icon2,
+                    lang: "ES",
+                    renotify: "true"
+                }
+       
+
+var notification = new Notification(title2,options2);
+
+     notification2.onclick = function () {
+                    //action
+                };
+                setTimeout(notification2.close.bind(notification2), 5000);
+            }
+       
+   }
+
+
+
+
+
+
+            
         </script>
     </head>
     <body>
         <button onclick="notifyMe()">Notificame!</button>
+
+<button onclick="notifyMe2()">Notificame2!</button>
+        
     </body>
 </html>
