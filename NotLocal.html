@@ -16,9 +16,7 @@
                 var title = "Notificación";
                 var options = {
                     body: body,
-                    icon: icon,
-                    lang: "ES",
-                    renotify: "true"
+                    icon: icon
                 }
                 var notification = new Notification(title,options);
                 var audio = new Audio('http://www.quecodigo.com/web/antigua/sounds/notificacion.mp3');
@@ -64,20 +62,12 @@
                 var title2 = "Notificación";
                 var options2 = {
                     body: body2,
-                    icon: icon2,
-                    lang: "ES",
-                    renotify: "true"
+                    icon: icon2
                 }
        
 
-var notification2 = new Notification(title2,options2);
+var notification = new Notification(title2,options2);
 
-     notification2.onclick = function () {
-                    //action
-                };
-                setTimeout(notification2.close.bind(notification2), 5000);
-            }
-       
    }
 
 
