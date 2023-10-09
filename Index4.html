@@ -377,10 +377,24 @@ var actionbardata = {"siteID":"219610288","siteURL":"http:\/\/alegra58.wordpress
 <meta name="application-name" content="Alegra" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Ayuda en la oración" /><meta name="msapplication-task" content="name=Escribir una entrada;action-uri=https://wordpress.com/post/alegra58.wordpress.com;icon-uri=https://s0.wp.com/i/icons/post.ico" /><meta name="msapplication-task" content="name=Moderar los comentarios;action-uri=https://alegra58.wordpress.com/wp-admin/edit-comments.php?comment_status=moderated;icon-uri=https://s0.wp.com/i/icons/comment.ico" /><meta name="msapplication-task" content="name=Subir nuevo medio;action-uri=https://alegra58.wordpress.com/wp-admin/media-new.php;icon-uri=https://s0.wp.com/i/icons/media.ico" /><meta name="msapplication-task" content="name=Estadísticas del blog;action-uri=https://alegra58.wordpress.com/wp-admin/index.php?page=stats;icon-uri=https://s0.wp.com/i/icons/stats.ico" /><meta name="description" content="Ayuda en la oración" />
 <style media="print">#wpadminbar { display:none; }</style>
 	<style media="screen">
-	html { margin-top: 32px !important; }
+	html { margin-top: 1px !important; }
 	@media screen and ( max-width: 782px ) {
-		html { margin-top: 46px !important; }
+		html { margin-top: 1px !important; }
 	}
+    
+    #banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 3px;
+  text-align: left;
+}
+
+
+
+    
 </style>
 	<link rel="icon" href="https://alegra58.files.wordpress.com/2023/05/alegra512-edited.jpg?w=32" sizes="32x32" />
 <link rel="icon" href="https://alegra58.files.wordpress.com/2023/05/alegra512-edited.jpg?w=157" sizes="192x192" />
@@ -514,8 +528,10 @@ var actionbardata = {"siteID":"219610288","siteURL":"http:\/\/alegra58.wordpress
  */
     </script>
 
+  
 
-  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+
+  <div id="banner" class="alert alert-warning alert-dismissible fade show" role="alert">
     <div class="container">
         <div class="row">
     <div class="col-sm-8">
