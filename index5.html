@@ -387,7 +387,7 @@ var actionbardata = {"siteID":"219610288","siteURL":"http:\/\/alegra58.wordpress
   top: 0;
   left: 0;
   width: 100%;
-
+max-width: 500px;
   padding: 1px;
   text-align: left;
 }
@@ -1391,6 +1391,21 @@ if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
       });
     }
   });
+  
+  
+  
+  window.addEventListener('scroll', function() {
+  var bannerDiv = document.getElementById('banner');
+  if (window.pageYOffset > 50) {
+    bannerDiv.style.display = 'none';
+  } else {
+    bannerDiv.style.display = 'block';
+  }
+});
+
+  
+  
+  
 </script>
 
   
