@@ -1440,10 +1440,12 @@ window.addEventListener("load", finicia);
 // Verificar si la página ha sido instalada
 if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
   // La página ha sido instalada
-  alert('La página ha sido instalada');
+  document.getElementById('btninstalar').style.display = 'none';
+		 document.getElementById('banner').style.display = 'none';
 } else {
   // La página no ha sido instalada
-  alert('La página no ha sido instalada');
+  document.getElementById('btninstalar').style.display = 'block';
+		 document.getElementById('banner').style.display = 'block';
 }
 
 
