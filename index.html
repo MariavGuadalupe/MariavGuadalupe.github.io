@@ -1411,15 +1411,7 @@ if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
 
   
 
-window.addEventListener('load', function() {
-   // Verificar si la página se está ejecutando como una PWA instalada
-if (window.navigator.standalone) {
-  // Ocultar el botón
-   document.getElementById('btninstalar').style.display = 'none';
-		 document.getElementById('banner').style.display = 'none';
-}
 
-});
 
 
 
@@ -1443,6 +1435,20 @@ window.addEventListener("load", finicia);
 
 
  function finicia(){
+
+
+// Verificar si la página ha sido instalada
+if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
+  // La página ha sido instalada
+  alert('La página ha sido instalada');
+} else {
+  // La página no ha sido instalada
+  alert('La página no ha sido instalada');
+}
+
+
+
+	 
 
 if (Notification.permission === 'denied') {
 
