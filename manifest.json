@@ -20,9 +20,9 @@
 },
 {  
 
-	"src": "/Alegra360.jpeg",
+	"src": "/Alegra360.png",
 	"type": "image/jpeg",
-	"sizes": "360x360",
+	"sizes": "512x512",
     "purpose": "maskable"
 
 },
