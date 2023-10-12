@@ -1380,7 +1380,7 @@ if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
-    document.getElementById('btninstalar').style.display = 'block';
+    
   });
 
   document.getElementById('btninstalar').addEventListener('click', () => {
@@ -1405,7 +1405,20 @@ if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
   if (window.pageYOffset > 50) {
     bannerDiv.style.display = 'none';
   } else {
-    bannerDiv.style.display = 'block';
+
+if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
+  // La página ha sido instalada
+  document.getElementById('btninstalar').style.display = 'none';
+		 document.getElementById('banner').style.display = 'none';
+} else {
+  // La página no ha sido instalada
+  document.getElementById('btninstalar').style.display = 'block';
+		 document.getElementById('banner').style.display = 'block';
+}
+
+
+	  
+    
   }
 });
 
