@@ -1503,35 +1503,13 @@ window.addEventListener("load", finicia);
 
 var userAgent = navigator.userAgent.toLowerCase();
 
-if (userAgent.indexOf('chrome') > -1) {
-  alert('El navegador es Chrome');
-} else if (userAgent.indexOf('safari') > -1) {
-  alert('El navegador es Safari');
-} else if (userAgent.indexOf('firefox') > -1) {
-  console.log('El navegador es Firefox');
-} else if (userAgent.indexOf('opera') > -1) {
-  console.log('El navegador es Opera');
-} else if (userAgent.indexOf('msie') > -1 || userAgent.indexOf('trident') > -1) {
-  alert('El navegador es Internet Explorer');
-} else {
-  alert('El navegador no se pudo identificar');
-}
-
-
-
-	 
-if (navigator.userAgent.indexOf("Chrome") != -1 ) {
-  alert("La página se está ejecutando en Google Chrome");
-} else {
-  alert("La página no se está ejecutando en Google Chrome");
-}
-
+document.getElementById('banner3').style.display = 'none';
+		 document.getElementById('banner').style.display = 'none';
 
 // Verificar si la página ha sido instalada
 if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
   // La página ha sido instalada
-  document.getElementById('btninstalar').style.display = 'none';
-		 document.getElementById('banner').style.display = 'none';
+  
 } else {
   // La página no ha sido instalada
   document.getElementById('btninstalar').style.display = 'block';
