@@ -428,7 +428,7 @@ max-width: 700px;
     
      #abrirC {
   position: absolute;
-  top: 145px;
+  top: 135px;
   right: 5px;
   display: block;
 }
@@ -437,9 +437,9 @@ max-width: 700px;
 
 #close-button {
   position: absolute;
-  top: 3px;
-  right: 3px;
-  padding: 5px;
+  top: 4px;
+  right: 4px;
+  padding: 6px;
   cursor: pointer;
 }
     
@@ -585,7 +585,7 @@ max-width: 700px;
 
 <div id="banner" style="width: 100%; height: 145px; border: 0px solid transparent;">
   
-  <img src="https://mariavguadalupe.github.io/AngelB.gif" alt="Banner GIF" style="width: 100%; height: 100%; border: 1px solid transparent;">
+  <img src="https://mariavguadalupe.github.io/AngelB.gif" alt="Banner GIF" style="width: 100%; height: 95%; border: 1.5px solid transparent;">
 
   
      
@@ -1695,13 +1695,14 @@ function onDenied(){
   var boton = document.getElementById('banner2');
 var botonC = document.getElementById('close-button');
 	    boton.style.display = 'none';
-
+var botonA = document.getElementById('banner2');
   setInterval(function() {
     boton.style.display = 'block';
+	botonA.style.display = 'none';  
     setTimeout(function() {
-      boton.style.display = 'block';
-    }, 8000);
-  }, 9000);
+      botonA.style.display = 'block';
+    }, 9000);
+  }, 9500);
 
   botonC.addEventListener('click', function() {
     boton.style.display = 'none';
