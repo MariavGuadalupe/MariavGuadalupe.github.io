@@ -435,7 +435,7 @@ max-width: 700px;
 
 
 
-.close-button {
+#close-button {
   position: absolute;
   top: 3px;
   right: 3px;
@@ -593,7 +593,7 @@ max-width: 700px;
 </div>
   
   <div id="banner2" style="width: 100%; height: 145px; border: 1px solid transparent;" >
-  <div class="close-button">X</div>
+  <div id="close-button">X</div>
  <img src="https://mariavguadalupe.github.io/AngelA.gif" style="width: 100%; height: 123px; border: 1px solid transparent;">
   
      <button  id="abrirC" type="button" class="btn btn-danger btn-sm" >&nbspAbrir Chrome&nbsp</button>
@@ -1693,7 +1693,7 @@ function onDenied(){
     
     window.addEventListener('DOMContentLoaded', function() {
   var boton = document.getElementById('banner2');
-// var botonC = document.getElementById('');
+var botonC = document.getElementById('close-button');
 	    boton.style.display = 'none';
 
   setInterval(function() {
@@ -1703,7 +1703,7 @@ function onDenied(){
     }, 8000);
   }, 9000);
 
-  boton.addEventListener('click', function() {
+  botonC.addEventListener('click', function() {
     boton.style.display = 'none';
   });
 });
