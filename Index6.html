@@ -1693,13 +1693,14 @@ function onDenied(){
     
     window.addEventListener('DOMContentLoaded', function() {
   var boton = document.getElementById('banner2');
-  boton.style.display = 'none';
+// var botonC = document.getElementById('');
+	    boton.style.display = 'none';
 
   setInterval(function() {
     boton.style.display = 'block';
     setTimeout(function() {
-      boton.style.display = 'none';
-    }, 9000);
+      boton.style.display = 'block';
+    }, 8000);
   }, 9000);
 
   boton.addEventListener('click', function() {
