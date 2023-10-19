@@ -1510,11 +1510,10 @@ window.addEventListener("load", finicia);
 
  function finicia(){
 
-var userAgent = navigator.userAgent.toLowerCase();
 
 document.getElementById('banner3').style.display = 'none';
-		 document.getElementById('banner').style.display = 'none';
-
+ document.getElementById('banner').style.display = 'none';
+	 
 // Verificar si la página ha sido instalada
 if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
   // La página ha sido instalada
