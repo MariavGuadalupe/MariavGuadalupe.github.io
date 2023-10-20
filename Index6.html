@@ -581,7 +581,7 @@ max-width: 600px;
     </script>
 
    
-  <div id="bannerH" style="width: 100%; height: 140px; border: 0px solid transparent; display: none">
+  <div id="bannerH" style="width: 100%; height: 145px; border: 0px solid transparent;">
 
 <div id="banner" style="width: 100%; height: 140px; border: 0px solid transparent; display: none">
   
@@ -1464,8 +1464,10 @@ if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
   var bannerDiv = document.getElementById('bannerH');
   if (window.pageYOffset > 50) {
     bannerDiv.style.display = 'none';
-  } else {
-/*
+  } 
+  /*
+  else {
+
 if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
   // La página ha sido instalada
  
@@ -1476,9 +1478,9 @@ if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.
 }
 
 
-	*/  
     
   }
+	*/  
 });
 
   
