@@ -429,7 +429,7 @@ max-width: 700px;
      #abrirC {
   position: absolute;
   top: 135px;
-  right: 5px;
+  right: 7px;
   display: block;
 }
 
@@ -437,8 +437,8 @@ max-width: 700px;
 
 #close-button {
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 5px;
+  right: 7px;
   padding: 6px;
   cursor: pointer;
 }
@@ -583,24 +583,24 @@ max-width: 700px;
    
   
 
-<div id="banner" style="width: 100%; height: 145px; border: 0px solid transparent;">
+<div id="banner" style="width: 100%; height: 140px; border: 0px solid transparent; display: none">
   
-  <img src="https://mariavguadalupe.github.io/AngelB.gif" alt="Banner GIF" style="width: 100%; height: 95%; border: 1.5px solid transparent;">
+  <img src="https://mariavguadalupe.github.io/AngelB.gif" alt="Banner GIF" style="width: 100%; height: 90%; border: 1.5px solid transparent;">
 
   
      
   
 </div>
   
-  <div id="banner2" style="width: 100%; height: 145px; border: 1px solid transparent;" >
+  <div id="banner2" style="width: 100%; height: 140px; border: 1px solid transparent; display: none" >
   <div id="close-button">X</div>
- <img src="https://mariavguadalupe.github.io/AngelA.gif" style="width: 100%; height: 123px; border: 1px solid transparent;">
+ <img src="https://mariavguadalupe.github.io/AngelA.gif" style="width: 100%; height: 140px; border: 1px solid transparent;">
   
      <button  id="abrirC" type="button" class="btn btn-danger btn-sm" >&nbspAbrir Chrome&nbsp</button>
   
 </div>   
 
-<div id="banner3" style="width: 100%; height: 140px; border: 0px solid transparent;">
+<div id="banner3" style="width: 100%; height: 140px; border: 0px solid transparent; display: none">
   
   <img src="https://mariavguadalupe.github.io/Angelita2i.gif" alt="Banner GIF" style="width: 68%; height: 90%; border: 1px solid transparent;">
 
@@ -1692,20 +1692,20 @@ function onDenied(){
   <script>
     
     window.addEventListener('DOMContentLoaded', function() {
-  var boton = document.getElementById('banner2');
 var botonC = document.getElementById('close-button');
-	    boton.style.display = 'none';
-var botonA = document.getElementById('banner');
+      var banner2 = document.getElementById('banner2');
+	    banner2.style.display = 'none';
+var banner1 = document.getElementById('banner');
   setInterval(function() {
-    boton.style.display = 'block';
-	botonA.style.display = 'none';  
+    banner2.style.display = 'block';
+	banner1.style.display = 'none';  
     setTimeout(function() {
-     botonA.style.display = 'block';
+     banner1.style.display = 'block';
     }, 9000);
-  }, 9500);
+  }, 9000);
 
   botonC.addEventListener('click', function() {
-    boton.style.display = 'none';
+    banner2.style.display = 'none';
   });
 });
 
