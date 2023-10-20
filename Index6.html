@@ -581,7 +581,7 @@ max-width: 600px;
     </script>
 
    
-  
+  <div id="bannerH" style="width: 100%; height: 140px; border: 0px solid transparent; display: none">
 
 <div id="banner" style="width: 100%; height: 140px; border: 0px solid transparent; display: none">
   
@@ -614,7 +614,7 @@ max-width: 600px;
 </div>
 
   
-  
+  </div>
   
   
   
@@ -1461,19 +1461,18 @@ if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
   
   
   window.addEventListener('scroll', function() {
-  var bannerDiv = document.getElementById('banner');
+  var bannerDiv = document.getElementById('bannerH');
   if (window.pageYOffset > 50) {
     bannerDiv.style.display = 'none';
   } else {
 
 if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
   // La página ha sido instalada
-  document.getElementById('btninstalar').style.display = 'none';
-		 document.getElementById('banner').style.display = 'none';
+ 
 } else {
   // La página no ha sido instalada
-  document.getElementById('btninstalar').style.display = 'block';
-		 document.getElementById('banner').style.display = 'block';
+ // document.getElementById('btninstalar').style.display = 'block';
+//		 document.getElementById('banner').style.display = 'block';
 }
 
 
@@ -1510,8 +1509,7 @@ window.addEventListener("load", finicia);
  function finicia(){
 
 
-document.getElementById('banner3').style.display = 'none';
- document.getElementById('banner').style.display = 'none';
+
 	 
 // Verificar si la página ha sido instalada
 if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
@@ -1519,8 +1517,7 @@ if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.
   
 } else {
   // La página no ha sido instalada
-  document.getElementById('btninstalar').style.display = 'block';
-		 document.getElementById('banner').style.display = 'block';
+ ibanner();
 }
 
 
@@ -1690,47 +1687,28 @@ function onDenied(){
 
   
   
-  <script>
-    
-    window.addEventListener('DOMContentLoaded', function() {
-var botonC = document.getElementById('close-button');
-      var banner2 = document.getElementById('banner2');
-	    banner2.style.display = 'none';
-var banner1 = document.getElementById('banner');
-  setInterval(function() {
-    banner2.style.display = 'block';
-	banner1.style.display = 'none';  
-    setTimeout(function() {
-     banner1.style.display = 'block';
-    }, 12000);
-  }, 9400);
-
-  botonC.addEventListener('click', function() {
-    banner2.style.display = 'none';
-  });
-});
-
-    
-</script>
 	
   <script>
-  window.addEventListener('DOMContentLoaded', function() {
+  function ibanner() {
+	  
     var banner1 = document.getElementById('banner');
     var banner2 = document.getElementById('banner2');
     banner2.style.display = 'none';
-    // banner3.style.display = 'none';
+    // banner.style.display = 'none';
 	  
     setTimeout(function() {
       banner2.style.display = 'block';
       banner1.style.display = 'none';
     }, 8700);
 
-    var botonC = document.getElementById('close-button');
+ /*   var botonC = document.getElementById('close-button');
     botonC.addEventListener('click', function() {
       banner2.style.display = 'none';
 	    banner1.style.display = 'none';
     });
-  });
+    */
+  }
+	  
 </script>
 
 
