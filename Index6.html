@@ -596,7 +596,7 @@ max-width: 600px;
   <div id="close-button">X</div>
  <img src="https://mariavguadalupe.github.io/Banner2.gif" style="width: 100%; height: 140px;  border: 1px solid transparent;">
   
-     <button  id="abrirC" type="button" class="btn btn-danger btn-sm" >&nbspAbrir Chrome&nbsp</button>
+     <button  id="abrirC" type="button" href="" class="btn btn-danger btn-sm" >&nbspAbrir Chrome&nbsp</button>
   
 </div>   
 
@@ -1715,17 +1715,17 @@ var banner1 = document.getElementById('banner');
   <script>
   window.addEventListener('DOMContentLoaded', function() {
     var banner1 = document.getElementById('banner');
-    var banner2 = document.getElementById('banner2');
+    var banner3 = document.getElementById('banner3');
     //banner2.style.display = 'none';
 
     setTimeout(function() {
-      banner2.style.display = 'block';
+      banner3.style.display = 'block';
       banner1.style.display = 'none';
     }, 8700);
 
     var botonC = document.getElementById('close-button');
     botonC.addEventListener('click', function() {
-      banner2.style.display = 'none';
+      banner3.style.display = 'none';
 	    banner1.style.display = 'none';
     });
   });
