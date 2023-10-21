@@ -1473,6 +1473,12 @@ if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
   
   
   window.addEventListener('scroll', function() {
+    
+    if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
+  // La página ha sido instalada
+  
+} else{
+    
   var bannerDiv = document.getElementById('bannerH');
   if (window.pageYOffset > 50) {
     bannerDiv.style.display = 'none';
@@ -1481,7 +1487,7 @@ if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
  if (window.pageYOffset < 50) {
     bannerDiv.style.display = 'block';
   } 
-	  
+}
   /*
   else {
 
