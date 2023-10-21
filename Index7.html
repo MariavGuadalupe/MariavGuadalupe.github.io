@@ -673,7 +673,7 @@ max-width: 500px;
   <div id="banner2" style="width: 100%; height: 140px; border: 1px solid transparent; display: none" >
   
  <img src="https://mariavguadalupe.github.io/banner7.gif" style="width: 100%; height: 140px;  border: 1px solid transparent;" id="imgb1">
-<img src="https://mariavguadalupe.github.io/Bainstalar.gif" style="width: 100%; height: 140px;  border: 1px solid transparent; display: none" id="imgb2">
+
 <a href="https://apps.apple.com/es/app/google-chrome/id535886823" target="_blank" id="bca1"></a>
 <a href="https://www.google.com.mx/url?sa=t&source=web&rct=j&opi=89978449&url=https://play.google.com/store/apps/details%3Fid%3Dcom.android.chrome%26hl%3Des%26gl%3DUS%26referrer%3Dutm_source%253Dgoogle%2526utm_medium%253Dorganic%2526utm_term%253Dchrome%26pcampaignid%3DAPPU_1_2fEyZYznEZ3LkPIPqsCQmAk&ved=2ahUKEwjMt8fWyYWCAxWdJUQIHSogBJMQ8oQBegQIChAB&usg=AOvVaw0151vmFDLSjJUprX_8zi3B" target="_blank" id="bca2"></a>
 
@@ -684,7 +684,7 @@ max-width: 500px;
 
 <div id="banner3" style="width: 100%; height: 140px; border: 0px solid transparent; display: none">
   <div id="close-button">X</div>
-  <img src="https://mariavguadalupe.github.io/Angelita2i.gif" alt="Banner GIF" style="width: 68%; height: 90%; border: 1px solid transparent;">
+  <img src="https://mariavguadalupe.github.io/Bainstalar.gif" alt="Banner GIF" style="width: 68%; height: 90%; border: 1px solid transparent;">
 
     <button  id="btninstalar" type="button" class="btn btn-danger btn-sm" onclick="promptEvent.prompt()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-down" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M7.646 10.854a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 9.293V5.5a.5.5 0 0 0-1 0v3.793L6.354 8.146a.5.5 0 1 0-.708.708l2 2z"></path>
@@ -1798,12 +1798,12 @@ function onDenied(){
       banner1.style.display = 'none';
    setTimeout(function() {
 
- var imgb1 = document.getElementById('imgb1');
- var imgb2 = document.getElementById('imgb2');
-	   
-      imgb2.style.display = 'block';
-      imgb1.style.display = 'none';
-    }, 3500);
+ var banner3 = document.getElementById('banner3');
+
+	banner2.style.display = 'none';   
+      banner3.style.display = 'block';
+      
+    }, 5000);
 	    
     }, 8700);
 
