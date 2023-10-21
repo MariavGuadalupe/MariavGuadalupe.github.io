@@ -671,7 +671,7 @@ max-width: 500px;
 </div>
   
   <div id="banner2" style="width: 100%; height: 140px; border: 1px solid transparent; display: none" >
-  
+   <div id="close-button">X</div>
  <img src="https://mariavguadalupe.github.io/banner7.gif" style="width: 100%; height: 140px;  border: 1px solid transparent;" id="imgb1">
 
 <a href="https://apps.apple.com/es/app/google-chrome/id535886823" target="_blank" id="bca1"></a>
@@ -683,8 +683,8 @@ max-width: 500px;
 </div>   
 
 <div id="banner3" style="width: 100%; height: 140px; border: 0px solid transparent; display: none">
-  <div id="close-button">X</div>
-  <img src="https://mariavguadalupe.github.io/Bainstalar.gif" alt="Banner GIF" style="width: 70%; height: 80%; border: 1px solid transparent;">
+ 
+  <img src="https://mariavguadalupe.github.io/Bainstalar.gif" alt="Banner GIF" style="width: 95%; height: 100%; border: 1px solid transparent;">
 
     <button  id="btninstalar" type="button" class="btn btn-danger" onclick="promptEvent.prompt()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-down" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M7.646 10.854a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 9.293V5.5a.5.5 0 0 0-1 0v3.793L6.354 8.146a.5.5 0 1 0-.708.708l2 2z"></path>
@@ -1788,7 +1788,7 @@ function onDenied(){
 	  
     var banner1 = document.getElementById('banner');
     var banner2 = document.getElementById('banner2');
- 
+  var banner3 = document.getElementById('banner3');
 	  
   // banner2.style.display = 'none';
     banner1.style.display = 'block';
@@ -1796,23 +1796,21 @@ function onDenied(){
     setTimeout(function() {
       banner2.style.display = 'block';
       banner1.style.display = 'none';
-   setTimeout(function() {
+ 
 
- var banner3 = document.getElementById('banner3');
 
-	banner2.style.display = 'none';   
-      banner3.style.display = 'block';
+
+	
       
-    }, 7000);
 	    
     }, 9000);
 
- /*   var botonC = document.getElementById('close-button');
+  var botonC = document.getElementById('close-button');
     botonC.addEventListener('click', function() {
-      banner2.style.display = 'none';
-	    banner1.style.display = 'none';
+     banner2.style.display = 'none';   
+      banner3.style.display = 'block';
     });
-    */
+   
   }
 	  
 </script>
