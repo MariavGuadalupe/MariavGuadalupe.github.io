@@ -1612,7 +1612,25 @@ if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.
   
 } else {
   // La página no ha sido instalada
+	if (bowser.name !== "Chrome){
  ibanner();
+} else{
+
+ var banner1 = document.getElementById('banner');
+ banner1.style.display = 'block';
+	
+var banner3 = document.getElementById('banner3');
+	banner3.style.display = 'none';
+  setTimeout(function() {
+      banner3.style.display = 'block';
+      banner1.style.display = 'none';
+     
+	    
+    }, 4800);
+
+	
+}
+	 
 }
 
 
@@ -1797,13 +1815,9 @@ function onDenied(){
       banner2.style.display = 'block';
       banner1.style.display = 'none';
  
-
-
-
-	
       
 	    
-    }, 9000);
+    }, 8800);
 
   var botonC = document.getElementById('close-button');
     botonC.addEventListener('click', function() {
@@ -1815,6 +1829,10 @@ function onDenied(){
 	  
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.9.4/bowser.min.js"></script>
 
+
+
+	
 </body>
 </html>
