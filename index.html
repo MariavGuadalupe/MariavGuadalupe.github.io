@@ -661,15 +661,18 @@ max-width: 500px;
    
   <div id="bannerH" style="width: 100%; height: 150px;">
 
+    <div id="banner4" style="width: 100%; height: 140px; border: 0px solid transparent; display: none">
+  
+  <img src="https://mariavguadalupe.github.io/Dialogo1.gif" alt="Banner GIF" style="width: 100%; height: 90%; border: 1px solid transparent;">  
+</div>
+    
+    
 <div id="banner" style="width: 100%; height: 140px; border: 0px solid transparent; display: none">
   
-  <img src="https://mariavguadalupe.github.io/Banner1.gif" alt="Banner GIF" style="width: 100%; height: 90%; border: 1px solid transparent;">
-
-  
-     
-  
+  <img src="https://mariavguadalupe.github.io/Banner1.gif" alt="Banner GIF" style="width: 100%; height: 90%; border: 1px solid transparent;">  
 </div>
   
+    
   <div id="banner2" style="width: 100%; height: 140px; border: 1px solid transparent; display: none" >
    <div id="close-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">X</div>
  <img src="https://mariavguadalupe.github.io/banner7.gif" style="width: 100%; height: 140px;  border: 1px solid transparent;" id="imgb1">
@@ -1624,7 +1627,9 @@ window.addEventListener("DOMContentLoaded", finicia);
 // Verificar si la página ha sido instalada
 if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
   // La página ha sido instalada
-  
+      var banner4 = document.getElementById('banner4');
+	        banner4.style.display = 'block';
+        
 } else {
   // La página no ha sido instalada
 	if (bowser.name !== "Chrome"){
@@ -1848,7 +1853,18 @@ function onDenied(){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.9.4/bowser.min.js"></script>
 
 
-
+  <script> 
+    // Código JavaScript para cambiar la imagen al hacer clic 
+    var banner4 = document.getElementById('banner4'); 
+    var imagen = banner4.querySelector('img'); 
+    var imagenes = ['/Dialogo1.gif', '/Dialogo2.gif']; 
+    var indice = 0; 
+ 
+    banner4.addEventListener('click', function() { 
+     indice = (indice + 1) % imagenes.length; 
+      imagen.src = imagenes[indice]; 
+    }); 
+  </script> 
 	
 </body>
 </html>
