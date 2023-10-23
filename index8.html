@@ -1853,7 +1853,18 @@ function onDenied(){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.9.4/bowser.min.js"></script>
 
 
-
+  <script> 
+    // Código JavaScript para cambiar la imagen al hacer clic 
+    var banner4 = document.getElementById('banner4'); 
+    var imagen = banner4.querySelector('img'); 
+    var imagenes = ['/Dialogo1.gif', '/Dialogo2.gif']; 
+    var indice = 0; 
+ 
+    banner4.addEventListener('click', function() { 
+     indice = (indice + 1) % imagenes.length; 
+      imagen.src = imagenes[indice]; 
+    }); 
+  </script> 
 	
 </body>
 </html>
