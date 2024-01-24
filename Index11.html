@@ -950,8 +950,8 @@ max-width: 500px;
 
 	
 <!-- Button trigger modal 2 -->
-<button type="button" id = "btn_modal2" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" >
-  Launch demo modal
+<button type="button" id = "btn_modal2" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" hidden>
+  Boton modal2
 </button>
 
 <!-- Modal -->
@@ -1751,7 +1751,9 @@ window.addEventListener("DOMContentLoaded", finicia);
 
  function finicia(){
 
+ const btnModal2 = document.getElementById('btn_modal2');
 
+	    btnModal2.click();
 
 	 
 // Verificar si la página ha sido instalada
