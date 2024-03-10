@@ -75,8 +75,8 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
         </q-item-section>
 
         <q-item-section>
-          <q-item-label @click="linkDoc(offline.link)">{{ contact.name }}</q-item-label>
-          <q-item-label caption lines="1">{{ contact.email }}</q-item-label>
+          <q-item-label @click="linkDoc(contact.link)">{{ contact.name }}</q-item-label>
+          <q-item-abel caption lines="1">{{ contact.email }}</q-item-abel>
         </q-item-section>
 
        
@@ -126,6 +126,7 @@ const app = Vue.createApp({
  window.location.href = "https://mariavguadalupe.github.io/";
 }
         function linkDoc(link) {
+          alert(link);
  window.location.href = link;
 }
     
@@ -156,14 +157,14 @@ const offline = [ {
   name: 'Mtra. Deyanira Hernández Lira',
   email: '',
   avatar: '9826cd/9826cd9048597711ce81a196da4f59aa_large.jpg',
-  link: "www.google.com"
+  link: 'www.google.com'
 }, 
   {               
   id: 6,
   name: 'Mtra. Deyanira Hernández Lira',
   email: '',
   avatar: '9826cd/9826cd9048597711ce81a196da4f59aa_large.jpg',
-    link: "www.facebook.com"
+    link: 'www.facebook.com'
 }                
                 
                 ]
