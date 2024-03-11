@@ -70,7 +70,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       <q-item v-for="contact in offline" :key="contact.id" class="q-mb-sm" clickable v-ripple>
         <q-item-section avatar>
           <q-avatar>
-            <img :src="`https://s3.us-east-1.amazonaws.com/doctoralia.com.mx/doctor/${contact.avatar}`">
+            <img :src="`${contact.avatar}`">
           </q-avatar>
         </q-item-section>
 
@@ -87,8 +87,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
         
         
         
-      <q-btn style="background: #00E5FF; color: white" label="Consultorio Catholic.net" href="https://www.es.catholic.net/op/consultorio/8/psicologos-catolicos.html" class="full-width" size="xl"></q-btn>
-<br>     
+     
 <br>
         <q-btn style="background: #FF0080; color: white" label="Asesoria Valora" href="https://valoraradio.org/asesoria-valora/" class="full-width" size="xl"></q-btn>
 <br>     
@@ -156,15 +155,15 @@ const offline = [ {
   id: 5,
   name: 'Mtra. Deyanira Hernández Lira',
   email: '',
-  avatar: '9826cd/9826cd9048597711ce81a196da4f59aa_large.jpg',
+  avatar: 'https://s3.us-east-1.amazonaws.com/doctoralia.com.mx/doctor/9826cd/9826cd9048597711ce81a196da4f59aa_large.jpg',
   link: 'https://www.doctoralia.com.mx/deyanira-hernandez-lira-2/terapeuta-complementario/benito-juarez'
 }, 
   {               
   id: 6,
-  name: 'Mtra. Deyanira Hernández Lira',
+  name: 'Catholic.net',
   email: '',
-  avatar: '9826cd/9826cd9048597711ce81a196da4f59aa_large.jpg',
-    link: 'https://es.catholic.net/'
+  avatar: 'https://es.catholic.net/images/logo_catholic.png',
+    link: 'https://www.es.catholic.net/op/consultorio/8/psicologos-catolicos.html'
 }                
                 
                 ]
