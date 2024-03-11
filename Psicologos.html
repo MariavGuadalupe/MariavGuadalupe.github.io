@@ -54,21 +54,9 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
     </q-toolbar>
 
     <q-list bordered>
-      
-        <q-item-section avatar>
-          
-        </q-item-section>
-
-        <q-item-section>
-          
-        </q-item-section>
-      </q-item>
-
-      <q-separator></q-separator>
-     
-
-      <q-item v-for="contact in offline" :key="contact.id" class="q-mb-sm" clickable v-ripple>
-        <q-item-section avatar>
+      <q-item v-for="contact in contacts" :key="contact.id" class="q-my-sm" clickable v-ripple>
+   
+          <q-item-section avatar>
           <q-avatar rounded size="65px">
             <img :src="`${contact.avatar}`">
           </q-avatar>
@@ -76,6 +64,26 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
         <q-item-section>
           <q-item-label @click="linkDoc(contact.link)" font-size="30px">{{ contact.name }}</q-item-label>
+          <q-item-label caption lines="1">{{ contact.email }}</q-item-label>
+        </q-item-section>
+
+      
+      </q-item>
+
+      <q-separator></q-separator>
+      <q-item-label header>Contactos externos</q-item-label>
+
+     
+
+      <q-item v-for="contact in offline" :key="contact.id" class="q-mb-sm" clickable v-ripple>
+        <q-item-section thumbnail>
+          
+            <img :src="`${contact.avatar}`">
+          </q-avatar>
+        </q-item-section>
+
+        <q-item-section >
+          <q-item-label  @click="linkDoc(contact.link)" font-size="30px">{{ contact.name }}</q-item-label>
           <q-item-abel caption lines="1">{{ contact.email }}</q-item-abel>
         </q-item-section>
 
@@ -127,50 +135,30 @@ const app = Vue.createApp({
 }
     
     const contacts = [ {
-  id: 1,
-  name: 'Ruddy Jedrzej',
-  email: 'zczczczxczxczx@discuz.net',
-  letter: 'R'
-}, {
-  id: 2,
-  name: 'Mallorie Alessandrini',
-  email: 'malessandrini1@marketwatch.com',
-  letter: 'M'
-}, {
-  id: 3,
-  name: 'Elisabetta Wicklen',
-  email: 'ewicklen2@microsoft.com',
-  letter: 'En'
-}, {
-  id: 4,
-  name: 'Seka Fawdrey',
-  email: 'sfawdrey3@wired.com',
-  letter: 'S'
-} ]
-
-const offline = [ {
-  id: 5,
+ id: 1,
   name: 'Mtra. Deyanira Hernández Lira',
   email: '',
   avatar: 'https://s3.us-east-1.amazonaws.com/doctoralia.com.mx/doctor/9826cd/9826cd9048597711ce81a196da4f59aa_large.jpg',
   link: 'https://www.doctoralia.com.mx/deyanira-hernandez-lira-2/terapeuta-complementario/benito-juarez'
-}, 
-  {               
-  id: 6,
+
+} ]
+
+const offline = [ {         
+  id: 2,
   name: 'Consultorio de Catholic.net',
   email: '',
   avatar: 'https://es.catholic.net/images/logo_catholic.png',
     link: 'https://www.es.catholic.net/op/consultorio/8/psicologos-catolicos.html'
 }, 
   {               
-  id: 7,
+  id: 3,
   name: 'Asesoria Valora',
   email: '',
   avatar: 'https://3.bp.blogspot.com/-UaonUxv7bWQ/UJGhtQe-5iI/AAAAAAAAAAo/c-VnQtxhcjM/s400/logo%2B_blog.png',
     link: 'https://valoraradio.org/asesoria-valora/'
   }, 
   {               
-  id: 8,
+  id: 4,
   name: 'Centro de escucha Cenyeliztli',
   email: '',
   avatar: 'https://cenyeliztli.org/wp-content/uploads/2023/03/Variante-logo-Cenyeliztli-c-1.png',
@@ -179,7 +167,7 @@ const offline = [ {
                 
                 ]
 
-    
+   
     
     return {
       
