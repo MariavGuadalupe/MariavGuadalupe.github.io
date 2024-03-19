@@ -253,9 +253,7 @@ const app = Vue.createApp({
         
     
         function alert1() {
-alert("aqui2");
-          
-   
+  
     let deferredPrompt;
 
   window.addEventListener('beforeinstallprompt', (e) => {
@@ -269,7 +267,7 @@ alert("aqui2");
       deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
-         //console.log('La página se ha instalado correctamente');
+         alert('La página se ha instalado correctamente');
           document.getElementById('btninstalar').style.display = 'none';
 		 document.getElementById('banner').style.display = 'none';
 		
