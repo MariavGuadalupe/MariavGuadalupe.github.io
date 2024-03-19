@@ -160,6 +160,28 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
     </q-banner>
           
           
+             <q-responsive :ratio="1" style="width: 300px; max-width: 400px;">
+          
+        <q-carousel
+      v-model="slide"
+      swipeable
+      animated
+      :control-type="controlType"
+      control-color="purple"
+      navigation
+      padding
+      arrows
+      height="350px"
+      class="text-purple rounded-borders"
+    >
+      <q-carousel-slide :name="1" img-src="https://mariavguadalupe.github.io/Seamos_felices.gif"></q-carousel-slide>
+      <q-carousel-slide :name="2" img-src="https://mariavguadalupe.github.io/FraseG1.gif"></q-carousel-slide>
+      <q-carousel-slide :name="3" img-src="https://mariavguadalupe.github.io/FraseG2.gif"></q-carousel-slide>
+      <q-carousel-slide :name="4" img-src="https://mariavguadalupe.github.io/FraseG3.gif"></q-carousel-slide>
+    </q-carousel>
+          
+      </q-responsive>     
+          
           
           
           
@@ -226,8 +248,8 @@ const app = Vue.createApp({
   setup () {
         
     return {
-      
-      drawer: ref(false)
+            drawer: ref(false),
+      slide: ref(1)
     }
   }
 })
