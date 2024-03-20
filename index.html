@@ -353,6 +353,8 @@ window.addEventListener("DOMContentLoaded", finicia);
 // Verificar si la página ha sido instalada
 if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
   // La página ha sido instalada
+  
+  alert("instalada");
       var banner = document.getElementById('banner');
 	        banner.style.display = 'none';
         
