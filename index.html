@@ -282,7 +282,7 @@ app.mount('#q-app')
   });
 
  document.getElementById('btninstalar').addEventListener('click', () => {
-	 console.log('dentro');
+	 alert('dentro');
     if (deferredPrompt) {
       deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choiceResult) => {
@@ -324,93 +324,16 @@ app.mount('#q-app')
 
 <script>
 
-
-		// Obtén la referencia al botón y a la imagen
-const botonModal2 = document.getElementById('btn_modal2');
-const divimagen4 = document.getElementById('banner4');
-
-// Agrega un event listener al hacer clic en la imagen
-divimagen4.addEventListener('click', function() {
-  // Simula el clic en el botón
- botonModal2.click();
-});
-
-
 		
-
-		
-window.addEventListener("load", finicia);
-
-
-
- function finicia(){
-
-
- alert("finicia");
-	 
- const btnModal2 = document.getElementById('btn_modal2');
-
-	    btnModal2.click();
-
-	 
-// Verificar si la página ha sido instalada
-if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
-  // La página ha sido instalada
-	 alert("No se suscribio");
-  
-      var banner = document.getElementById('banner');
-	        banner.style.display = 'none';
-        
-} else {
-  // La página no ha sido instalada
-	if (bowser.name !== "Chrome"){
- ibanner();
-} else{
-
- var banner1 = document.getElementById('banner');
- banner1.style.display = 'block';
-	
-var banner3 = document.getElementById('banner3');
-	banner3.style.display = 'none';
-  setTimeout(function() {
-      banner3.style.display = 'block';
-      banner1.style.display = 'none';
-     
-	    
-    }, 4800);
+window.addEventListener("load", finicio);
 
 	
-}
-	 
-}
+ function finicio(){
 
-
-
-	 
-
-if (Notification.permission === 'denied') {
-
-	    const btnModal = document.getElementById('btn_modal');
-
-	    btnModal.click();
-	   // $("#notiDes").hide();
-  
- 
-}
-
-
-if (Notification.permission === 'granted') {
-
-	 //   $("#notiDes").hide();
-  
-}
-		
-
-
-		
-
+ alert("finicia");		
 		
  } 
+	
 </script>
 
 
