@@ -257,26 +257,12 @@ const app = Vue.createApp({
     
         function alert1() {
           
-   
-if (this.deferredPrompt) {
-  this.deferredPrompt.prompt();
-
-  this.deferredPrompt.userChoice.then((choiceResult) => {
-    if (choiceResult.outcome === 'accepted') {
-      console.log('El usuario aceptó la instalación');
-    } else {
-      console.log('El usuario canceló la instalación');
-    }
-    this.deferredPrompt = null;
-  });
-}
-          
-          
-          
-alert("aqui4");
-       
-   
-    
+ window.addEventListener("beforeinstallprompt", (e) => {
+    console.log(e); // this only fires during Lighthouse Audit
+    e.preventDefault();
+    this.deferredPrompt = e;
+    console.log(`'beforeinstallprompt' event was fired in mounted.`) // only during Lighthouse Audit
+  })   
   
     
           
