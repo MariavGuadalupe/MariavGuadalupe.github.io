@@ -280,14 +280,15 @@ app.mount('#q-app')
     
   });
 
-  document.getElementById('btninstalar').addEventListener('click', () => {
-    console.log('ha entrado');
+ document.getElementById('btninstalar').addEventListener('click', () => {
+	 console.log('dentro');
     if (deferredPrompt) {
       deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
          console.log('La página se ha instalado correctamente');
-          
+          document.getElementById('btninstalar').style.display = 'none';
+		 document.getElementById('banner3').style.display = 'none';
 		
         }
         deferredPrompt = null;
