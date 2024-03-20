@@ -368,6 +368,42 @@ if (bowser.name !== "Chrome"){
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.9.4/bowser.min.js"></script>
 	  
+<script type="application/javascript" src="https://sdki.truepush.com/sdk/v2.0.4/app.js" async></script>
+    <script>
+    var truepush = window.truepush || [];
+            
+    truepush.push(function(){
+        truepush.Init({
+            id: "64e110cabdb78352b845fe0f"
+        },function(error){
+          if(error) console.error(error);
+        })
+    })
+    </script>
+
+
+<script>
+  (function (w, d, s, o, f, js, fjs) {
+    w["botsonic_widget"] = o;
+    w[o] =
+      w[o] ||
+      function () {
+        (w[o].q = w[o].q || []).push(arguments);
+      };
+    (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+    js.id = o;
+    js.src = f;
+    js.async = 1;
+    fjs.parentNode.insertBefore(js, fjs);
+  })(window, document, "script", "Botsonic", "https://widget.writesonic.com/CDN/botsonic.min.js");
+  Botsonic("init", {
+    serviceBaseUrl: "https://api.botsonic.ai",
+    token: "b993aa3d-d470-4e86-9137-c38c329a22b3",
+  });
+</script>
+
+
+
 	  
     
   </body>
