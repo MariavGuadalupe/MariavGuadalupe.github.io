@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html>
+  <!--
+    WARNING! Make sure that you match all Quasar related
+    tags to the same version! (Below it's "@2.12.5")
+  -->
+
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/quasar.prod.css" rel="stylesheet" type="text/css">
+
+    <link rel="manifest" href="./manifest.json">
+    
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>María alegra</title>
+  
+  <script type="module">
+    import { menuController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.menuController = menuController;
+  </script>
+
+    
+  </head>
+
+  <body>
+
+
+    
+    <!-- example of injection point where you write your app template -->
+   <!--
+Forked from:
+https://quasar.dev/vue-components/carousel#example--vertical-mode
+-->
+<div id="q-app" style="min-height: 100vh;">
+
+  
+  <div class="q-pa-md">
+    
+    
+    
+ <q-layout view="lHh Lpr lff" container style="height: 100vh" class="shadow-2 rounded-borders">
+      <q-header elevated class="bg-cyan-8">
+        <q-toolbar>
+          <q-toolbar-title>María alegra</q-toolbar-title>
+          <q-btn flat @click="drawer = !drawer" round dense icon="menu"></q-btn>
+        </q-toolbar>
+      </q-header>
+
+      <q-drawer
+        v-model="drawer"
+        show-if-above
+        :width="200"
+        :breakpoint="400"
+      >
+        <q-scroll-area style="height: calc(100% - 150px); margin-top: 150px; border-right: 1px solid #ddd">
+          <q-list padding>
+            <q-item clickable v-ripple href="./SagrarioLive.html">
+              <q-item-section avatar>
+                <q-icon name="church"></q-icon>
+              </q-item-section>
+
+              <q-item-section>
+                Sagrario en vivo
+              </q-item-section>
+            </q-item>
+
+            <q-item active clickable v-ripple href="./Maria.html">
+              <q-item-section avatar>
+     <q-icon name="star"></q-icon>
+              </q-item-section>
+
+              <q-item-section>
+                Santa María de Guadalupe en vivo 
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple href="./LiturgiaQ.html">
+              <q-item-section avatar>
+                <q-icon name="auto_stories"></q-icon>
+              </q-item-section>
+
+              <q-item-section>
+                   Liturgia
+              </q-item-section>
+            </q-item>
+            
+               <q-item clickable v-ripple href="./Buscador.html">
+              <q-item-section avatar>
+                <q-icon name="search"></q-icon>
+              </q-item-section>
+
+              <q-item-section>
+                      Buscador católico
+              </q-item-section>
+            </q-item>
+            
+               <q-item clickable v-ripple href="https://iglesiaynuevaevangelizacion.blogspot.com/">
+              <q-item-section avatar>
+                <q-icon name="rss_feed"></q-icon>
+              </q-item-section>
+
+              <q-item-section>
+                   Iglesia y nueva Evangelización
+              </q-item-section>
+            </q-item>
+               <q-item clickable v-ripple href="./Psicologos.html">
+              <q-item-section avatar>
+                <q-icon name="psychology"></q-icon>
+              </q-item-section>
+
+              <q-item-section>
+                   Psicólogos recomendados
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple href="./Sobrealegra.html">
+              <q-item-section avatar>
+                <q-icon name="contact_mail"></q-icon>
+              </q-item-section>
+
+              <q-item-section>
+                Sobre Alegra ...
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </q-scroll-area>
+
+        <q-img class="absolute-top" src="https://cdn.quasar.dev/img/material.png" style="height: 150px">
+          <div class="absolute-bottom bg-transparent">
+            <q-avatar size="56px" class="q-mb-sm">
+              <img src="https://mariavguadalupe.github.io/Alegra512.png">
+            </q-avatar>
+            <div class="text-weight-bold">"¿Acaso no estoy yo aquí, yo que tengo el honor de ser tu madre?</div>
+            <div></div>
+          </div>
+        </q-img>
+      </q-drawer>
+
+      <q-page-container>
+        <q-page padding>
+          
+          
+            <q-banner rounded :class="$q.dark.isActive ? 'bg-grey-9' : 'bg-grey-2'">
+           
+ 
+  <img src="https://mariavguadalupe.github.io/BannerFin.gif" alt="Banner GIF" style="width: 97%; height: 98%; border: 1px solid transparent;">
+
+     
+               <q-btn id="btninstalar" type="button" class="btn btn-danger" @click="instala"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M7.646 10.854a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 9.293V5.5a.5.5 0 0 0-1 0v3.793L6.354 8.146a.5.5 0 1 0-.708.708l2 2z"></path>
+  <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"></path>
+</svg>&nbspInstalar App</q-btn>
+              
+              
+              
+ <q-btn flat label="Abrir Chrome"></q-btn>
+              
+              
+              
+    </q-banner>
+          
+          
+             <q-responsive :ratio="1" style="width: 300px; max-width: 400px;">
+          
+        <q-carousel
+      v-model="slide"
+      swipeable
+      animated
+      :control-type="controlType"
+      control-color="purple"
+      navigation
+      padding
+      arrows
+      height="350px"
+      class="text-purple rounded-borders"
+    >
+      <q-carousel-slide :name="1" img-src="https://mariavguadalupe.github.io/Seamos_felices.gif"></q-carousel-slide>
+      <q-carousel-slide :name="2" img-src="https://mariavguadalupe.github.io/FraseG1.gif"></q-carousel-slide>
+      <q-carousel-slide :name="3" img-src="https://mariavguadalupe.github.io/FraseG2.gif"></q-carousel-slide>
+      <q-carousel-slide :name="4" img-src="https://mariavguadalupe.github.io/FraseG3.gif"></q-carousel-slide>
+    </q-carousel>
+          
+      </q-responsive>     
+          
+          
+          
+          
+          <q-card class="my-card" flat bordered>
+      <img src="https://mariavguadalupe.github.io/Seamos_felices.gif">
+
+      <q-card-actions align="right">
+        <q-btn flat round color="red" icon="favorite"></q-btn>
+        <q-btn flat round color="teal" icon="bookmark"></q-btn>
+        <q-btn flat round color="primary" icon="share"></q-btn>
+      </q-card-actions>
+    </q-card>
+          
+          <br>
+          
+              <q-card class="my-card" flat bordered>
+      <img src="https://mariavguadalupe.github.io/FraseG1.gif">
+
+      <q-card-actions align="right">
+        <q-btn flat round color="red" icon="favorite"></q-btn>
+        <q-btn flat round color="teal" icon="bookmark"></q-btn>
+        <q-btn flat round color="primary" icon="share"></q-btn>
+      </q-card-actions>
+    </q-card>
+       
+          
+          
+                   <q-card class="my-card" flat bordered>
+      <img src="https://mariavguadalupe.github.io/FraseG4.gif">
+
+      <q-card-actions align="right">
+        <q-btn flat round color="red" icon="favorite"></q-btn>
+        <q-btn flat round color="teal" icon="bookmark"></q-btn>
+        <q-btn flat round color="primary" icon="share"></q-btn>
+      </q-card-actions>
+    </q-card>
+          
+          
+          
+        </q-page>
+      </q-page-container>
+    </q-layout>
+  
+</div>
+  
+          </div>
+  
+
+  
+
+        
+    <!-- Add the following at the end of your body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/quasar.umd.prod.js"></script>
+    
+    <script>
+      
+
+             
+      /*
+        Example kicking off the UI. Obviously, adapt this to your specific needs.
+        Assumes you have a <div id="q-app"></div> in your <body> above
+       */
+    const { ref } = Vue
+
+const app = Vue.createApp({
+  
+   
+  setup () {
+        
+     function instala() {
+  let deferredPrompt;
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    
+  });
+   
+ 
+	  console.log("ha entrado pf");
+	  
+	  
+  if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(function() { console.log("Service worker registrado"); });
+    }
+        
+    
+      }
+    
+   
+    
+    return {
+            instala,
+            drawer: ref(false),
+      slide: ref(1)
+    }
+  }
+})
+
+app.use(Quasar, { config: {} })
+app.mount('#q-app')
+
+    </script>
+
+
+   
+    
+  </body>
+</html>
