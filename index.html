@@ -338,7 +338,11 @@ document.getElementById('banner1').style.display = 'none';
 
 } else {
 
+if (bowser.name !== "Chrome"){
 
+	//document.getElementById('banner1').style.display = 'none';
+	alert("no es Chrome");
+	
 }
 
  } 
@@ -346,7 +350,8 @@ document.getElementById('banner1').style.display = 'none';
 </script>
 
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.9.4/bowser.min.js"></script>
+	  
 	  
     
   </body>
