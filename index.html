@@ -339,12 +339,15 @@ divimagen4.addEventListener('click', function() {
 		
 
 		
-window.addEventListener("DOMContentLoaded", finicia);
+window.addEventListener("load", finicia);
 
 
 
  function finicia(){
 
+
+ alert("finicia");
+	 
  const btnModal2 = document.getElementById('btn_modal2');
 
 	    btnModal2.click();
@@ -353,8 +356,8 @@ window.addEventListener("DOMContentLoaded", finicia);
 // Verificar si la página ha sido instalada
 if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
   // La página ha sido instalada
+	 alert("No se suscribio");
   
-  alert("instalada");
       var banner = document.getElementById('banner');
 	        banner.style.display = 'none';
         
