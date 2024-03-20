@@ -220,6 +220,30 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       </q-card-actions>
     </q-card>
           
+            <q-btn id="btn_modal" v-show="false" label="Full Height" color="primary" @click="fullHeight = true"></q-btn>
+          
+          <q-dialog
+      v-model="fullHeight"
+      full-height
+    >
+      <q-card class="column full-height" style="width: 300px">
+        <q-card-section>
+          <div class="text-h6"> </div>
+        </q-card-section>
+
+        <q-card-section class="col q-pt-none">
+          <p>La principal característica de Alegra es el envio de notificaciones a lo largo del día que permiten recordar la verdad acerca de Dios y ayudan a manterner una vida de oración.
+	</p>
+	<p>	 En este momento las notificaciónes se encuentran bloquedas por el navegador, para poder reactivarlas configure los permisos que se otorgan al sitio por favor.
+	</p>
+        </q-card-section>
+
+        <q-card-actions align="right" class="bg-white text-teal">
+          <q-btn flat label="OK" v-close-popup></q-btn>
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+          
           
           
         </q-page>
@@ -257,7 +281,7 @@ const app = Vue.createApp({
    
     
     return {
-         
+            fullHeight: ref(false),
             drawer: ref(false),
       slide: ref(1)
     }
@@ -351,16 +375,31 @@ document.getElementById('banner1').style.display = 'none';
 if (bowser.name !== "Chrome"){
 
 	document.getElementById('btninstalar').style.display = 'none';
-	//alert("no es Chrome");
+	console.log("no es Chrome");
 	
 } else {
 	document.getElementById('btnChrome').style.display = 'none';
-	//alert("Es Chrome");
+	console.log("Es Chrome");
 }
 
 	
-
  }
+   
+   
+   if (Notification.permission === 'denied') {
+
+	    const btnModal = document.getElementById('btn_modal');
+
+     
+	    btnModal.click();
+	   // $("#notiDes").hide();
+  
+ 
+}
+   
+   
+   
+   
 	 
  }	
 </script>
@@ -402,9 +441,10 @@ if (bowser.name !== "Chrome"){
   });
 </script>
 
-
-
-	  
+  
+    
+    
+    
     
   </body>
 </html>
