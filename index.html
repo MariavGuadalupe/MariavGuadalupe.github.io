@@ -49,7 +49,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       </q-header>
    
       <q-footer bordered class="bg-grey-3 text-primary">
-        
+         <div style="max-width: 400px">
    <q-tabs
         v-model="tab"
          inline-label
@@ -61,6 +61,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
         <q-tab name="alarms" icon="alarm" label="Alarms"></q-tab>
         <q-tab name="movies" icon="movie" label="Movies"></q-tab>
       </q-tabs>
+           </div>
         
       </q-footer>
    
@@ -158,12 +159,12 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       <q-page-container>
         <q-page padding>
           
-          <div id="banner1" style="width: 100%;  border: 0px solid transparent;">
+          <div id="banner1" style="width: 100%;  border: 0px solid transparent; max-width: 400px;">
  
             <q-banner rounded :class="$q.dark.isActive ? 'bg-grey-9' : 'bg-grey-2'">
 
 		    
-  <img src="https://mariavguadalupe.github.io/BannerFin.gif" alt="Banner GIF" style="width: 97%; height: 98%; border: 1px solid transparent;">
+  <img src="https://mariavguadalupe.github.io/BannerFin.gif" alt="Banner GIF" style="width: 97%; height: 98%; border: 1px solid transparent; max-width: 400px;">
 
      
                <q-btn  id="btninstalar" type="button" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-down" viewBox="0 0 16 16">
@@ -179,7 +180,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
   </div>       
           
           
-           <div style="max-width: 600px">
+           <div style="max-width: 400px">
    
 
       <div class="q-gutter-y-sm">
@@ -257,13 +258,8 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
           
           
           
-          
-          
-          
-          
-          
-          
-             <q-responsive :ratio="1" style="width: 300px; max-width: 400px;">
+ 
+             <q-responsive :ratio="1" style="width: 400px; max-width: 400px;">
           
         <q-carousel
       v-model="slide"
@@ -286,7 +282,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       </q-responsive>     
           
           
-          
+          <div style="max-width: 400px">
           
           <q-card class="my-card" flat bordered>
       <img src="https://mariavguadalupe.github.io/Seamos_felices.gif">
@@ -322,6 +318,8 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       </q-card-actions>
     </q-card>
           
+           </div>
+            
             <q-btn id="btn_modal" v-show="false" label="Full Height" color="primary" @click="fullHeight = true"></q-btn>
           
           <q-dialog
