@@ -255,22 +255,24 @@ const app = Vue.createApp({
   setup () {
         
      function instala() {
-  let deferredPrompt;
+
+	      let promptEvent;
 
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
-    deferredPrompt = e;
-    
+    promptEvent = e;
   });
-   
- 
-	  console.log("ha entrado pf");
+	  
 	  
 	  
   if('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then(function() { console.log("Service worker registrado"); });
     }
+
+	  
+
+	  console.log("Service worker tpush");
         
     
       }
