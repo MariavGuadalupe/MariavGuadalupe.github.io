@@ -329,6 +329,16 @@ window.addEventListener("load", finicio);
 	
  function finicio(){
 
+if (navigator.userAgent.match(/Android/i)) {
+  // Código para dispositivos Android
+  alert('Ejecutándose en un dispositivo Android');
+} else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+  // Código para dispositivos iOS
+  alert('Ejecutándose en un dispositivo iOS');
+}
+
+	 
+
 if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
   // La página ha sido instalada      
 
