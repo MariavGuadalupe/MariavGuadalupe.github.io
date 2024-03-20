@@ -40,13 +40,30 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
     
     
     
- <q-layout view="lHh Lpr lff" container style="height: 100vh" class="shadow-2 rounded-borders">
+ <q-layout view="lHh lpr lFf" container style="height: 100vh" class="shadow-2 rounded-borders">
       <q-header elevated class="bg-cyan-8">
         <q-toolbar>
           <q-toolbar-title>María alegra</q-toolbar-title>
           <q-btn flat @click="drawer = !drawer" round dense icon="menu"></q-btn>
         </q-toolbar>
       </q-header>
+   
+      <q-footer bordered class="bg-grey-3 text-primary">
+        
+   <q-tabs
+        v-model="tab"
+         inline-label
+        switch-indicator
+        narrow-indicator
+        class="bg-primary text-white shadow-2"
+      >
+        <q-tab name="mails" icon="mail" label="Mails"></q-tab>
+        <q-tab name="alarms" icon="alarm" label="Alarms"></q-tab>
+        <q-tab name="movies" icon="movie" label="Movies"></q-tab>
+      </q-tabs>
+        
+      </q-footer>
+   
 
       <q-drawer
         v-model="drawer"
@@ -161,6 +178,91 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
  
   </div>       
           
+          
+           <div style="max-width: 600px">
+   
+
+      <div class="q-gutter-y-sm">
+        <q-tab-panels
+          v-model="tab"
+          animated
+          transition-prev="scale"
+          transition-next="scale"
+          class="bg-purple text-white text-center"
+        >
+          <q-tab-panel name="mails">
+            <div class="text-h6">Mails</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </q-tab-panel>
+
+          <q-tab-panel name="alarms">
+            <div class="text-h6">Alarms</div>
+            Ad molestiae non facere animi nobis, similique nemo velit.
+          </q-tab-panel>
+
+          <q-tab-panel name="movies">
+            <div class="text-h6">Movies</div>
+            Nostrum necessitatibus expedita dolores? Voluptatem.
+          </q-tab-panel>
+        </q-tab-panels>
+
+        <q-tab-panels
+          v-model="tab"
+          animated
+          transition-prev="fade"
+          transition-next="fade"
+          class="bg-orange text-white text-center"
+        >
+          <q-tab-panel name="mails">
+            <div class="text-h6">Mails</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </q-tab-panel>
+
+          <q-tab-panel name="alarms">
+            <div class="text-h6">Alarms</div>
+            Ad molestiae non facere animi nobis, similique nemo.
+          </q-tab-panel>
+
+          <q-tab-panel name="movies">
+            <div class="text-h6">Movies</div>
+            Nostrum necessitatibus expedita dolores? Voluptatem.
+          </q-tab-panel>
+        </q-tab-panels>
+
+        <q-tab-panels
+          v-model="tab"
+          animated
+          transition-prev="jump-up"
+          transition-next="jump-down"
+          class="bg-teal text-white text-center"
+        >
+          <q-tab-panel name="mails">
+            <div class="text-h6">Mails</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </q-tab-panel>
+
+          <q-tab-panel name="alarms">
+            <div class="text-h6">Alarms</div>
+            Ad molestiae non facere animi nobis, similique nemo.
+          </q-tab-panel>
+
+          <q-tab-panel name="movies">
+            <div class="text-h6">Movies</div>
+            Nostrum necessitatibus expedita dolores? Voluptatem.
+          </q-tab-panel>
+        </q-tab-panels>
+      </div>
+    </div>
+             
+          
+          
+          
+          
+          
+          
+          
+          
+          
              <q-responsive :ratio="1" style="width: 300px; max-width: 400px;">
           
         <q-carousel
@@ -248,8 +350,14 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
           
         </q-page>
       </q-page-container>
+   
+     
+   
     </q-layout>
   
+    
+    
+    
 </div>
   
           </div>
@@ -281,6 +389,7 @@ const app = Vue.createApp({
    
     
     return {
+            tab: ref('mails'),
             fullHeight: ref(false),
             drawer: ref(false),
       slide: ref(1)
