@@ -309,15 +309,15 @@ app.mount('#q-app')
   });
 	  
 	  
-	  
+/*	  
   if('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then(function() { console.log("Service worker registrado"); });
     }
 
-	  
+	*/  
 
-	  console.log("Service worker Nuevo");
+	  console.log("Service worker tpush");
 
     </script>
 
@@ -331,7 +331,7 @@ window.addEventListener("load", finicio);
 
 if (navigator.userAgent.match(/Android/i)) {
   // Código para dispositivos Android
- alert('Ejecutándose en un dispositivo Android');
+// alert('Ejecutándose en un dispositivo Android');
 } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
   // Código para dispositivos iOS
   //alert('Ejecutándose en un dispositivo iOS');
@@ -351,11 +351,11 @@ document.getElementById('banner1').style.display = 'none';
 if (bowser.name !== "Chrome"){
 
 	document.getElementById('btninstalar').style.display = 'none';
-	alert("no es Chrome");
+	//alert("no es Chrome");
 	
 } else {
 	document.getElementById('btnChrome').style.display = 'none';
-	alert("Es Chrome");
+	//alert("Es Chrome");
 }
 
 	
