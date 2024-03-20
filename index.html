@@ -253,15 +253,17 @@ const app = Vue.createApp({
   setup () {
         
     
- const beforeinstallprompt = ref(null); // Inicializa una referencia para almacenar el evento beforeinstallprompt
+
+
+    function openInstallDialog() {
+      console.log(beforeinstallprompt.value);
+       const beforeinstallprompt = ref(null); // Inicializa una referencia para almacenar el evento beforeinstallprompt
 
     window.addEventListener('beforeinstallprompt', (event) => {
       event.preventDefault(); // Evita el comportamiento predeterminado
       beforeinstallprompt.value = event; // Almacena el evento para su uso posterior
     });
-
-    function openInstallDialog() {
-      console.log("Gloria a Dios");
+      console.log(beforeinstallprompt.value);
      if (beforeinstallprompt.value) {
         beforeinstallprompt.value.prompt(); // Activa el prompt de instalación
       }
