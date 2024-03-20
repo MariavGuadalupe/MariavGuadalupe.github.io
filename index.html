@@ -144,7 +144,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
           
             <q-banner rounded :class="$q.dark.isActive ? 'bg-grey-9' : 'bg-grey-2'">
 
-		    <div id="banner" style="width: 100%;  border: 0px solid transparent;">
+		    <div id="banner1" style="width: 100%;  border: 0px solid transparent;">
  
   <img src="https://mariavguadalupe.github.io/BannerFin.gif" alt="Banner GIF" style="width: 97%; height: 98%; border: 1px solid transparent;">
 
@@ -157,7 +157,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
               
  <q-btn flat label="Abrir Chrome"></q-btn>
               
-              
+		    </div>         
               
     </q-banner>
           
@@ -282,14 +282,14 @@ app.mount('#q-app')
   });
 
  document.getElementById('btninstalar').addEventListener('click', () => {
-	 alert('dentro');
+	// alert('dentro');
     if (deferredPrompt) {
       deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
          console.log('La página se ha instalado correctamente');
           document.getElementById('btninstalar').style.display = 'none';
-		 document.getElementById('banner').style.display = 'none';
+		 document.getElementById('banner1').style.display = 'none';
 		
         }
         deferredPrompt = null;
@@ -329,7 +329,7 @@ window.addEventListener("load", finicio);
 
 	
  function finicio(){
-
+document.getElementById('banner1').style.display = 'none';
  alert("finicia");		
 		
  } 
