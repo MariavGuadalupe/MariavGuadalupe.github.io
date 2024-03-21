@@ -51,11 +51,10 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       <q-footer bordered class="bg-grey-3 text-primary">
          <div style="max-width: 600px">
    <q-tabs
-        v-model="tab"
-         inline-label
-        switch-indicator
-        narrow-indicator
+         v-model="tab"
+        indicator-color="yellow"
         class="bg-primary text-white shadow-2"
+      >
       >
         <q-tab name="mails" icon="mail" label="Mails"></q-tab>
         <q-tab name="alarms" icon="alarm" label="Alarms"></q-tab>
