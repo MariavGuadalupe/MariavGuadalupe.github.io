@@ -163,7 +163,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
             <q-banner rounded :class="$q.dark.isActive ? 'bg-grey-9' : 'bg-grey-2'">
 
 		    
-  <img src="https://mariavguadalupe.github.io/BannerFin.gif" alt="Banner GIF" style="width: 97%; height: 98%; border: 1px solid transparent; max-width: 400px;">
+  <img src="https://mariavguadalupe.github.io/BannerFin.gif" alt="Banner GIF" style="width: 97%; height: 98%; border: 1px solid transparent; max-width: 400px; display: none">
 
      
                <q-btn  id="btninstalar" type="button" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-down" viewBox="0 0 16 16">
@@ -687,11 +687,13 @@ if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.
   // La página ha sido instalada      
 
 	 
-document.getElementById('banner1').style.display = 'none';
+
 	
 
 } else {
 
+document.getElementById('banner1').style.display = 'block';
+	
 if (bowser.name !== "Chrome"){
 
 	document.getElementById('btninstalar').style.display = 'none';
