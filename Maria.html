@@ -57,7 +57,28 @@ img {
 }
 
 	
-  
+  .containerE {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.expanded {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
  
   
   
@@ -92,7 +113,9 @@ img {
   <h1 class="alin">Santa María de Guadalupe en vivo</h1>
 
 	    </br>
- <div id="ytplayer"></div>
+ <div class="containerE">
+  <img src="https://morenita.tv/img/codice/virgen1.jpg" class="img" alt="Image">
+</div>
 
       </br>
   
@@ -1160,6 +1183,7 @@ button.addEventListener("click", (e)=>{
 
 onclick="location.href='https://docs.google.com/document/d/1VX3csnAoXpTe8_Rx58DH2CtatWi1Pak9/edit?usp=sharing&ouid=110209637001854403086&rtpof=true&sd=true';" style="cursor: pointer;"
 
+<div id="ytplayer"></div>
 
 */
 </script>
@@ -1207,6 +1231,28 @@ onclick="location.href='https://docs.google.com/document/d/1VX3csnAoXpTe8_Rx58DH
         $("p").css("font-size", fontSize + "px");
       });
     });
+
+
+
+
+const img = document.querySelector('.img');
+
+img.addEventListener('click', () => {
+  img.classList.add('expanded');
+});
+
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('expanded')) {
+    img.classList.remove('expanded');
+  }
+});
+
+
+
+
+
+
+	
   </script>
 
 
