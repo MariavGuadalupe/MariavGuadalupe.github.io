@@ -2,7 +2,7 @@
 "name": "María Alegra",
 "short_name": "María Alegra",
 "teme_color": "#005954",
-"backgroud_color": "#ffe88a",
+"backgroud_color": "#005954",
 "display": "standalone",
 "orientation": "portrait",
 "scope": "./",
