@@ -1103,7 +1103,7 @@ h1 {
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" id="botonm" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" hidden>
   Launch demo modal
 </button>
 
@@ -1287,14 +1287,10 @@ onclick="location.href='https://docs.google.com/document/d/1VX3csnAoXpTe8_Rx58DH
 const img = document.querySelector('.img');
 
 img.addEventListener('click', () => {
-  img.classList.add('expanded');
+  botonm.click();
 });
 
-document.addEventListener('click', (e) => {
-  if (e.target.classList.contains('expanded')) {
-    img.classList.remove('expanded');
-  }
-});
+
 
 
 
