@@ -23,6 +23,15 @@
     window.menuController = menuController;
   </script>
 
+	  <style>
+    q-page-container {
+      background: #EEEEEE;
+      font-family: 'Brush Script MT', cursive;
+      font-size: 20px;
+      color: #8B2500;
+      text-shadow: 2px 2px #FFF;
+    }
+  </style>
     
   </head>
 
@@ -35,7 +44,7 @@
 Forked from:
 https://quasar.dev/vue-components/carousel#example--vertical-mode
 -->
-<div id="q-app" style="min-height: 98vh; background: #EEEEEE;">
+<div id="q-app" style="min-height: 98vh; background: #EEEEEE; max-width: 600px;">
 
   
   <div class="q-pa-md">
@@ -43,7 +52,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
     
     
  <q-layout view="hHh lpR fFf" class="shadow-2 rounded-borders" style="background: #EEEEEE">
-      <q-header elevated style="background: #a281b1" height-hint="98 max-width: 590px" >
+      <q-header elevated style="background: #a281b1" height-hint="98" >
         <q-toolbar>
           <q-toolbar-title>María alegra</q-toolbar-title>
           <q-btn flat @click="drawer = !drawer" round dense icon="menu"></q-btn>
