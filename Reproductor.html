@@ -1,46 +1,65 @@
- <!DOCTYPE html>
+ Sure, I can help you complete the JavaScript code for your audio player. Here's the complete code:
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Control de Audio</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Control de Audio</title>
 </head>
 <body>
-  <audio id="miAudio" src="https://asisapp.github.io/Asisapp/Santa%20Mar%C3%ADa%20de%20Guadalupe%20en%20vivo.ogg" controls></audio>
-  <br>
-  <button id="botonPlayPause">Reproducir</button>
-  <button id="botonDetener">Detener</button>
-  <button id="botonAdelantar">Adelantar 5s</button>
-  <button id="botonRetroceder">Retroceder 5s</button>
+ <audio id="miAudio" src="https://asisapp.github.io/Asisapp/Santa%20Mar%C3%ADa%20de%20Guadalupe%20en%20vivo.ogg" controls></audio>
+ <br>
+ <button id="botonPlayPause">Reproducir</button>
+ <button id="botonDetener">Detener</button>
+ <button id="botonAdelantar">Adelantar 5s</button>
+ <button id="botonRetroceder">Retroceder 5s</button>
 
-  <script>
-    // Tu código JavaScript aquí
+ <script>
+ // Tu código JavaScript aquí
 
 document.addEventListener("DOMContentLoaded", function() {
-  var audio = document.getElementById("miAudio");
+ var audio = document.getElementById("miAudio");
 
-  var botonPlayPause = document.getElementById("botonPlayPause");
-  botonPlayPause.addEventListener("click", function() {
-    if (audio.paused) {
-      audio.play();
-      botonPlayPause.innerHTML = "Pausar";
-    } else {
-      audio.pause();
-      botonPlayPause.innerHTML = "Reproducir";
-    }
-  });
+ var botonPlayPause = document.getElementById("botonPlayPause");
+ botonPlayPause.addEventListener("click", function() {
+ if (audio.paused) {
+ audio.play();
+ botonPlayPause.innerHTML = "Pausar";
+ } else {
+ audio.pause();
+ botonPlayPause.innerHTML = "Reproducir";
+ }
+ });
 
-  var botonDetener = document.getElementById("botonDetener");
-  botonDetener.addEventListener("click", function() {
-    audio.pause();
-    audio.currentTime = 0;
-    botonPlayPause.innerHTML = "Reproducir";
-  });
+ var botonDetener = document.getElementById("botonDetener");
+ botonDetener.addEventListener("click", function() {
+ audio.pause();
+ audio.currentTime = 0;
+ botonPlayPause.innerHTML = "Reproducir";
+ });
 
-  var botonAdelantar = document.getElementById("botonAdelantar");
-  botonAdelantar.addEventListener("click", function() {
-    audio.currentTime += 5;
-    
-  </script>
+ var botonAdelantar = document.getElementById("botonAdelantar");
+ botonAdelantar.addEventListener("click", function() {
+ audio.currentTime += 5;
+ audio.play();
+ 
+ if (audio.currentTime + 5 >= audio.duration) {
+ botonAdelantar.disabled = true;
+ } else {
+ botonAdelantar.disabled = false;
+ }
+ });
+
+ var botonRetroceder = document.getElementById("botonRetroceder");
+ botonRetroceder.addEventListener("click", function() {
+ audio.currentTime -= 5;
+ if (audio.currentTime < 0) {
+ audio.currentTime = 0;
+ }
+ });
+ });
+ </script>
+
 </body>
 </html>
