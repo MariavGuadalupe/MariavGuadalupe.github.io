@@ -193,6 +193,42 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
           class="text-center"
         >
           <q-tab-panel name="mails">
+
+ <div class="text-h6"></div>     
+            
+ <q-card class="my-card" flat bordered>
+      
+      <q-card-section>    
+        <div class="row no-wrap items-center">
+          <div class="col" style="font-family: 'Times New Roman'; font-size: 20px; color: #000000; text-shadow: 2px 2px #FFF;">
+        <div class="text-h5"></div>
+  <p> Seamos felices siempre, porque para ser felices hemos nacido y estamos destinados...  </p>            <br>
+          </div>      
+        </div>     
+      <q-separator></q-separator>
+      <q-card-actions>
+        
+     
+        <q-btn flat color="primary" href="https://mariavguadalupe.github.io/Articulo1.html">
+          Leer articulo
+        </q-btn>
+
+ <q-btn
+          round
+          @click="play2"
+          icon="volume_up"
+          class="small"
+          style="background: #8ae0db"
+        ></q-btn>
+	      
+    <q-btn id="debocina" v-show="false" label="Click" color="primary" @click="seamless = true" ></q-btn>                                          
+      </q-card-actions>
+    </q-card>
+
+    
+
+
+		  
             <div class="text-h6"></div>     
             
  <q-card class="my-card" flat bordered>
@@ -557,7 +593,7 @@ para servir y ayudar a los demás, mostrando compasión, generosidad y perdón. 
       </q-card>
     </q-dialog>
           
-  <q-dialog v-model="persistent" seamless position="right">
+  <q-dialog v-model="persistent" persistent transition-show="scale" transition-hide="scale" position="right">
       <q-card style="width: 350px">
         <q-linear-progress :value="0.6" color="pink"></q-linear-progress>
 
