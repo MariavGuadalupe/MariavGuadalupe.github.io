@@ -208,7 +208,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       <q-card-actions>
          <q-btn
           round
-          
+          @click="play2"
           icon="volume_up"
           class="small"
           style="background: #8ae0db"
@@ -218,7 +218,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
           Leer articulo
         </q-btn>
            
-    <q-btn label="Click" color="primary" @click="seamless = true"></q-btn>                                          
+    <q-btn id="debocina" v-show="false" label="Click" color="primary" @click="seamless = true" ></q-btn>                                          
       </q-card-actions>
     </q-card>
 
@@ -561,14 +561,13 @@ para servir y ayudar a los demás, mostrando compasión, generosidad y perdón. 
 
         <q-card-section class="row items-center no-wrap">
           <div>
-            <div class="text-weight-bold">The Walker</div>
-            <div class="text-grey">Fitz & The Tantrums</div>
-          </div>
-
+           
+ <audio id="miAudio" src="https://asisapp.github.io/Asisapp/Santa%20Mar%C3%ADa%20de%20Guadalupe%20en%20vivo.ogg" controls autoplay></audio>
+ <br>
           <q-space></q-space>
 
-          <q-btn flat round icon="fast_rewind"></q-btn>
-          <q-btn flat round icon="fast_forward"></q-btn>
+          <q-btn @click="play2" flat round icon="fast_rewind"></q-btn>
+          <q-btn id="botonRetroceder" flat round icon="fast_forward"></q-btn>
           <q-btn flat round icon="stop" v-close-popup></q-btn>
         </q-card-section>
       </q-card>
@@ -615,11 +614,16 @@ const app = Vue.createApp({
    
   setup () {
         
-    
+    function play2(){
+          var btnBocina = document.getElementById("debocina");                               
+               btnBocina.click();                           
+                                      
+       }
    
     
     return {  
-                                                     seamless: ref(false),
+            play2,                              
+            seamless: ref(false),
             tab: ref('mails'),
             fullHeight: ref(false),
             drawer: ref(false),
@@ -761,13 +765,6 @@ if (bowser.name !== "Chrome"){
         })
     })
     </script>
-
-
-
-  
-    
-    
-    
     
   </body>
 </html>
