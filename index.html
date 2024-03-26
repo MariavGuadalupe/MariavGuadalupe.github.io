@@ -202,7 +202,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
         <div class="row no-wrap items-center">
           <div class="col" style="font-family: 'Times New Roman'; font-size: 20px; color: #000000; text-shadow: 2px 2px #FFF;">
         <div class="text-h5"></div>
-  <p> Seamos felices siempre, porque para ser felices hemos nacido y estamos destinados...  </p>            <br>
+  <p> Dios nos manda amar como quien sabe lo que nos conviene, lo que nos hace mejores, más grandes, más personas, verdaderamente cristianos. Y espera pacientemente nuestra respuesta libre.</p>            <br>
           </div>      
         </div>     
       <q-separator></q-separator>
@@ -221,8 +221,9 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
           style="background: #8ae0db"
         ></q-btn>
 	      
-    <q-btn id="debocina" v-show="false" label="Click" color="primary" @click="seamless = true" ></q-btn>                                          
-      </q-card-actions>
+    <q-btn id="debocina" v-show="false" label="Click" color="primary" @click="persistent = true" ></q-btn>                                          
+      </
+                                                                                                q-card-actions>
     </q-card>
 
     
@@ -250,13 +251,13 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
  <q-btn
           round
-          @click="play2"
+         
           icon="volume_up"
           class="small"
           style="background: #8ae0db"
         ></q-btn>
 	      
-    <q-btn id="debocina" v-show="false" label="Click" color="primary" @click="seamless = true" ></q-btn>                                          
+                                            
       </q-card-actions>
     </q-card>
 
@@ -367,16 +368,10 @@ No tengáis miedo” .
         </div>     
       <q-separator></q-separator>
       <q-card-actions>
-         <q-btn
-          round
-         
-          icon="volume_up"
-          class="small"
-          style="background: #8ae0db"
-        ></q-btn>
+        
      
         <q-btn flat color="primary">
-          Leer articulo
+          Saber más
         </q-btn>
           
       </q-card-actions>
@@ -679,7 +674,7 @@ const app = Vue.createApp({
             atras1,                                                 
             adelante1,                                                
             play2,                              
-            seamless: ref(false),
+            persistent: ref(false),
             tab: ref('mails'),
             fullHeight: ref(false),
             drawer: ref(false),
