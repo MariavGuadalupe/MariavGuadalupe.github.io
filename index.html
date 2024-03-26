@@ -206,18 +206,20 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
         </div>     
       <q-separator></q-separator>
       <q-card-actions>
-         <q-btn
+        
+     
+        <q-btn flat color="primary" href="https://mariavguadalupe.github.io/Articulo1.html">
+          Leer articulo
+        </q-btn>
+
+ <q-btn
           round
           @click="play2"
           icon="volume_up"
           class="small"
           style="background: #8ae0db"
         ></q-btn>
-     
-        <q-btn flat color="primary" href="https://mariavguadalupe.github.io/Articulo1.html">
-          Leer articulo
-        </q-btn>
-           
+	      
     <q-btn id="debocina" v-show="false" label="Click" color="primary" @click="seamless = true" ></q-btn>                                          
       </q-card-actions>
     </q-card>
@@ -555,7 +557,7 @@ para servir y ayudar a los demás, mostrando compasión, generosidad y perdón. 
       </q-card>
     </q-dialog>
           
-  <q-dialog v-model="seamless" seamless position="top">
+  <q-dialog v-model="seamless" seamless position="bottom">
       <q-card style="width: 350px">
         <q-linear-progress :value="0.6" color="pink"></q-linear-progress>
 
