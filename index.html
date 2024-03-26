@@ -218,6 +218,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
           Leer articulo
         </q-btn>
            
+    <q-btn label="Click" color="primary" @click="seamless = true"></q-btn>                                          
       </q-card-actions>
     </q-card>
 
@@ -554,7 +555,28 @@ para servir y ayudar a los demás, mostrando compasión, generosidad y perdón. 
       </q-card>
     </q-dialog>
           
-          
+  <q-dialog v-model="seamless" seamless position="top">
+      <q-card style="width: 350px">
+        <q-linear-progress :value="0.6" color="pink"></q-linear-progress>
+
+        <q-card-section class="row items-center no-wrap">
+          <div>
+            <div class="text-weight-bold">The Walker</div>
+            <div class="text-grey">Fitz & The Tantrums</div>
+          </div>
+
+          <q-space></q-space>
+
+          <q-btn flat round icon="fast_rewind"></q-btn>
+          <q-btn flat round icon="fast_forward"></q-btn>
+          <q-btn flat round icon="stop" v-close-popup></q-btn>
+        </q-card-section>
+      </q-card>
+    </q-dialog>       
+                                
+                                
+                                
+                                
           
         </q-page>
       </q-page-container>
@@ -596,7 +618,8 @@ const app = Vue.createApp({
     
    
     
-    return {
+    return {  
+                                                     seamless: ref(false),
             tab: ref('mails'),
             fullHeight: ref(false),
             drawer: ref(false),
