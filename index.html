@@ -566,8 +566,8 @@ para servir y ayudar a los demás, mostrando compasión, generosidad y perdón. 
  <br>
           <q-space></q-space>
 
-          <q-btn @click="play2" flat round icon="fast_rewind"></q-btn>
-          <q-btn id="botonRetroceder" flat round icon="fast_forward"></q-btn>
+          <q-btn @click="atras1" flat round icon="fast_rewind"></q-btn>
+          <q-btn @click="adelante1" flat round icon="fast_forward"></q-btn>
           <q-btn flat round icon="stop" v-close-popup></q-btn>
         </q-card-section>
       </q-card>
@@ -614,14 +614,32 @@ const app = Vue.createApp({
    
   setup () {
         
+                               
+            
+                                          
     function play2(){
           var btnBocina = document.getElementById("debocina");                               
                btnBocina.click();                           
-                                      
        }
-   
+    function atras1(){
+             var audio = document.getElementById("miAudio");                                                 
+          audio.currentTime -= 5;
+ if (audio.currentTime < 0) {
+ audio.currentTime = 0;
+ }                                                
+                                                            
+       }
+         
+         function adelante1(){
+          var audio = document.getElementById("miAudio");                            
+ audio.currentTime += 5;
+ audio.play();
+                                                            
+       }                                                    
     
     return {  
+            atras1,                                                 
+            adelante1,                                                
             play2,                              
             seamless: ref(false),
             tab: ref('mails'),
