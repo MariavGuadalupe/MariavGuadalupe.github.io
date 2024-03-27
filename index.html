@@ -163,11 +163,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
         <q-page padding>
 
 
-	<q-page-scroller expand position="top" :scroll-offset="50" :offset="[0, 0]">
-            <div class="col cursor-pointer q-pa-sm bg-accent text-white text-center">
-              Espíritu Santo, Espíritu de Amor iluminame, guíame.
-            </div>
-          </q-page-scroller>	
+		
           
           <div id="banner1" style="width: 100%;  border: 0px solid transparent; max-width: 600px; display: none">
  
@@ -192,7 +188,11 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
           
            <div style="max-width: 600px font-family: 'Times New Roman'; font-size: 20px; color: #000000; text-shadow: 2px 2px #FFF;">
    
-
+<q-page-scroller expand position="top" :scroll-offset="50" :offset="[0, 0]">
+            <div class="col cursor-pointer q-pa-sm bg-accent text-white text-center">
+              Espíritu Santo, Espíritu de Amor iluminame, guíame.
+            </div>
+          </q-page-scroller>
       <div class="q-gutter-y-sm">
         <q-tab-panels
           v-model="tab"
