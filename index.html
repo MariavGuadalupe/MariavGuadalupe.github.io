@@ -7,6 +7,8 @@
 
 <head>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
+  
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/quasar.prod.css" rel="stylesheet" type="text/css">
 
   <link rel="manifest" href="./manifest.json">
@@ -169,7 +171,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
             </div>
 
-            <div style="max-width: 600px font-family: 'Times New Roman'; font-size: 20px; color: #000000; text-shadow: 2px 2px #FFF;">
+            <div style="max-width: 600px font-family: 'Times New Roman'; font-size: 20px;">
 
               <div class="q-gutter-y-sm">
                 <q-tab-panels v-model="tab" animated transition-prev="scale" transition-next="scale" class="text-center">
@@ -241,10 +243,12 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
                         </div>
                         <q-separator></q-separator>
                         <q-card-actions>
-                          <q-btn round icon="play_arrow" class="small" color="red" href="https://www.youtube.com/watch?v=BaPYiF86Ed8l"></q-btn>
+                                                
+                                               
+                          <q-btn  icon="mdi-play-box"  color="red" href="https://www.youtube.com/watch?v=BaPYiF86Ed8l"></q-btn>
 
                           <q-btn flat color="primary">
-                           
+                           Ver video
                           </q-btn>
 
                         </q-card-actions>
