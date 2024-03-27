@@ -1,835 +1,639 @@
-
 <!DOCTYPE html>
 <html>
-  <!--
+<!--
     WARNING! Make sure that you match all Quasar related
     tags to the same version! (Below it's "@2.12.5")
   -->
 
-  <head>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
-    <link href="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/quasar.prod.css" rel="stylesheet" type="text/css">
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/quasar.prod.css" rel="stylesheet" type="text/css">
 
-    <link rel="manifest" href="./manifest.json">
-    
-<meta charset="UTF-8">
+  <link rel="manifest" href="./manifest.json">
+
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-	 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#a281b1">
-<meta name="theme-color" media="(prefers-color-scheme: dark)"  content=#a281b1"> 
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#a281b1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content=#a281b1">
   <title>María alegra</title>
-  
+
   <script type="module">
-    import { menuController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    import {
+      menuController
+    } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
     window.menuController = menuController;
   </script>
 
-    
-  </head>
+</head>
 
-  <body>
+<body>
 
-
-    
-    <!-- example of injection point where you write your app template -->
-   <!--
+  <!-- example of injection point where you write your app template -->
+  <!--
 Forked from:
 https://quasar.dev/vue-components/carousel#example--vertical-mode
 -->
-<div id="q-app" style="min-height: 98vh; background: #EEEEEE;">
+  <div id="q-app" style="min-height: 98vh; background: #EEEEEE;">
 
-  
-  <div class="q-pa-md" style="max-width: 600px;">
-    
-    
-    
- <q-layout view="hHh lpR fFf" class="shadow-2 rounded-borders" style="background: #EEEEEE; ">
-      <q-header elevated style="background: #a281b1" height-hint="98" >
-        <q-toolbar>
-          <q-toolbar-title>María alegra</q-toolbar-title>
-          <q-btn flat @click="drawer = !drawer" round dense icon="menu"></q-btn>
-        </q-toolbar>
-	      
-<q-page-scroller expand position="top" :scroll-offset="50" :offset="[0, 0]">
+    <div class="q-pa-md" style="max-width: 600px;">
+
+      <q-layout view="hHh lpR fFf" class="shadow-2 rounded-borders" style="background: #EEEEEE; ">
+        <q-header elevated style="background: #a281b1" height-hint="98">
+          <q-toolbar>
+            <q-toolbar-title>María alegra</q-toolbar-title>
+            <q-btn flat @click="drawer = !drawer" round dense icon="menu"></q-btn>
+          </q-toolbar>
+
+          <q-page-scroller expand position="top" :scroll-offset="50" :offset="[0, 0]">
             <div class="col cursor-pointer q-pa-sm bg-accent text-white text-center">
               Espíritu Santo, Espíritu de Amor iluminame, guíame.
             </div>
           </q-page-scroller>
 
-	      
-      </q-header>
-   
-      <q-footer bordered class="bg-grey-3 text-primary">
-         <div style="max-width: 590px">
-   <q-tabs
-         v-model="tab"
-        switch-indicator
-        narrow-indicator
-        class="text-white shadow-2" style="background: #e2bbb4"
-      >
-        <q-tab name="mails" icon="img:https://mariavguadalupe.github.io/folded_hands.svg" label="Verdad"></q-tab>
-        <q-tab name="alarms" icon="accessibility_new" label="consejo"></q-tab>
-        <q-tab name="movies" icon="volunteer_activism" label="testimonio"></q-tab>
-      </q-tabs>
-           </div>
-        
-      </q-footer>
-   
+        </q-header>
 
-      <q-drawer style="background: #b8f0ed; color: #005954;"
-        v-model="drawer"
-        show-if-above
-        :width="210"
-        :breakpoint="400" 
-      >
-        <q-scroll-area style="height: calc(100% - 150px); margin-top: 150px; max-width: 195px; border-right: 1px solid #eac976"> 
-		<q-list padding>
-            <q-item clickable v-ripple href="./SagrarioLive.html">
-              <q-item-section avatar>
-                <q-icon name="church"></q-icon>
-              </q-item-section>
-
-              <q-item-section>
-                Sagrario en vivo
-              </q-item-section>
-            </q-item>
-
-            <q-item active clickable v-ripple href="./Maria.html">
-              <q-item-section avatar>
-     <q-icon name="star"></q-icon>
-              </q-item-section>
-
-              <q-item-section>
-                Santa María de Guadalupe 
-              </q-item-section>
-            </q-item>
-
-            <q-item clickable v-ripple href="./LiturgiaQ.html">
-              <q-item-section avatar>
-                <q-icon name="auto_stories"></q-icon>
-              </q-item-section>
-
-              <q-item-section>
-                   Liturgia
-              </q-item-section>
-            </q-item>
-            
-               <q-item clickable v-ripple href="./Buscador.html">
-              <q-item-section avatar>
-                <q-icon name="search"></q-icon>
-              </q-item-section>
-
-              <q-item-section>
-                      Buscador católico
-              </q-item-section>
-            </q-item>
-            
-               <q-item clickable v-ripple href="https://iglesiaynuevaevangelizacion.blogspot.com/">
-              <q-item-section avatar>
-                <q-icon name="rss_feed"></q-icon>
-              </q-item-section>
-
-              <q-item-section>
-                   Iglesia y nueva Evangelización
-              </q-item-section>
-            </q-item>
-               <q-item clickable v-ripple href="./Psicologos.html">
-              <q-item-section avatar>
-                <q-icon name="psychology"></q-icon>
-              </q-item-section>
-
-              <q-item-section>
-                   Psicólogos recomendados
-              </q-item-section>
-            </q-item>
-
-            <q-item clickable v-ripple href="./Sobrealegra.html">
-              <q-item-section avatar>
-                <q-icon name="contact_mail"></q-icon>
-              </q-item-section>
-
-              <q-item-section>
-                Sobre Alegra ...
-              </q-item-section>
-            </q-item>
-          </q-list>
-        </q-scroll-area>
-
-        <q-img class="absolute-top" src="https://mariavguadalupe.github.io/azul.png" style="height: 155px; width: 195px; ">
-          <div class="absolute-bottom bg-transparent">
-            <q-avatar size="70px" class="q-mb-sm">
-              <img src="https://mariavguadalupe.github.io/Alegra512.png">
-            </q-avatar>
-            <div class="text-weight-bold"style="color: #0e0e0e;">"¿Acaso no estoy yo aquí, yo que tengo el honor de ser tu madre?"</div>
-            <div></div>
+        <q-footer bordered class="bg-grey-3 text-primary">
+          <div style="max-width: 590px">
+            <q-tabs v-model="tab" switch-indicator narrow-indicator class="text-white shadow-2" style="background: #e2bbb4">
+              <q-tab name="mails" icon="img:https://mariavguadalupe.github.io/folded_hands.svg" label="Verdad"></q-tab>
+              <q-tab name="alarms" icon="accessibility_new" label="consejo"></q-tab>
+              <q-tab name="movies" icon="volunteer_activism" label="testimonio"></q-tab>
+            </q-tabs>
           </div>
-        </q-img>
-      </q-drawer>
 
-      <q-page-container style="background: #EEEEEE;">
+        </q-footer>
 
-	      
-        <q-page padding>
+        <q-drawer style="background: #b8f0ed; color: #005954;" v-model="drawer" show-if-above :width="210" :breakpoint="400">
+          <q-scroll-area style="height: calc(100% - 150px); margin-top: 150px; max-width: 195px; border-right: 1px solid #eac976">
+            <q-list padding>
+              <q-item clickable v-ripple href="./SagrarioLive.html">
+                <q-item-section avatar>
+                  <q-icon name="church"></q-icon>
+                </q-item-section>
 
+                <q-item-section>
+                  Sagrario en vivo
+                </q-item-section>
+              </q-item>
 
-		
-          
-          <div id="banner1" style="width: 100%;  border: 0px solid transparent; max-width: 600px; display: none">
- 
-            <q-banner rounded :class="$q.dark.isActive ? 'bg-grey-9' : 'bg-grey-2'">
+              <q-item active clickable v-ripple href="./Maria.html">
+                <q-item-section avatar>
+                  <q-icon name="star"></q-icon>
+                </q-item-section>
 
-		    
-  <img src="https://mariavguadalupe.github.io/BannerFin.gif" alt="Banner GIF" style="width: 97%; height: 98%; border: 1px solid transparent; max-width: 400px;">
+                <q-item-section>
+                  Santa María de Guadalupe
+                </q-item-section>
+              </q-item>
 
-     
-               <q-btn  id="btninstalar" type="button" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-down" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M7.646 10.854a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 9.293V5.5a.5.5 0 0 0-1 0v3.793L6.354 8.146a.5.5 0 1 0-.708.708l2 2z"></path>
-  <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"></path>
-</svg>&nbspInstalar App</q-btn>
-              
-    <q-btn id="btnChrome" flat label="Abrir Chrome" href="https://www.google.com.mx/url?sa=t&source=web&rct=j&opi=89978449&url=https://play.google.com/store/apps/details%3Fid%3Dcom.android.chrome%26hl%3Des%26gl%3DUS%26referrer%3Dutm_source%253Dgoogle%2526utm_medium%253Dorganic%2526utm_term%253Dchrome%26pcampaignid%3DAPPU_1_2fEyZYznEZ3LkPIPqsCQmAk&ved=2ahUKEwjMt8fWyYWCAxWdJUQIHSogBJMQ8oQBegQIChAB&usg=AOvVaw0151vmFDLSjJUprX_8zi3B" target="_blank"></q-btn>              		             
-  
-	    </q-banner>
-		            
- 
-  </div>       
-          
-          
-           <div style="max-width: 600px font-family: 'Times New Roman'; font-size: 20px; color: #000000; text-shadow: 2px 2px #FFF;">
-   
+              <q-item clickable v-ripple href="./LiturgiaQ.html">
+                <q-item-section avatar>
+                  <q-icon name="auto_stories"></q-icon>
+                </q-item-section>
 
-      <div class="q-gutter-y-sm">
-        <q-tab-panels
-          v-model="tab"
-          animated
-          transition-prev="scale"
-          transition-next="scale"
-          class="text-center"
-        >
-          <q-tab-panel name="mails">
+                <q-item-section>
+                  Liturgia
+                </q-item-section>
+              </q-item>
 
- <div class="text-h6"></div>     
-            
- <q-card class="my-card" flat bordered>
-      
-      <q-card-section>    
-        <div class="row no-wrap items-center">
-          <div class="col" style="font-family: 'Times New Roman'; font-size: 20px; color: #000000; text-shadow: 2px 2px #FFF;">
-        <div class="text-h5"></div>
-  <p> Dios nos manda amar como quien sabe lo que nos conviene, lo que nos hace mejores, más grandes, más personas, verdaderamente cristianos. Y espera pacientemente nuestra respuesta libre.</p>           
-       <p> (P.Ramiro Pellitero) </p>                    
-                            
-          </div>      
-        </div>     
-      <q-separator></q-separator>
-      <q-card-actions>
-        <q-btn
-          round
-          @click="play2"
-          icon="volume_up"
-          class="small"
-          style="background: #8ae0db"
-        ></q-btn>
-	      
-     
-        <q-btn flat color="primary" href="https://mariavguadalupe.github.io/Articulo1.html">
-          Leer articulo
-        </q-btn>
+              <q-item clickable v-ripple href="./Buscador.html">
+                <q-item-section avatar>
+                  <q-icon name="search"></q-icon>
+                </q-item-section>
 
- 
-    <q-btn id="debocina" v-show="false" label="Click" color="primary" @click="persistent = true" ></q-btn>                                          
-      </q-card-actions>
-    </q-card>
+                <q-item-section>
+                  Buscador católico
+                </q-item-section>
+              </q-item>
 
-    
+              <q-item clickable v-ripple href="https://iglesiaynuevaevangelizacion.blogspot.com/">
+                <q-item-section avatar>
+                  <q-icon name="rss_feed"></q-icon>
+                </q-item-section>
 
+                <q-item-section>
+                  Iglesia y nueva Evangelización
+                </q-item-section>
+              </q-item>
+              <q-item clickable v-ripple href="./Psicologos.html">
+                <q-item-section avatar>
+                  <q-icon name="psychology"></q-icon>
+                </q-item-section>
 
-		  
-            <div class="text-h6"></div>     
-            
- <q-card class="my-card" flat bordered>
-      
-      <q-card-section>    
-        <div class="row no-wrap items-center">
-          <div class="col" style="font-family: 'Times New Roman'; font-size: 20px; color: #000000; text-shadow: 2px 2px #FFF;">
-        <div class="text-h5"></div>
-  <p> Seamos felices siempre, porque para ser felices hemos nacido y estamos destinados...  </p>            <br>
-          </div>      
-        </div>     
-      <q-separator></q-separator>
-      <q-card-actions>
-        
-     
-        <q-btn flat color="primary" href="https://mariavguadalupe.github.io/Articulo1.html">
-          Leer articulo
-        </q-btn>
+                <q-item-section>
+                  Psicólogos recomendados
+                </q-item-section>
+              </q-item>
 
- <q-btn
-          round
-         
-          icon="play"
-          class="small"
-          style="background: #8ae0db"
-        ></q-btn>
-	      
-                                            
-      </q-card-actions>
-    </q-card>
+              <q-item clickable v-ripple href="./Sobrealegra.html">
+                <q-item-section avatar>
+                  <q-icon name="contact_mail"></q-icon>
+                </q-item-section>
 
-    
-          </q-tab-panel>
+                <q-item-section>
+                  Sobre Alegra ...
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </q-scroll-area>
 
-          <q-tab-panel name="alarms">
-            <div class="text-h6"></div>
+          <q-img class="absolute-top" src="https://mariavguadalupe.github.io/azul.png" style="height: 155px; width: 195px; ">
+            <div class="absolute-bottom bg-transparent">
+              <q-avatar size="70px" class="q-mb-sm">
+                <img src="https://mariavguadalupe.github.io/Alegra512.png">
+              </q-avatar>
+              <div class="text-weight-bold" style="color: #0e0e0e;">"¿Acaso no estoy yo aquí, yo que tengo el honor de ser tu madre?"</div>
+              <div></div>
+            </div>
+          </q-img>
+        </q-drawer>
 
-  <q-card class="my-card" flat bordered>
-      
-      <q-card-section>    
-        <div class="row no-wrap items-center">
-          <div class="col">
-        <div class="text-h5"></div>
-	  <p> “El amor siempre vence... Dios siempre puede más”
-</p>
-<p> (Juan Pablo II)  </p>                 
-            
-          </div>      
-        </div>     
-      <q-separator></q-separator>
-      <q-card-actions>
-         <q-btn
-          round
-         
-          icon=""
-          class="small"
-          style="background: #8ae0db"
-        ></q-btn>
-     
-        <q-btn flat color="primary">
-          Leer articulo
-        </q-btn>
-          
-      </q-card-actions>
-    </q-card>
+        <q-page-container style="background: #EEEEEE;">
 
-            
-          </q-tab-panel>
+          <q-page padding>
 
-          <q-tab-panel name="movies">
-            <div class="text-h6"></div>
-                  
-<q-card class="my-card" flat bordered>
-      
-      <q-card-section>    
-        <div class="row no-wrap items-center">
-          <div class="">
-        <div class="text-h5"></div>
-   <p>   El camino de la 
-vida humana puede 
-verse como una
- llamada a la felicidad 
-que se encuentra en el don sincero de sí mismo 
-a los demás 
-	</p>
-<p>		  
-(San Juan Pablo II)
-   </p>                   
-            
-          </div>      
-        </div>     
-      <q-separator></q-separator>
-      <q-card-actions>
-         <q-btn
-          round
-          
-          icon="volume_up"
-          class="small"
-          style="background: #8ae0db"
-        ></q-btn>
-     
-        <q-btn flat color="primary">
-          Leer articulo
-        </q-btn>
-          
-      </q-card-actions>
-    </q-card>
+            <div id="banner1" style="width: 100%;  border: 0px solid transparent; max-width: 600px; display: none">
 
-    
-            
-          </q-tab-panel>
-        </q-tab-panels>
+              <q-banner rounded :class="$q.dark.isActive ? 'bg-grey-9' : 'bg-grey-2'">
 
-        <q-tab-panels
-          v-model="tab"
-          animated
-          transition-prev="fade"
-          transition-next="fade"
-          class=" text-center"
-        >
-          <q-tab-panel name="mails">
-            <div class="text-h6"></div>
-                       
-    <q-card class="my-card" flat bordered>
-      
-      <q-card-section>    
-        <div class="row no-wrap items-center">
-          <div class="col" style="font-family: 'Times New Roman'; font-size: 20px; color: #000000; text-shadow: 2px 2px #FFF;"> 
-        <div></div>
- “Yo —te dice Jesús— 
-he probado la muerte por ti,
-he cargado sobre mí tu mal. Ahora he resucitado para decírtelo: estoy aquí, contigo, para siempre. ¡No temas! 
-No tengáis miedo” .          
-            
-          </div>      
-        </div>     
-      <q-separator></q-separator>
-      <q-card-actions>
-        
-     
-        <q-btn flat color="primary">
-          Saber más
-        </q-btn>
-          
-      </q-card-actions>
-    </q-card>
-           
-            
-          </q-tab-panel>
+                <img src="https://mariavguadalupe.github.io/BannerFin.gif" alt="Banner GIF" style="width: 97%; height: 98%; border: 1px solid transparent; max-width: 400px;">
 
-          <q-tab-panel name="alarms">
+                <q-btn id="btninstalar" type="button" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M7.646 10.854a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 9.293V5.5a.5.5 0 0 0-1 0v3.793L6.354 8.146a.5.5 0 1 0-.708.708l2 2z"></path>
+                    <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"></path>
+                  </svg>&nbspInstalar App</q-btn>
 
-          
-<q-card class="my-card" flat bordered>
-      
-      <q-card-section>    
-        <div class="row no-wrap items-center">
-          <div class="col">
-        <div class="text-h5"></div>
-“En mi angustia 
-llamé al Señor, 
-pedí ayuda a mi Dios, y Él me escuchó desde 
-su templo; mis gritos llegaron hasta sus oídos” 
-(Salmos 18,6).          
-            
-          </div>      
-        </div>     
-      <q-separator></q-separator>
-      <q-card-actions>
-         <q-btn
-          round
-         
-          icon="volume_up"
-          class="small"
-          style="background: #8ae0db"
-        ></q-btn>
-     
-        <q-btn flat color="primary">
-          Leer articulo
-        </q-btn>
-           
-      </q-card-actions>
-    </q-card>
-    
-            
-          </q-tab-panel>
+                <q-btn id="btnChrome" flat label="Abrir Chrome" href="https://www.google.com.mx/url?sa=t&source=web&rct=j&opi=89978449&url=https://play.google.com/store/apps/details%3Fid%3Dcom.android.chrome%26hl%3Des%26gl%3DUS%26referrer%3Dutm_source%253Dgoogle%2526utm_medium%253Dorganic%2526utm_term%253Dchrome%26pcampaignid%3DAPPU_1_2fEyZYznEZ3LkPIPqsCQmAk&ved=2ahUKEwjMt8fWyYWCAxWdJUQIHSogBJMQ8oQBegQIChAB&usg=AOvVaw0151vmFDLSjJUprX_8zi3B" target="_blank"></q-btn>
 
-          <q-tab-panel name="movies">
-            
-    <q-card class="my-card" flat bordered>
-      
-      <q-card-section>    
-        <div class="row no-wrap items-center">
-          <div class="col">
-     <p>      “Confía tu suerte al Señor, y Él te sostendrá”</p>  (Salmos 55).
-          </div>      
-        </div>     
-      <q-separator></q-separator>
-      <q-card-actions>
-         <q-btn
-          round
-        
-          icon="volume_up"
-          class="small"
-          style="background: #8ae0db"
-        ></q-btn>
-     
-        <q-btn flat color="primary">
-          Leer articulo
-        </q-btn>
-         
-      </q-card-actions>
-    </q-card>
-     
-	  
-	  </q-tab-panel>
-        </q-tab-panels>
+              </q-banner>
 
-        <q-tab-panels
-          v-model="tab"
-          animated
-          transition-prev="jump-up"
-          transition-next="jump-down"
-          class="text-center"
-        >
-          <q-tab-panel name="mails">     
-            
-     <q-card class="my-card" flat bordered>
-      
-      <q-card-section>    
+            </div>
 
-        <div class="row no-wrap items-center">
-          <div class="col">
-           “Donde hay más alegría, allí también hay más verdad” 
-          </div>      
-        </div>     
-      <q-separator></q-separator>
-      <q-card-actions>
-         <q-btn
-          round
+            <div style="max-width: 600px font-family: 'Times New Roman'; font-size: 20px; color: #000000; text-shadow: 2px 2px #FFF;">
 
-          icon="volume_up"
-          class="small"
-          style="background: #8ae0db"
-        ></q-btn>
-     
-        <q-btn flat color="primary">
-          Leer articulo
-        </q-btn>
-     
-      </q-card-actions>
-    </q-card>
-            
-	  
-	  </q-tab-panel>
+              <div class="q-gutter-y-sm">
+                <q-tab-panels v-model="tab" animated transition-prev="scale" transition-next="scale" class="text-center">
+                  <q-tab-panel name="mails">
 
-          <q-tab-panel name="alarms">
-               
-            
-            <q-card class="my-card" flat bordered>
-      
-      <q-card-section>    
+                    <div class="text-h6"></div>
 
-        <div class="row no-wrap items-center">
-          <div class="col">
-                 «No se inquieten 
-por el día de mañana; 
-A cada día le bastan sus propias preocupaciones»
-            (Mateo 6,34). 
-          </div>      
-        </div>     
-      <q-separator></q-separator>
-      <q-card-actions>
-         <q-btn
-          round
-          style="background: #8ae0db"
-          icon="volume_up"
-          class="small"
-          style=""
-        ></q-btn>
-     
-        <q-btn flat color="primary">
-          Leer articulo
-        </q-btn>
-           
-      </q-card-actions>
-    </q-card>
+                    <q-card class="my-card" flat bordered>
 
-            
-            
-          </q-tab-panel>
+                      <q-card-section>
+                        <div class="row no-wrap items-center">
+                          <div class="col" style="font-family: 'Times New Roman'; font-size: 20px; color: #000000; text-shadow: 2px 2px #FFF;">
+                            <div class="text-h5"></div>
+                            <p> Dios nos manda amar como quien sabe lo que nos conviene, lo que nos hace mejores, más grandes, más personas, verdaderamente cristianos. Y espera pacientemente nuestra respuesta libre.</p>
+                            <p> (P.Ramiro Pellitero) </p>
 
-          <q-tab-panel name="movies">
-                        
-              <q-card class="my-card" flat bordered>
-      
-      <q-card-section>    
+                          </div>
+                        </div>
+                        <q-separator></q-separator>
+                        <q-card-actions>
+                          <q-btn round @click="play2" icon="volume_up" class="small" style="background: #8ae0db"></q-btn>
 
-        <div class="row no-wrap items-center">
-          <div class="col">
-           Busca oportunidades 
-para servir y ayudar a los demás, mostrando compasión, generosidad y perdón. Ama a tu prójimo como a ti mismo, siguiendo el ejemplo de Jesús 
-          </div>      
-        </div>     
-      <q-separator></q-separator>
-      <q-card-actions>
-   
-     
-        <q-btn flat color="primary">
-         
-        </q-btn>
-          
-      </q-card-actions>
-    </q-card>
-   
-            
-          </q-tab-panel>
-        </q-tab-panels>
-      </div>
-    </div>
-             
-          
-          
-          
- 
-             
-          
-          
-          <div style="max-width: 600px">
-          
-          
-          
-           </div>
-            
+                          <q-btn flat color="primary" href="https://mariavguadalupe.github.io/Articulo1.html">
+                            Leer articulo
+                          </q-btn>
+
+                          <q-btn id="debocina" v-show="false" label="Click" color="primary" @click="persistent = true"></q-btn>
+                        </q-card-actions>
+                    </q-card>
+
+                    <div class="text-h6"></div>
+
+                    <q-card class="my-card" flat bordered>
+
+                      <q-card-section>
+                        <div class="row no-wrap items-center">
+                          <div class="col" style="font-family: 'Times New Roman'; font-size: 20px; color: #000000; text-shadow: 2px 2px #FFF;">
+                            <div class="text-h5"></div>
+                            <p> Seamos felices siempre, porque para ser felices hemos nacido y estamos destinados... </p> <br>
+                          </div>
+                        </div>
+                        <q-separator></q-separator>
+                        <q-card-actions>
+                          <q-btn round icon="" class="small" style="background: #8ae0db"></q-btn>
+
+                          <q-btn flat color="primary" href="https://mariavguadalupe.github.io/Articulo1.html">
+                            Leer articulo
+                          </q-btn>
+
+                        </q-card-actions>
+                    </q-card>
+
+                  </q-tab-panel>
+
+                  <q-tab-panel name="alarms">
+                    <div class="text-h6"></div>
+
+                    <q-card class="my-card" flat bordered>
+
+                      <q-card-section>
+                        <div class="row no-wrap items-center">
+                          <div class="col">
+                            <div class="text-h5"></div>
+                            <p> “El amor siempre vence... Dios siempre puede más”
+                            </p>
+                            <p> (Juan Pablo II) </p>
+
+                          </div>
+                        </div>
+                        <q-separator></q-separator>
+                        <q-card-actions>
+                          <q-btn round icon="" class="small" style="background: #8ae0db"></q-btn>
+
+                          <q-btn flat color="primary">
+                            Leer articulo
+                          </q-btn>
+
+                        </q-card-actions>
+                    </q-card>
+
+                  </q-tab-panel>
+
+                  <q-tab-panel name="movies">
+                    <div class="text-h6"></div>
+
+                    <q-card class="my-card" flat bordered>
+
+                      <q-card-section>
+                        <div class="row no-wrap items-center">
+                          <div class="">
+                            <div class="text-h5"></div>
+                            <p> El camino de la
+                              vida humana puede
+                              verse como una
+                              llamada a la felicidad
+                              que se encuentra en el don sincero de sí mismo
+                              a los demás
+                            </p>
+                            <p>
+                              (San Juan Pablo II)
+                            </p>
+
+                          </div>
+                        </div>
+                        <q-separator></q-separator>
+                        <q-card-actions>
+                          <q-btn round icon="volume_up" class="small" style="background: #8ae0db"></q-btn>
+
+                          <q-btn flat color="primary">
+                            Leer articulo
+                          </q-btn>
+
+                        </q-card-actions>
+                    </q-card>
+
+                  </q-tab-panel>
+                </q-tab-panels>
+
+                <q-tab-panels v-model="tab" animated transition-prev="fade" transition-next="fade" class=" text-center">
+                  <q-tab-panel name="mails">
+                    <div class="text-h6"></div>
+
+                    <q-card class="my-card" flat bordered>
+
+                      <q-card-section>
+                        <div class="row no-wrap items-center">
+                          <div class="col" style="font-family: 'Times New Roman'; font-size: 20px; color: #000000; text-shadow: 2px 2px #FFF;">
+                            <div></div>
+                            “Yo —te dice Jesús—
+                            he probado la muerte por ti,
+                            he cargado sobre mí tu mal. Ahora he resucitado para decírtelo: estoy aquí, contigo, para siempre. ¡No temas!
+                            No tengáis miedo” .
+
+                          </div>
+                        </div>
+                        <q-separator></q-separator>
+                        <q-card-actions>
+
+                          <q-btn flat color="primary">
+                            Saber más
+                          </q-btn>
+
+                        </q-card-actions>
+                    </q-card>
+
+                  </q-tab-panel>
+
+                  <q-tab-panel name="alarms">
+
+                    <q-card class="my-card" flat bordered>
+
+                      <q-card-section>
+                        <div class="row no-wrap items-center">
+                          <div class="col">
+                            <div class="text-h5"></div>
+                            “En mi angustia
+                            llamé al Señor,
+                            pedí ayuda a mi Dios, y Él me escuchó desde
+                            su templo; mis gritos llegaron hasta sus oídos”
+                            (Salmos 18,6).
+
+                          </div>
+                        </div>
+                        <q-separator></q-separator>
+                        <q-card-actions>
+                          <q-btn round icon="volume_up" class="small" style="background: #8ae0db"></q-btn>
+
+                          <q-btn flat color="primary">
+                            Leer articulo
+                          </q-btn>
+
+                        </q-card-actions>
+                    </q-card>
+
+                  </q-tab-panel>
+
+                  <q-tab-panel name="movies">
+
+                    <q-card class="my-card" flat bordered>
+
+                      <q-card-section>
+                        <div class="row no-wrap items-center">
+                          <div class="col">
+                            <p> “Confía tu suerte al Señor, y Él te sostendrá”</p> (Salmos 55).
+                          </div>
+                        </div>
+                        <q-separator></q-separator>
+                        <q-card-actions>
+                          <q-btn round icon="volume_up" class="small" style="background: #8ae0db"></q-btn>
+
+                          <q-btn flat color="primary">
+                            Leer articulo
+                          </q-btn>
+
+                        </q-card-actions>
+                    </q-card>
+
+                  </q-tab-panel>
+                </q-tab-panels>
+
+                <q-tab-panels v-model="tab" animated transition-prev="jump-up" transition-next="jump-down" class="text-center">
+                  <q-tab-panel name="mails">
+
+                    <q-card class="my-card" flat bordered>
+
+                      <q-card-section>
+
+                        <div class="row no-wrap items-center">
+                          <div class="col">
+                            “Donde hay más alegría, allí también hay más verdad”
+                          </div>
+                        </div>
+                        <q-separator></q-separator>
+                        <q-card-actions>
+                          <q-btn round icon="volume_up" class="small" style="background: #8ae0db"></q-btn>
+
+                          <q-btn flat color="primary">
+                            Leer articulo
+                          </q-btn>
+
+                        </q-card-actions>
+                    </q-card>
+
+                  </q-tab-panel>
+
+                  <q-tab-panel name="alarms">
+
+                    <q-card class="my-card" flat bordered>
+
+                      <q-card-section>
+
+                        <div class="row no-wrap items-center">
+                          <div class="col">
+                            «No se inquieten
+                            por el día de mañana;
+                            A cada día le bastan sus propias preocupaciones»
+                            (Mateo 6,34).
+                          </div>
+                        </div>
+                        <q-separator></q-separator>
+                        <q-card-actions>
+                          <q-btn round style="background: #8ae0db" icon="volume_up" class="small" style=""></q-btn>
+
+                          <q-btn flat color="primary">
+                            Leer articulo
+                          </q-btn>
+
+                        </q-card-actions>
+                    </q-card>
+
+                  </q-tab-panel>
+
+                  <q-tab-panel name="movies">
+
+                    <q-card class="my-card" flat bordered>
+
+                      <q-card-section>
+
+                        <div class="row no-wrap items-center">
+                          <div class="col">
+                            Busca oportunidades
+                            para servir y ayudar a los demás, mostrando compasión, generosidad y perdón. Ama a tu prójimo como a ti mismo, siguiendo el ejemplo de Jesús
+                          </div>
+                        </div>
+                        <q-separator></q-separator>
+                        <q-card-actions>
+
+                          <q-btn flat color="primary">
+
+                          </q-btn>
+
+                        </q-card-actions>
+                    </q-card>
+
+                  </q-tab-panel>
+                </q-tab-panels>
+              </div>
+            </div>
+
+            <div style="max-width: 600px">
+
+            </div>
+
             <q-btn id="btn_modal" v-show="false" label="Full Height" color="primary" @click="fullHeight = true"></q-btn>
-          
-          <q-dialog
-      v-model="fullHeight"
-      full-height
-    >
-      <q-card class="column full-height" style="width: 300px">
-        <q-card-section>
-          <div class="text-h6"> </div>
-        </q-card-section>
 
-        <q-card-section class="col q-pt-none">
-          <p>La principal característica de Alegra es el envio de notificaciones a lo largo del día que permiten recordar la verdad acerca de Dios y ayudan a manterner una vida de oración.
-	</p>
-	<p>	 En este momento las notificaciónes se encuentran bloquedas por el navegador, para poder reactivarlas configure los permisos que se otorgan al sitio por favor.
-	</p>
-        </q-card-section>
+            <q-dialog v-model="fullHeight" full-height>
+              <q-card class="column full-height" style="width: 300px">
+                <q-card-section>
+                  <div class="text-h6"> </div>
+                </q-card-section>
 
-        <q-card-actions align="right" class="bg-white text-teal">
-          <q-btn flat label="OK" v-close-popup></q-btn>
-        </q-card-actions>
-      </q-card>
-    </q-dialog>
-          
-  <q-dialog v-model="persistent" persistent transition-show="scale" transition-hide="scale" position="right">
-      <q-card style="width: 350px">
-        <q-linear-progress :value="0.6" color="pink"></q-linear-progress>
+                <q-card-section class="col q-pt-none">
+                  <p>La principal característica de Alegra es el envio de notificaciones a lo largo del día que permiten recordar la verdad acerca de Dios y ayudan a manterner una vida de oración.
+                  </p>
+                  <p> En este momento las notificaciónes se encuentran bloquedas por el navegador, para poder reactivarlas configure los permisos que se otorgan al sitio por favor.
+                  </p>
+                </q-card-section>
 
-        <q-card-section class="row items-center no-wrap">
-          <div>
-           
- <audio id="miAudio" src="https://asisapp.github.io/Asisapp/MARTES%2C%2019%20DE%20MAYO%20DE%202015.ogg" controls autoplay></audio>
- <br>
-          <q-space></q-space>
+                <q-card-actions align="right" class="bg-white text-teal">
+                  <q-btn flat label="OK" v-close-popup></q-btn>
+                </q-card-actions>
+              </q-card>
+            </q-dialog>
 
-          <q-btn @click="atras1" flat round icon="fast_rewind"></q-btn>
-          <q-btn @click="adelante1" flat round icon="fast_forward"></q-btn>
-          <q-btn flat round icon="stop" v-close-popup></q-btn>
-        </q-card-section>
-      </q-card>
-    </q-dialog>       
-                                
-                                
-                                
-                                
-          
-        </q-page>
-      </q-page-container>
-   
-     
-   
-    </q-layout>
-  
-    
-    
-    
-</div>
-  
-          </div>
-  
+            <q-dialog v-model="persistent" persistent transition-show="scale" transition-hide="scale" position="right">
+              <q-card style="width: 350px">
+                <q-linear-progress :value="0.6" color="pink"></q-linear-progress>
 
-  
+                <q-card-section class="row items-center no-wrap">
+                  <div>
 
-        
-    <!-- Add the following at the end of your body tag -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/quasar.umd.prod.js"></script>
-    
-    <script>
-      
+                    <audio id="miAudio" src="https://asisapp.github.io/Asisapp/MARTES%2C%2019%20DE%20MAYO%20DE%202015.ogg" controls autoplay></audio>
+                    <br>
+                    <q-space></q-space>
 
-             
-      /*
+                    <q-btn @click="atras1" flat round icon="fast_rewind"></q-btn>
+                    <q-btn @click="adelante1" flat round icon="fast_forward"></q-btn>
+                    <q-btn flat round icon="stop" v-close-popup></q-btn>
+                </q-card-section>
+              </q-card>
+            </q-dialog>
+
+          </q-page>
+        </q-page-container>
+
+      </q-layout>
+
+    </div>
+
+  </div>
+
+  <!-- Add the following at the end of your body tag -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/quasar.umd.prod.js"></script>
+
+  <script>
+    /*
         Example kicking off the UI. Obviously, adapt this to your specific needs.
         Assumes you have a <div id="q-app"></div> in your <body> above
        */
-    const { ref } = Vue
-
-const app = Vue.createApp({
-  
-   
-  setup () {
-        
-                               
-            
-                                          
-    function play2(){
-          var btnBocina = document.getElementById("debocina");                               
-               btnBocina.click();                           
-       }
-    function atras1(){
-             var audio = document.getElementById("miAudio");                                                 
-          audio.currentTime -= 5;
- if (audio.currentTime < 0) {
- audio.currentTime = 0;
- }                                                
-                                                            
-       }
-         
-         function adelante1(){
-          var audio = document.getElementById("miAudio");                            
- audio.currentTime += 5;
- audio.play();
-                                                            
-       }                                                    
-    
-    return {  
-            atras1,                                                 
-            adelante1,                                                
-            play2,                              
-            persistent: ref(false),
-            tab: ref('mails'),
-            fullHeight: ref(false),
-            drawer: ref(false),
-      slide: ref(1)
-    }
-  }
-})
-
-app.use(Quasar, { config: {} })
-app.mount('#q-app')
-
-    </script>
-
-
-    
-    <script>
-  let deferredPrompt;
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    
-  });
-
- document.getElementById('btninstalar').addEventListener('click', () => {
-	// alert('dentro');
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-         console.log('La página se ha instalado correctamente');
-          document.getElementById('btninstalar').style.display = 'none';
-		 document.getElementById('banner1').style.display = 'none';
-		
+    const {
+      ref
+    } = Vue
+    const app = Vue.createApp({
+      setup() {
+        function play2() {
+          var btnBocina = document.getElementById("debocina");
+          btnBocina.click();
         }
-        deferredPrompt = null;
-      });
-    }
-  });
-    
-    
-    </script>
-    
-    <script>
 
-	  let promptEvent;
+        function atras1() {
+          var audio = document.getElementById("miAudio");
+          audio.currentTime -= 5;
+          if (audio.currentTime < 0) {
+            audio.currentTime = 0;
+          }
+        }
 
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    promptEvent = e;
-  });
-	  
-	  
-/*	  
-  if('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then(function() { console.log("Service worker registrado"); });
-    }
-
-	*/  
-
-	  console.log("Service worker tpush");
-
-    </script>
-
-<script>
-
-		
-window.addEventListener("load", finicio);
-
-	
- function finicio(){
-
-if (navigator.userAgent.match(/Android/i)) {
-  // Código para dispositivos Android
-// alert('Ejecutándose en un dispositivo Android');
-} else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
-  // Código para dispositivos iOS
-  //alert('Ejecutándose en un dispositivo iOS');
-}
-
-	 
-
-if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
-  // La página ha sido instalada      
-
-	 
-
-	
-
-} else {
-
-document.getElementById('banner1').style.display = 'block';
-	
-if (bowser.name !== "Chrome"){
-
-	document.getElementById('btninstalar').style.display = 'none';
-	console.log("no es Chrome");
-	
-} else {
-	document.getElementById('btnChrome').style.display = 'none';
-	console.log("Es Chrome");
-}
-
-	
- }
-   
-   
-   if (Notification.permission === 'denied') {
-
-	    const btnModal = document.getElementById('btn_modal');
-
-     
-	    btnModal.click();
-	   // $("#notiDes").hide();
-  
- 
-}
-   
-   
-   
-   
-	 
- }	
-</script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.9.4/bowser.min.js"></script>
-	  
-<script type="application/javascript" src="https://sdki.truepush.com/sdk/v2.0.4/app.js" async></script>
-    <script>
-    var truepush = window.truepush || [];
-            
-    truepush.push(function(){
-        truepush.Init({
-            id: "64e110cabdb78352b845fe0f"
-        },function(error){
-          if(error) console.error(error);
-        })
+        function adelante1() {
+          var audio = document.getElementById("miAudio");
+          audio.currentTime += 5;
+          audio.play();
+        }
+        return {
+          atras1,
+          adelante1,
+          play2,
+          persistent: ref(false),
+          tab: ref('mails'),
+          fullHeight: ref(false),
+          drawer: ref(false),
+          slide: ref(1)
+        }
+      }
     })
-    </script>
-    
-  </body>
+    app.use(Quasar, {
+      config: {}
+    })
+    app.mount('#q-app')
+  </script>
+
+  <script>
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+    });
+    document.getElementById('btninstalar').addEventListener('click', () => {
+      // alert('dentro');
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('La página se ha instalado correctamente');
+            document.getElementById('btninstalar').style.display = 'none';
+            document.getElementById('banner1').style.display = 'none';
+          }
+          deferredPrompt = null;
+        });
+      }
+    });
+  </script>
+
+  <script>
+    let promptEvent;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      promptEvent = e;
+    });
+    /*	  
+      if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function() { console.log("Service worker registrado"); });
+        }
+
+    	*/
+    console.log("Service worker tpush");
+  </script>
+
+  <script>
+    window.addEventListener("load", finicio);
+
+    function finicio() {
+      if (navigator.userAgent.match(/Android/i)) {
+        // Código para dispositivos Android
+        // alert('Ejecutándose en un dispositivo Android');
+      } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+        // Código para dispositivos iOS
+        //alert('Ejecutándose en un dispositivo iOS');
+      }
+      if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
+        // La página ha sido instalada      
+      } else {
+        document.getElementById('banner1').style.display = 'block';
+        if (bowser.name !== "Chrome") {
+          document.getElementById('btninstalar').style.display = 'none';
+          console.log("no es Chrome");
+        } else {
+          document.getElementById('btnChrome').style.display = 'none';
+          console.log("Es Chrome");
+        }
+      }
+      if (Notification.permission === 'denied') {
+        const btnModal = document.getElementById('btn_modal');
+        btnModal.click();
+        // $("#notiDes").hide();
+      }
+    }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.9.4/bowser.min.js"></script>
+
+  <script type="application/javascript" src="https://sdki.truepush.com/sdk/v2.0.4/app.js" async></script>
+  <script>
+    var truepush = window.truepush || [];
+    truepush.push(function() {
+      truepush.Init({
+        id: "64e110cabdb78352b845fe0f"
+      }, function(error) {
+        if (error) console.error(error);
+      })
+    })
+  </script>
+
+</body>
+
 </html>
