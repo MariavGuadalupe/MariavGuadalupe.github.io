@@ -65,9 +65,11 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
         </q-footer>
 
-        <q-drawer light-dimmed style="background: transparent;  color: #005954; border-right: 5px solid #eac976" v-model="drawer" show-if-above :width="210" :breakpoint="400" class="bg-transparent" content-class="bg-transparent">
-          <q-scroll-area light-dimmed	 style="height: calc(100% - 150px); margin-top: 150px; max-width: 195px;" class="bg-transparent"	>
-            <q-list padding class="bg-transparent" transparent style="background: transparent;" >
+        <q-drawer  content-class="bg-transparent" style="background-color: transparent !important; border-right: 5px solid #eac976" v-model="drawer" show-if-above :width="210" :breakpoint="400" >
+          
+          
+          <q-scroll-area light-dimmed	 style="height: calc(100% - 150px); margin-top: 150px; max-width: 195px; background-color: transparent !important;" content-class="bg-transparent">
+            <q-list padding id="draweri"  style="background-color: transparent !important;" content-class="bg-transparent">
               <q-item clickable v-ripple href="./SagrarioLive.html">
                 <q-item-section avatar>
                   <q-icon name="church"></q-icon>
@@ -148,6 +150,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
               <div></div>
             </div>
           </q-img>
+                                                                                                                                     
         </q-drawer>
 
         <q-page-container style="background: #EEEEEE;" transition="flip-right">
@@ -1755,6 +1758,14 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
   </script>
 
   <script>
+                                      
+    const aside = document.querySelector('.q-drawer.q-drawer--left.q-drawer--on-top.q-drawer--mobile.q-drawer--top-padding');
+
+aside.style.opacity = "0.8";
+
+aside.style.background = "#B2EBF2";                            
+                                      
+                                      
     window.addEventListener("load", finicio);
 
     function finicio() {
