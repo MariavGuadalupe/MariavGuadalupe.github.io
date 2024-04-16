@@ -35,6 +35,12 @@
 Forked from:
 https://quasar.dev/vue-components/carousel#example--vertical-mode
 -->
+
+    <div id="loaderWrapper" style=" position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #ffffff; display: flex; justify-content: center; align-items: center; z-index: 9999;">
+    <img src="https://mariavguadalupe.github.io/Bienvenida.gif" alt="Cargando..." style="width: 100vh; height: auto;">
+  </div>   
+
+    
   <div id="q-app" style="min-height: 98vh; background: #EEEEEE;">
 
     <div class="q-pa-md" style="max-width: 600px;">
@@ -1835,6 +1841,25 @@ aside.style.background = "#B2EBF2";
       })
     })
   </script>
+
+<script>
+window.addEventListener("load", finicio);
+
+document.addEventListener('DOMContentLoaded', function() {
+  var loaderWrapper = document.getElementById('loaderWrapper');
+
+  // Mostrar la imagen de carga
+  loaderWrapper.style.display = 'block';
+
+  // Simular un tiempo de carga de al menos 2 segundos
+  setTimeout(function() {
+    // Una vez transcurridos al menos 2 segundos, ocultar la imagen de carga y mostrar el contenido de la página
+    loaderWrapper.style.display = 'none';
+   
+  },3000); // 2000 milisegundos = 2 segundos
+});
+
+     </script> 
 
 </body>
 
