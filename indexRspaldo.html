@@ -6,6 +6,8 @@
   -->
 
 <head>
+   
+  
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
 
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
@@ -24,6 +26,10 @@
       menuController
     } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
     window.menuController = menuController;
+          var imgAvatar = document.getElementById('imgAvat');  
+          imgAvatar.style.display = 'none';                      
+                 
+                       
   </script>
 
 </head>
@@ -147,7 +153,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
             </q-list>
           </q-scroll-area>
 
-          <q-img class="absolute-top" src="https://mariavguadalupe.github.io/manto7.png" style="height: 155px; width: 205px; ">
+          <q-img id="imgAvat" class="absolute-top" src="https://mariavguadalupe.github.io/manto7.png" style="height: 155px; width: 205px; ">
             <div class="absolute-bottom bg-transparent">
               <q-avatar size="70px" class="q-mb-sm">
                 <img src="https://mariavguadalupe.github.io/Alegra512.png">
@@ -1844,23 +1850,30 @@ aside.style.background = "#B2EBF2";
 
 <script>
 window.addEventListener("load", finicio);
+                              
 
 document.addEventListener('DOMContentLoaded', function() {
+          var imgAvatar = document.getElementById('imgAvat');  
+          imgAvatar.style.display = 'none';                     
+      var divQ = document.getElementById('q-app');  
+          divQ.style.display = 'none';
+                             
   var loaderWrapper = document.getElementById('loaderWrapper');
 
-  // Mostrar la imagen de carga
   loaderWrapper.style.display = 'block';
 
   // Simular un tiempo de carga de al menos 2 segundos
   setTimeout(function() {
     // Una vez transcurridos al menos 2 segundos, ocultar la imagen de carga y mostrar el contenido de la página
     loaderWrapper.style.display = 'none';
-   
-  },3000); // 2000 milisegundos = 2 segundos
+   divQ.style.display = 'block';
+        imgAvatar.style.display = 'block';
+                              
+  },3000); 
 });
-
-     </script> 
-
+               
+      </script>                         
+                              
 </body>
 
 </html>
