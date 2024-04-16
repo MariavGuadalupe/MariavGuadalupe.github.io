@@ -21,15 +21,10 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content=#a281b1">
   <title>María alegra</title>
 
-  <script type="module">
-    import {
-      menuController
-    } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
-    window.menuController = menuController;
+  <script>
+                                                                                
           var imgAvatar = document.getElementById('imgAvat');  
-          imgAvatar.style.display = 'none';                      
-                 
-                       
+          imgAvatar.style.display = 'none';                                        
   </script>
 
 </head>
@@ -153,16 +148,15 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
             </q-list>
           </q-scroll-area>
 
-          <q-img id="imgAvat" class="absolute-top" src="https://mariavguadalupe.github.io/manto7.png" style="height: 155px; width: 205px; ">
-            <div class="absolute-bottom bg-transparent">
-              <q-avatar size="70px" class="q-mb-sm">
+          <q-img class="absolute-top" src="https://mariavguadalupe.github.io/manto7.png" style="height: 155px; width: 205px; ">
+            <div id="imgAvat"  class="absolute-bottom bg-transparent" hidden>
+              <q-avatar  size="70px" class="q-mb-sm">
                 <img src="https://mariavguadalupe.github.io/Alegra512.png">
               </q-avatar>
               <div class="text-weight-bold" style="color: #0e0e0e;">"¿Acaso no estoy yo aquí, yo que tengo el honor de ser tu madre?"</div>
               <div></div>
             </div>
-          </q-img>
-                                                                                                                                     
+          </q-img>                                                                                                     
         </q-drawer>
 
         <q-page-container style="background: #EEEEEE;" transition="flip-right">
@@ -1861,7 +1855,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var loaderWrapper = document.getElementById('loaderWrapper');
 
   loaderWrapper.style.display = 'block';
-
+document.getElementById("imgAvat").style.display = "block";
   // Simular un tiempo de carga de al menos 2 segundos
   setTimeout(function() {
     // Una vez transcurridos al menos 2 segundos, ocultar la imagen de carga y mostrar el contenido de la página
