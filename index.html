@@ -41,6 +41,8 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
     
   <div id="q-app" style="min-height: 98vh; background: #EEEEEE;" hidden>
+                                                                
+                                                                
 
     <div class="q-pa-md" style="max-width: 600px;">
 
@@ -48,7 +50,10 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
         <q-header elevated style="background: #a281b1" height-hint="98">
           <q-toolbar>
             <q-toolbar-title>María alegra</q-toolbar-title>
+             <q-btn flat round dense icon="search" class="q-mr-xs" href="./Buscador.html"></q-btn>                                                           
+                                                                       
             <q-btn flat @click="drawer = !drawer" round dense icon="menu"></q-btn>
+                                                                         
           </q-toolbar>
 
           <q-page-scroller expand position="top" :scroll-offset="50" :offset="[0, 0]">
@@ -136,7 +141,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
               <q-item clickable v-ripple href="./Sobrealegra.html">
                 <q-item-section avatar>
-                  <q-icon name="contact_mail"></q-icon>
+                  <q-icon name="mdi-information-outline"></q-icon>
                 </q-item-section>
 
                 <q-item-section>
@@ -178,6 +183,51 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
            <q-btn color="purple" @click="showCustom" label="Custom spinner" v-show="false"></q-btn>            
 
+ <div class="q-pa-md q-gutter-sm" >
+                                 
+    <a href="https://mariavguadalupe.github.io/Maria.html">                             
+    <q-avatar     
+      size="75px"
+      class="overlapping"
+      :style="'border: 2px solid white'"
+    >
+       <img src="https://mariavguadalupe.github.io/virgencita2.jpg" >
+    </q-avatar>
+                                                                  
+     </a>                                                                
+                                                                   
+        <a href="https://mariavguadalupe.github.io/SagrarioLive.html">
+    <q-avatar                                                     
+      size="75px"
+      class="overlapping"
+      :style="'border: 2px solid white'"                                  
+    >
+        <img src="https://mariavguadalupe.github.io/custodia2.png" >
+    </q-avatar>
+    </a>
+                                                                  
+    <a href="https://www.elsantorosario.es/como-rezar-el-rosario/">
+    <q-avatar                                                     
+      size="75px"
+      class="overlapping"
+      :style="'border: 2px solid white'"                                  
+    >
+        <img src="https://santamariacatholic.com/cdn/shop/products/image_bfde4da5-0445-4c5b-a3a2-3882d74cd0cd_1024x1024@2x.jpg?v=1593542902" >
+    </q-avatar>
+    </a>                                                              
+           <a href="https://www.aciprensa.com/Oracion/laudes.htm">
+    <q-avatar                                                     
+      size="75px"
+      class="overlapping"
+      :style="'border: 2px solid white'"                                  
+    >
+        <img src="https://shalombooksny.com/4319-large_default/liturgia-de-las-horas-para-los-fieles.jpg" >
+    </q-avatar>
+    </a>                                                             
+  </div>
+                                                                              
+                                                                                          
+                                                                                          
 
             </div>
 
@@ -1873,8 +1923,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
                               
                
-      </script>                         
-                              
+      </script>                                            
+                                     
+                   
 </body>
 
 </html>
