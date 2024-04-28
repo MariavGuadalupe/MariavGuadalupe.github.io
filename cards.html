@@ -247,15 +247,25 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
     >
       <q-carousel-slide :name="1">
                                                                                     
-       <p> María alegra </p>
+       <h1> María alegra </h1>
         <p> Es una iniciativa que pretende ayudar a combatir la depresión</p>                                           <p> A través de... </p>
           
-         <p> Bla blabla blabla... </p>                                                                           
+         <p> ... </p>                                                                           
                                                                                     
                                                                                     </q-carousel-slide>
-      <q-carousel-slide :name="2" img-src="https://cdn.quasar.dev/img/parallax1.jpg"></q-carousel-slide>
-      <q-carousel-slide :name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg"></q-carousel-slide>
-      <q-carousel-slide :name="4" img-src="https://cdn.quasar.dev/img/quasar.jpg"></q-carousel-slide>
+      <q-carousel-slide :name="2" img-src="https://cdn.quasar.dev/img/parallax1.jpg">
+
+Misión 
+          
+      </q-carousel-slide>
+      <q-carousel-slide :name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg">
+Visión 
+          
+      </q-carousel-slide>
+      <q-carousel-slide :name="4" img-src="https://cdn.quasar.dev/img/quasar.jpg">
+Objetivo:
+          
+      </q-carousel-slide>
 
       <template v-slot:control>
         <q-carousel-control
@@ -264,7 +274,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
           class="text-white rounded-borders"
           style="background: rgba(0, 0, 0, .3); padding: 4px 8px;"
         >
-          <q-toggle dense dark color="orange" v-model="autoplay" label="Auto Play"></q-toggle>
+          <q-toggle dense dark color="orange" v-model="autoplay" label="botón"></q-toggle>
         </q-carousel-control>
 
         <q-carousel-control
