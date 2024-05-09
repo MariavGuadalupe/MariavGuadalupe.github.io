@@ -253,23 +253,35 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
          
           
        <h2> María alegra</h2>
-        <p> Es una iniciativa que pretende ayudar a combatir la depresión</p>                                           <p> A través de... </p>
+        <p> Es una iniciativa que pretende ayudar a combatir la depresión</p>                                           <p> A través de las verdades de la fe y las herramientas que proporciona la psicologíca </p>
           
-         <p> ... </p>                                                                           
+         <p>  </p>                                                                           
                                                                                     
                                                                                     </q-carousel-slide>
       <q-carousel-slide :name="2" img-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMI928lmhtOlfWbV2arxKInvDsBSdbh_c5AQ&usqp=CAU">
 
-Misión 
+ 
+           <h2> Misión</h2>
+        <p> Fomentar   </p>
+          
+         <p>la atención  </p>                                                                                                                                      
+           <p>psicologíca </p>                                                                                                                                    
+            <p>en cada  </p>                                                                                                                                 
+          <p>parroquia </p>   
+                                                                                                                                               
+      </q-carousel-slide>
+      <q-carousel-slide :name="3" img-src="">
+ <h2> Visión</h2>
+        <p> Legar a todas las parroquías del mundo  </p>
           
       </q-carousel-slide>
-      <q-carousel-slide :name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg">
-Visión 
+      <q-carousel-slide :name="4" img-src="">
+
           
-      </q-carousel-slide>
-      <q-carousel-slide :name="4" img-src="https://cdn.quasar.dev/img/quasar.jpg">
-Objetivo:
-          
+        <h2> Objetivo:</h2>
+        <p> Evangelzar para combatir la depresión </p>                                   
+                                            
+                                            
       </q-carousel-slide>
 
       <template v-slot:control>
@@ -279,7 +291,7 @@ Objetivo:
           class="text-white rounded-borders"
           style="background: rgba(0, 0, 0, .3); padding: 4px 8px;"
         >
-          <q-toggle dense dark color="orange" v-model="autoplay" label="botón"></q-toggle>
+          <q-btn dense dark v-close-popup label="Omitir"></q-btn>
         </q-carousel-control>
 
         <q-carousel-control
@@ -303,9 +315,6 @@ Objetivo:
           </div>
        
 
-         <q-card-actions align="right">
-          <q-btn flat label="Omitir" v-close-popup align="right" class="bg-white text-teal"></q-btn>
-        </q-card-actions>
 
        
          
