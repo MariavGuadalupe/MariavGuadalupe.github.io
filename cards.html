@@ -35,7 +35,7 @@ Forked from:
 https://quasar.dev/vue-components/carousel#example--vertical-mode
 -->
 
-   <div id="loaderWrapper" class="container">
+   <div id="loaderWrapper" class="container" hidden>
     <img src="https://mariavguadalupe.github.io/Bienvenida3.gif" alt="Cargando..." style="width: 100%; height: auto; margin: auto;  max-width: 100%;">
   </div>     
 
@@ -2043,20 +2043,20 @@ document.addEventListener('DOMContentLoaded', function() {
                                       
                               
        var divQ = document.getElementById('q-app');                                     
-       var loaderWrapper = document.getElementById('loaderWrapper');
+     //  var loaderWrapper = document.getElementById('loaderWrapper');
 
-  loaderWrapper.style.display = 'none';
+//  loaderWrapper.style.display = 'none';
 
   setTimeout(function() {
                           
-    loaderWrapper.style.display = 'none';
+   // loaderWrapper.style.display = 'none';
     divQ.style.display = 'block';
   
        finicio();                               
      //window.addEventListener("load", finicio);                                 
          
                                      
-  },100); 
+  },200); 
 });
                               
                
