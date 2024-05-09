@@ -2000,6 +2000,10 @@ aside.style.background = "#B2EBF2";
       if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
         // La página ha sido instalada      
       } else {
+                                    
+          const btnBien = document.getElementById('bienvenida');
+        btnBien.click();                          
+                                    
         document.getElementById('banner1').style.display = 'block';
         if (bowser.name !== "Chrome") {
           document.getElementById('btninstalar').style.display = 'none';
@@ -2050,10 +2054,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
        finicio();                               
      //window.addEventListener("load", finicio);                                 
-         const btnBien = document.getElementById('bienvenida');
-        btnBien.click();
+         
                                      
-  },0); 
+  },100); 
 });
                               
                
