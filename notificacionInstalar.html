@@ -181,7 +181,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
               </q-banner>
 
-           <q-btn color="purple" @click="showCustom" label="Custom spinner" ></q-btn>            
+           <q-btn color="purple" @click="showCustom" label="BOTÓN MORADO" ></q-btn>            
             </div>
                                                                                           
         <div class="q-pa-md q-gutter-sm" >
@@ -1903,12 +1903,12 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
           function showCustom () {
         $q.notify({
           spinner: false,
-          message: 'En Chrome puedes instalar App',
+          message: '<div style="width: 90%;  border: 0px solid transparent; max-width: 300px; height: 40%; ">    En Chrome puedes instalar lA wEB- App </div>',
           color: 'grey-8',
           progress: true,
           position: 'top',
           timeout: 10000,
-          avatar: 'https://mariavguadalupe.github.io/AvatarAngel1.png',
+          avatar:'https://mariavguadalupe.github.io/AvatarAngel1.png',                                                 html: true,
           actions: [
             { label: 'Instalar', color: 'yellow', handler: () => { let deferredPrompt;
     window.addEventListener('beforeinstallprompt', (e) => {
