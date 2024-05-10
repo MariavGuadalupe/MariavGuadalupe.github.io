@@ -6,7 +6,30 @@
   -->
 
 <head>
-   
+   <style>
+#canvas-basic {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#simpleUsage {
+     position: relative;
+    display: inline-block;
+    padding: 3px 7px;
+    border: solid 7px transparent;
+    margin-right: 50px;
+    z-index: 1;
+    text-decoration: none;
+    color: #222;
+    transition: border .3s;;
+}
+</style>
   
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
 
@@ -38,11 +61,11 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
    <div id="loaderWrapper" class="container" hidden>
     <img src="https://mariavguadalupe.github.io/Bienvenida3.gif" alt="Cargando..." style="width: 100%; height: auto; margin: auto;  max-width: 100%;">
   </div>     
- <div id="vero" class="container" >
-                                 <br>
-                                 <br>
-                                 <br>
-    <p id="simpleUsage">Texto</p>
+                                                                                                                                                     
+                                                                                                                                                  
+ <div id="presentacion" class="container" style="width: 100%; height: auto; margin: auto;  max-width: 100%;">
+           <canvas id="canvas-basic"></canvas>                       
+    <p id="simpleUsage">Hola!</p>
 
   </div>  
     
@@ -2035,8 +2058,8 @@ aside.style.background = "#B2EBF2";
         // La página ha sido instalada      
       } else {
                                     
-          const btnBien = document.getElementById('bienvenida');
-        btnBien.click();                          
+        //  const btnBien = document.getElementById('bienvenida');
+       // btnBien.click();                          
                                     
         document.getElementById('banner1').style.display = 'block';
         if (bowser.name !== "Chrome") {
@@ -2078,11 +2101,11 @@ document.addEventListener('DOMContentLoaded', function() {
                               
        var divQ = document.getElementById('q-app');                                     
      //  var loaderWrapper = document.getElementById('loaderWrapper');
-
-//  loaderWrapper.style.display = 'none';
+var pres= document.getElementById('presentacion');
+//  pres.style.display = 'block';
 
   setTimeout(function() {
-                          
+       pres.style.display = 'none';                  
    // loaderWrapper.style.display = 'none';
     divQ.style.display = 'block';
   
@@ -2090,20 +2113,42 @@ document.addEventListener('DOMContentLoaded', function() {
      //window.addEventListener("load", finicio);                                 
          
                                      
-  },200); 
+  },5000); 
 });
              
                                                 
       </script>                  
-                          
+                       
+                                     
+       <script src="https://cdn.tutorialjinni.com/granim/2.0.0/granim.js"></script>                              
+                                     
       <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
                        
         <script>
         new TypeIt("#simpleUsage", {
-    strings: "This is a simple string.",
+    strings: ["¿cómo vez este ejemplo?","Berrengo!!!"],
     speed: 50,
     waitUntilVisible: true,
 }).go();
+                                       
+                                       
+         var granimInstance = new Granim({
+    element: '#canvas-basic',
+    direction: 'left-right',
+    isPausedWhenNotInView: true,
+    states : {
+        "default-state": {
+            gradients: [
+                ['#ff9966', '#ff5e62'],
+                ['#00F260', '#0575E6'],
+                ['#e1eec3', '#f05053']
+            ]
+        }
+    }
+});                              
+                                       
+                                       
+                                       
          </script>                                                           
                                                                     
                                                                     
