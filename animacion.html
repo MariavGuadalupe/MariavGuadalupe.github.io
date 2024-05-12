@@ -2125,12 +2125,20 @@ var pres= document.getElementById('presentacion');
       <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
                        
         <script>
-        new TypeIt("#simpleUsage", {
-    strings: ["María alegra","Es una iniciativa que pretende ayudar a combatir la depresión","A través de la promoción de las verdades de la fe y las herramientas que proporciona la psicología", " ", "Objetivo"],
-    speed: 50,
-    waitUntilVisible: true,
-}).go();
-                                                     
+    
+new TypeIt('#simpleUsage', {
+  strings: ["María alegra","Es una iniciativa que pretende ayudar a combatir la depresión","A través de la promoción de las verdades de la fe y las herramientas que proporciona la psicología", " ", "Objetivo"],
+  speed: 50,
+  loop: false
+}) 
+  .type("Mas texto", {delay: 500})
+  .delete(5000)
+  .move(null, {speed: 30, to: 'start', instant: true})
+  .type(" - <em>Objetivo: </em>")
+  .go();
+
+
+            
                                        
                                        
          var granimInstance = new Granim({
