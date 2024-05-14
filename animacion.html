@@ -65,7 +65,10 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
                                                                                                                                                   
  <div id="presentacion" class="container" style="width: 100%; height: auto; margin: auto;  max-width: 100%;">
            <canvas id="canvas-basic"></canvas>                       
-    <h3 id="simpleUsage"></h3>
+    <h4 id="simpleUsage"></h4>
+     
+     <h5 id="texto2"></h5>  
+    <h5 id="texto3"></h5>                
 
   </div>  
     
@@ -284,7 +287,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
           <p id="simpleUsage"></p>
        <h2> María alegra</h2>
-        <p> Es una iniciativa que pretende ayudar a combatir la depresión</p>                                           <p> A través de la promoción de las verdades de la fe y las herramientas que proporciona la psicología </p>
+        <h6> Es una iniciativa que pretende ayudar a combatir la depresión</h6>                                           <p> A través de las verdades de la fe y las herramientas que proporciona la psicología </p>
           
          <p>  </p>                                                                           
                                                                                     
@@ -2127,14 +2130,18 @@ var pres= document.getElementById('presentacion');
         <script>
     
 new TypeIt('#simpleUsage', {
-  strings: ["María alegra"," ","Es una iniciativa que pretende ayudar a combatir la depresión","A través de la promoción de las verdades de la fe y las herramientas que proporciona la psicología."],
+  strings: ["<h2>María alegra</h2>","","Es una iniciativa que pretende ayudar a combatir la depresión...        "],
   speed: 50,
   loop: false
 }) 
-  .type("Mas texto", {delay: 500})
-  .delete(5000)
+  .type("", {delay: 500})
+  .delete(1000)
   .move(null, {speed: 30, to: 'start', instant: true})
-  .type("<em>Objetivo: </em>")
+  .type("<h4>A través de las verdades de la fe y las herramientas que proporciona la psicología.</h4>   <br> <br>")
+  .type("", {delay: 500})
+  .delete(1000)
+  .move(null, {speed: 7000, to: 'start', instant: true})
+  .type("<h3>Objetivo:</h3><br> <br>")
   .type("<em>Llegar a todas las parroquias del mundo</em>")
   .go();
 
