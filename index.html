@@ -2107,6 +2107,10 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       }
       if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
         // La página ha sido instalada      
+                                    
+              var divQ2 = document.getElementById('q-app'); 
+                 divQ2.style.display = 'block';                    
+                                    
       } else {
         //  const btnBien = document.getElementById('bienvenida');
         // btnBien.click();                          
@@ -2196,6 +2200,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       divQ2.style.display = 'block';
       finicio();
     });
+  
     const butsaber = document.getElementById("bsaber");
     const asaber = document.getElementById("mia");
     asaber.addEventListener("click", () => {
