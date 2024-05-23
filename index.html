@@ -301,9 +301,9 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
             </div>
 
             <q-btn id="bienvenida" label="Click me" color="primary" @click="dialog = true" v-show="false"></q-btn>
-            <q-btn id="bsaber" v-show="true" label="Click" color="primary" @click="persistent = true"></q-btn>
+            <q-btn id="bsaber" v-show="false" label="Click" color="primary" @click="persistent = true"></q-btn>
 
-            <q-dialog v-model="dialog" persistent :maximized="maximizedToggle" transition-show="scale" transition-hide="scale">
+            <q-dialog v-model="dialog" persistent :maximized="maximizedToggle" transition-show="scale" transition-hide="scale" >
 
               <q-card dark bordered class="bg-black my-card">
                 <q-card-section>
