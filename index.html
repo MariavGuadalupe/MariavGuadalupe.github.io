@@ -126,9 +126,9 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
     <button id="omit" class="boton-elegante" hidden>Omitir</button>
     <h4 id="simpleUsage" class="introtext"></h4>
 
-    <h5 id="texto2" class="introtext"></h5>
+    
     <a id="mia">Saber más..</a>
-    <h5 id="texto3"></h5>
+   
 
   </div>
 
@@ -2165,31 +2165,10 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
   <script>
     new TypeIt('#simpleUsage', {
-        strings: ["<h3>María alegra</h3>", "Es una iniciativa que pretende ayudar a combatir la depresión.", "<h4>A través de las verdades de la fe y las herramientas que proporciona la psicología.</h4>"],
+        strings: ["<h3>María alegra</h3>", "Es una iniciativa que pretende ayudar a combatir la depresión.", " ","A través de las verdades de la fe y las herramientas que proporciona la psicología."],
         speed: 50,
         loop: false
       })
-      .type("", {
-        delay: 500
-      })
-      .delete(1000)
-      .move(null, {
-        speed: 30,
-        to: 'start',
-        instant: true
-      })
-      .type("")
-      .type("", {
-        delay: 500
-      })
-      .delete(1000)
-      .move(null, {
-        speed: 7000,
-        to: 'start',
-        instant: true
-      })
-      .type("<h3></h3>")
-      .type("<em></em>")
       .go();
     var granimInstance = new Granim({
       element: '#canvas-basic',
