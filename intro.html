@@ -139,7 +139,11 @@
     }
    
     
-    .color-change-2x {
+
+
+.scale-up-bottom{animation:scale-up-bottom 0.7s; } @keyframes scale-up-bottom{0%{transform:scale(.5);transform-origin:center bottom}100%{transform:scale(1);transform-origin:center bottom}}
+    
+    #container1 {
 	animation: color-change-2x 2s linear infinite alternate both;
 }
     
@@ -222,7 +226,22 @@
 
     
     
+       
+    .color-change-2x {
+	animation: color-change-2x 2s linear infinite alternate both;
+}
     
+    
+
+@keyframes color-change-2x {
+  0% {
+    background: #19dcea;
+  }
+  100% {
+    background: #b22cff;
+  }
+}
+ 
     
     
     
@@ -261,10 +280,11 @@ Forked from:
 https://quasar.dev/vue-components/carousel#example--vertical-mode
 -->
 
-           <div id="container1" class="" style="">                                           
-                                               <h4 class="tracking-in-contract">Bienvenido a María Alegra</h4>
-    <h5 class="animated zoomInUp">¡Es una Web App!</h5>
-    <a href="#" class="buttonNa">Utilizar la web App</a>                                                                       
+           <div id="container1" class="color-change-2x" style="">                                           
+                                               <h4 class="scale-up-bottom">Bienvenido a María Alegra</h4>
+    <h5 class="scale-up-bottom">¡Es una Web App
+                               1</h5>
+    <a href="#" class="buttonNa">Explorar</a>                                                                       
                                                                                                                       
    </div>                                                                             
   <div id="loaderWrapper" class="container" hidden>
