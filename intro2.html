@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+body {
+  background: linear-gradient(90deg, #ff0066, #ff6600, #ffff00, #00ff00, #00ffff, #0066ff, #6600ff);
+  background-size: 400% 400%;
+  animation: Gradient 15s ease infinite;
+}
+@keyframes Gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+#welcomeMsg {
+  text-align: center;
+  margin-top: 20%;
+  font-size: 50px;
+  animation: fadeIn 3s;
+}
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+</style>
+<div id="welcomeMsg">Welcome!<br><button onclick="changeText()">Change Message</button></div>
+<script>
+let text = "Welcome!";
+function changeText() {
+  if (text == "Welcome!") {
+    text = "Hello ";
+  } else {
+    text = "Welcome!";
+  }
+  document.getElementById("welcomeMsg").innerHTML = text;
+}
+</script>
+</body>
+</html>
