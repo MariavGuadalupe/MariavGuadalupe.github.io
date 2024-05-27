@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+  <style>
+canvas {
+	width: 100%;
+	height: 100%;
+}
+
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mensaje de Bienvenida</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body>
+    <canvas id="glscreen"></canvas>
+
+<script id="2d-fragment-shader" type="x-shader/x-fragment">// <![CDATA[
+
+#ifdef GL_ES
+precision mediump float;
+#endif
+
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+uniform float u_time;
+
+void main() {
+    vec2 st = gl_FragCoord.xy/u_resolution.xy;
+    st.x *= u_resolution.x/u_resolution.y;
+
+    vec3 color = vec3(0.);
+    color = vec3(st.x,st.y,abs(sin(u_time)));
+
+    gl_FragColor = vec4(color,1.0);
+}
+// ]]></script>
+<script id="2d-vertex-shader" type="x-shader/x-vertex">// <![CDATA[
+attribute vec2 a_position;
+  void main() {
+    gl_Position = vec4(a_position, 0, 1);
+  }
+// ]]></script>
+  
+</body>
+
+</html>
