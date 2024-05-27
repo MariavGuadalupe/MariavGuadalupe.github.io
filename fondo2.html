@@ -7,16 +7,7 @@
 
 <head>
   <style>
-    #canvas-basic {
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
+
 
     .introtext {
       position: relative;
@@ -350,7 +341,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
   </div>
 
   <div id="presentacion0" class="container" style="width: 100%; height: auto; margin: auto;  max-width: 100%;">
-    <canvas id="canvas-basic0"></canvas>
+   
 
                          
                               
@@ -2340,7 +2331,6 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
         // La página ha sido instalada      
          const butOmit = document.getElementById("omit");
-    const divIn = document.getElementById("canvas-basic");
     const divsimpleUsage = document.getElementById("simpleUsage");                           
              divIn.style.display = "none";
       divsimpleUsage.style.display = "none";
@@ -2387,17 +2377,17 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
     document.addEventListener('DOMContentLoaded', function() {
       var divQ = document.getElementById('q-app');
       //  var loaderWrapper = document.getElementById('loaderWrapper');
-      var pres = document.getElementById('presentacion');
+      //var pres = document.getElementById('presentacion');
       var btnomit = document.getElementById('omit');
       //  pres.style.display = 'block';
       btnomit.style.display = 'block';
       setTimeout(function() {
-        pres.style.display = 'none';
+        //pres.style.display = 'none';
         // loaderWrapper.style.display = 'none';
         divQ.style.display = 'block';
         finicio();
         //window.addEventListener("load", finicio);                                 
-      }, 1000);
+      }, 100);
     });
   </script>
 
@@ -2412,22 +2402,9 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
         loop: false
       })
       .go();
-    var granimInstance = new Granim({
-      element: '#canvas-basic',
-      direction: 'left-right',
-      isPausedWhenNotInView: true,
-      states: {
-        "default-state": {
-          gradients: [
-            ['#ff9966', '#ff5e62'],
-            ['#00F260', '#0575E6'],
-            ['#e1eec3', '#f05053']
-          ]
-        }
-      }
-    });
+	  
     const butOmit = document.getElementById("omit");
-    const divIn = document.getElementById("canvas-basic");
+	  
     const divsimpleUsage = document.getElementById("simpleUsage");
     butOmit.addEventListener("click", () => {
       divIn.style.display = "none";
