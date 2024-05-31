@@ -2603,12 +2603,15 @@ attribute vec2 a_position;
 
 <script>
   
+
 document.getElementById('container1').style.backgroundImage = "radial-gradient(circle at 75.98% 68.19%, #ffb600 0, #ffbf00 8.33%, #f9c700 16.67%, #e5cf00 25%, #d0d500 33.33%, #b9db00 41.67%, #a1e000 50%, #86e42a 58.33%, #64e843 66.67%, #2feb5a 75%, #00ee71 83.33%, #00f087 91.67%, #00f29f 100%)";
 
-// Remove the background image after 1 second
-setTimeout(function() {
-  document.getElementById('container1').style.backgroundImage = "none";
-}, 2000);
+
+window.addEventListener("load", fun_gradiente);
+    function fun_gradiente() {
+document.getElementById('container1').style.backgroundImage = "none";
+	    
+    }
 
 </script>
 
