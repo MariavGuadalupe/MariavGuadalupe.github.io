@@ -2343,18 +2343,10 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       }
       if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
         // La página ha sido instalada      
-         const butOmit = document.getElementById("omit");
-    const divsimpleUsage = document.getElementById("simpleUsage");                           
-             divIn.style.display = "none";
-      divsimpleUsage.style.display = "none";
-      var divQ2 = document.getElementById('q-app');
-      var pres2 = document.getElementById('presentacion');
-      pres2.style.display = 'none';
-      divQ2.style.display = 'block';                  
-                                    
+                                       
       } else {
-        //  const btnBien = document.getElementById('bienvenida');
-        // btnBien.click();                          
+       
+                                    
         document.getElementById('banner1').style.display = 'block';
         if (bowser.name !== "Chrome") {
           document.getElementById('btninstalar').style.display = 'none';
@@ -2582,7 +2574,7 @@ document.getElementById('container1').style.backgroundImage = "none";
       const botonNa = document.getElementById("buttonNa");
       const divConta1 = document.getElementById("container1");
       const fondoColores = document.getElementById("glscreen");
-      var divQ2 = document.getElementById('q-app');
+      const divQ2 = document.getElementById('q-app');
       
   
 botonNa.addEventListener("click", () => {
@@ -2600,7 +2592,31 @@ botonNa.addEventListener("click", () => {
 
 
 
+  <script>  
+     
+    if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
+        // La página ha sido instalada      
+        
+      const divConta1 = document.getElementById("container1");
+      const fondoColores = document.getElementById("glscreen");
+      const divQ2 = document.getElementById('q-app');
 
+    fondoColores.style.display = 'none';
+    divConta1.style.display = 'none';
+    divQ2.style.display = 'block';
+  
+                                
+      } else {
+                                                             
+        
+      }  
+                                                             
+                                
+                                
+                                
+  </script>                              
+                                
+                                
 </body>
 
 </html>
