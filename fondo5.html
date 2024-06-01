@@ -316,6 +316,27 @@ canvas {
     }
     
     
+    swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+   
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
     
   </style>
 
@@ -349,17 +370,34 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
                                             <canvas id="glscreen"></canvas>                                         
                                                                                 
            <div id="container1" class="" style="width: 100%; height: 100vh; margin: auto;  max-width: 100%;  background-image: radial-gradient(circle at 75.98% 68.19%, #ffb600 0, #ffbf00 8.33%, #f9c700 16.67%, #e5cf00 25%, #d0d500 33.33%, #b9db00 41.67%, #a1e000 50%, #86e42a 58.33%, #64e843 66.67%, #2feb5a 75%, #00ee71 83.33%, #00f087 91.67%, #00f29f 100%);">                                           
-                                               <h1 class="tituloN">Bienvenido a María Alegra!</h1>
+                                              
     
-    <a href="#" id="buttonNa">Continuar</a>                                                                       
-                                
-    <button id="omit2" class="boton-elegante" hidden>Omitir</button>
-    <h4 id="simpleUsage0" class="introtext"></h4>
+ <swiper-container class="mySwiper" pagination="true" pagination-type="progressbar" navigation="true" autoplay-delay="12500" autoplay-disable-on-interaction="false">
+    <swiper-slide> <h2 class="tituloN">Bienvenido a María Alegra</h2></swiper-slide>
+    <swiper-slide>Es una iniciativa que pretende acabar con la depresíon</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide>Slide 4</swiper-slide>
+    <swiper-slide>Slide 5</swiper-slide>
+    <swiper-slide>Slide 6</swiper-slide>
+    <swiper-slide>Slide 7</swiper-slide>
+    <swiper-slide>Slide 8</swiper-slide>
+    <swiper-slide>Slide 9</swiper-slide>
+                                      
+  </swiper-container>
+  
+                                                                             
+    <a href="#" id="buttonNa">Continuar</a>        
+                             <br>
+                             <br>
+
 
     
     <a id="mia">Saber más..</a>
-                                                                                                                   
-   </div>                                                                             
+                                                                                      
+               
+   </div>                                                                        
+               
+               
   <div id="loaderWrapper" class="container" hidden>
     <img src="https://mariavguadalupe.github.io/Bienvenida3.gif" alt="Cargando..." style="width: 100%; height: auto; margin: auto;  max-width: 100%;">
   </div>
@@ -2341,18 +2379,10 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       }
       if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
         // La página ha sido instalada      
-         const butOmit = document.getElementById("omit");
-    const divsimpleUsage = document.getElementById("simpleUsage");                           
-             divIn.style.display = "none";
-      divsimpleUsage.style.display = "none";
-      var divQ2 = document.getElementById('q-app');
-      var pres2 = document.getElementById('presentacion');
-      pres2.style.display = 'none';
-      divQ2.style.display = 'block';                  
-                                    
+                                       
       } else {
-        //  const btnBien = document.getElementById('bienvenida');
-        // btnBien.click();                          
+       
+                                    
         document.getElementById('banner1').style.display = 'block';
         if (bowser.name !== "Chrome") {
           document.getElementById('btninstalar').style.display = 'none';
@@ -2403,34 +2433,6 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
   </script>
 
  
-
-  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
-
-  <script>
-    new TypeIt('#simpleUsage', {
-        strings: ["<h3>María alegra</h3>", "Es una iniciativa que pretende ayudar a combatir la depresión.", " ","A través de las verdades de la fe y las herramientas que proporciona la psicología."],
-        speed: 50,
-        loop: false
-      })
-      .go();
-
- 
-  
-  
-    const butsaber = document.getElementById("bsaber");
-    const asaber = document.getElementById("mia");
-    asaber.addEventListener("click", () => {
-      divIn.style.display = "none";
-      divsimpleUsage.style.display = "none";
-      var divQ2 = document.getElementById('q-app');
-      var pres2 = document.getElementById('presentacion');
-      pres2.style.display = 'none';
-      divQ2.style.display = 'block';
-      finicio();
-      butsaber.click();
-    });
-  </script>
-
   <script>
     
     
@@ -2608,7 +2610,7 @@ document.getElementById('container1').style.backgroundImage = "none";
       const botonNa = document.getElementById("buttonNa");
       const divConta1 = document.getElementById("container1");
       const fondoColores = document.getElementById("glscreen");
-      var divQ2 = document.getElementById('q-app');
+      const divQ2 = document.getElementById('q-app');
       
   
 botonNa.addEventListener("click", () => {
@@ -2619,7 +2621,6 @@ botonNa.addEventListener("click", () => {
     finicio();
   
   
-  
      });
   
 
@@ -2627,7 +2628,35 @@ botonNa.addEventListener("click", () => {
 
 
 
+  <script>  
+     
+    if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
+        // La página ha sido instalada      
+        
+      const divConta1 = document.getElementById("container1");
+      const fondoColores = document.getElementById("glscreen");
+      const divQ2 = document.getElementById('q-app');
 
+    fondoColores.style.display = 'none';
+    divConta1.style.display = 'none';
+    divQ2.style.display = 'block';
+  
+                                
+      } else {
+                                                             
+        
+      }  
+                                                             
+                                
+                                
+                                
+  </script> 
+                                                             
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>                                                             
+                                                             
+                                                             
+                                
+                                
 </body>
 
 </html>
