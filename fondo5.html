@@ -159,7 +159,7 @@
     }
     
     /* Estilos para la animación del botón */
-    .buttonNa {
+    #buttonNa {
       background-color: #f2f2f2;
       color: #333;
       padding: 10px 20px;
@@ -167,7 +167,7 @@
       font-family: Arial, sans-serif;
       font-size: 18px;
       cursor: pointer;
-      animation: fadeIn 8s ease-in;
+      animation: fadeIn 4s ease-in;
     }
    
 
@@ -351,7 +351,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
            <div id="container1" class="" style="width: 100%; height: 100vh; margin: auto;  max-width: 100%;  background-image: radial-gradient(circle at 75.98% 68.19%, #ffb600 0, #ffbf00 8.33%, #f9c700 16.67%, #e5cf00 25%, #d0d500 33.33%, #b9db00 41.67%, #a1e000 50%, #86e42a 58.33%, #64e843 66.67%, #2feb5a 75%, #00ee71 83.33%, #00f087 91.67%, #00f29f 100%);">                                           
                                                <h1 class="tituloN">Bienvenido a María Alegra!</h1>
     
-    <a href="#" class="buttonNa">Continuar</a>                                                                       
+    <a href="#" id="buttonNa">Continuar</a>                                                                       
                                 
     <button id="omit2" class="boton-elegante" hidden>Omitir</button>
     <h4 id="simpleUsage0" class="introtext"></h4>
@@ -2413,19 +2413,9 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
         loop: false
       })
       .go();
-	  
-    const butOmit = document.getElementById("omit");
-	  
-    const divsimpleUsage = document.getElementById("simpleUsage");
-    butOmit.addEventListener("click", () => {
-      divIn.style.display = "none";
-      divsimpleUsage.style.display = "none";
-      var divQ2 = document.getElementById('q-app');
-      var pres2 = document.getElementById('presentacion');
-      pres2.style.display = 'none';
-      divQ2.style.display = 'block';
-      finicio();
-    });
+
+ 
+  
   
     const butsaber = document.getElementById("bsaber");
     const asaber = document.getElementById("mia");
@@ -2612,6 +2602,26 @@ window.addEventListener("load", fun_gradiente);
 document.getElementById('container1').style.backgroundImage = "none";
 	    
     }
+  
+  
+  
+      const botonNa = document.getElementById("buttonNa");
+      const divConta1 = document.getElementById("container1");
+      const fondoColores = document.getElementById("glscreen");
+      var divQ2 = document.getElementById('q-app');
+      
+  
+botonNa.addEventListener("click", () => {
+
+    fondoColores.style.display = 'none';
+    divConta1.style.display = 'none';
+    divQ2.style.display = 'block';
+    finicio();
+  
+  
+  
+     });
+  
 
 </script>
 
