@@ -159,10 +159,9 @@
     }
     
     /* Estilos para la animación del botón */
-    #buttonNa {
-      position: flex;
-      z-index: 1;    
-      bottom: 50px;
+   
+	  #buttonNa {
+
       background-color: #f2f2f2;
       color: #333;
       padding: 10px 20px;
@@ -320,8 +319,10 @@ canvas {
     
     
     swiper-container {
+	top: 0;
+      left: 0;    
       width: 100%;
-      height: 100%;
+      height: 80vh;
     }
 
     swiper-slide {
@@ -373,15 +374,14 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
                                             <canvas id="glscreen"></canvas>                                         
                                                                                 
            <div id="container1" class="" style="width: 100%; height: 100vh; margin: auto;  max-width: 100%;  background-image: radial-gradient(circle at 75.98% 68.19%, #ffb600 0, #ffbf00 8.33%, #f9c700 16.67%, #e5cf00 25%, #d0d500 33.33%, #b9db00 41.67%, #a1e000 50%, #86e42a 58.33%, #64e843 66.67%, #2feb5a 75%, #00ee71 83.33%, #00f087 91.67%, #00f29f 100%);">                                           
-      <a href="#" id="buttonNa">Continuar</a>        
-                                                                
+                                                                      
     
  <swiper-container class="mySwiper" pagination="true" pagination-type="progressbar" navigation="true" autoplay-delay="3500" autoplay-disable-on-interaction="false">
     <swiper-slide> <h2 class="tituloN">Bienvenido a María Alegra</h2></swiper-slide>
     <swiper-slide> <div style="border: 20px solid transparent; padding: 10px 10px 15px 10px;"><p>Es una iniciativa que pretende </p> <p>acabar con la depresíon</p></div></swiper-slide>
     <swiper-slide>A través de la fe</swiper-slide>
     <swiper-slide>La psicología.</swiper-slide>
-    <swiper-slide>Slide 5</swiper-slide>
+    <swiper-slide>Objetivo:</swiper-slide>
     <swiper-slide>Slide 6</swiper-slide>
     <swiper-slide>Slide 7</swiper-slide>
     <swiper-slide>Slide 8</swiper-slide>
@@ -391,7 +391,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
   
                                                                              
     
-
+<a href="#" id="buttonNa">Continuar</a>        
 
     
     <a id="mia">Saber más..</a>
