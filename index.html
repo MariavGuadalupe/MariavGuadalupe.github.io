@@ -7,8 +7,6 @@
 
 <head>
   <style>
-
-
     .introtext {
       position: relative;
       display: inline-block;
@@ -78,23 +76,22 @@
       overflow: hidden;
       font-weight: bold;
     }
-    
-    
-    
- 
-   
-    
-     /* Estilos para la animación */
+
+    /* Estilos para la animación */
     @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
-    
-      #container1 {
+
+    #container1 {
       position: absolute;
       top: 0;
-      left: 0;  
-        
+      left: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -102,54 +99,39 @@
       height: 100vh;
       animation: fadeIn 2s ease-in;
     }
-    
 
-    
     /* Estilos para el título */
-    
     .titulo1 {
-
-     font-family: Arial, sans-serif;
+      font-family: Arial, sans-serif;
       font-size: 30px;
-     
       margin-bottom: 10px;
-    color: white;
-    animation: anime 5s alternate infinite;
-}
-    
-      
-    .titulo2 {
+      color: white;
+      animation: anime 5s alternate infinite;
+    }
 
-     font-family: Arial, sans-serif;
+    .titulo2 {
+      font-family: Arial, sans-serif;
       font-size: 24px;
-     
       margin-bottom: 15px;
-  
-}
-    
-    
-    
+    }
 
     @keyframes anime {
-    0% {
+      0% {
         transform: scale(1);
-    }
+      }
 
-    100% {
+      100% {
         transform: scale(1.1);
+      }
     }
-}
 
-    
-    
-    
     h3 {
       font-family: Arial, sans-serif;
       font-size: 24px;
       color: #f2f2f2;
       margin-bottom: 10px;
     }
-    
+
     /* Estilos para el subtítulo */
     h4 {
       font-family: Arial, sans-serif;
@@ -157,15 +139,13 @@
       color: #f2f2f2;
       margin-bottom: 10px;
     }
-    
+
     /* Estilos para la animación del botón */
-   
-	  #buttonNa {
-	position: fixed;
+    #buttonNa {
+      position: fixed;
       bottom: 75px;
-	display: flex;	  
-z-index:3;
-		  
+      display: flex;
+      z-index: 3;
       background-color: #f2f2f2;
       color: #333;
       padding: 10px 20px;
@@ -175,10 +155,8 @@ z-index:3;
       cursor: pointer;
       animation: fadeIn 4s ease-in;
     }
-   
 
     .tituloN {
-     
       color: #f2f2f2;
       padding: 10px 20px;
       border-radius: 5px;
@@ -187,145 +165,166 @@ z-index:3;
       cursor: pointer;
       animation: fadeIn 2s ease-in;
     }
-   
-    
 
+    .scale-up-bottom {
+      animation: scale-up-bottom 0.7s;
+    }
 
-.scale-up-bottom{animation:scale-up-bottom 0.7s; } @keyframes scale-up-bottom{0%{transform:scale(.5);transform-origin:center bottom}100%{transform:scale(1);transform-origin:center bottom}}
-    
+    @keyframes scale-up-bottom {
+      0% {
+        transform: scale(.5);
+        transform-origin: center bottom
+      }
+
+      100% {
+        transform: scale(1);
+        transform-origin: center bottom
+      }
+    }
+
     #container12 {
-	animation: color-change-2x 2s linear infinite alternate both;
-}
-    
-    
+      animation: color-change-2x 2s linear infinite alternate both;
+    }
 
-@keyframes color-change-2x {
-  0% {
-    background: #19dcea;
-  }
-  100% {
-    background: #b22cff;
-  }
-}
+    @keyframes color-change-2x {
+      0% {
+        background: #19dcea;
+      }
+
+      100% {
+        background: #b22cff;
+      }
+    }
 
     .tracking-in-contract {
-	animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-    
+      animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
+
     @keyframes tracking-in-contract {
-  0% {
-    letter-spacing: 1em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    letter-spacing: normal;
-    opacity: 1;
-  }
-}
+      0% {
+        letter-spacing: 1em;
+        opacity: 0;
+      }
+
+      40% {
+        opacity: 0.6;
+      }
+
+      100% {
+        letter-spacing: normal;
+        opacity: 1;
+      }
+    }
 
     @-webkit-keyframes zoomInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
+      from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+        transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      }
 
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-  }
-}
+      60% {
+        opacity: 1;
+        -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+      }
+    }
 
-@keyframes zoomInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
+    @keyframes zoomInUp {
+      from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+        transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      }
 
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-  }
-}
+      60% {
+        opacity: 1;
+        -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+      }
+    }
 
-.zoomInUp {
-  -webkit-animation-name: zoomInUp;
-  animation-name: zoomInUp;
-}
+    .zoomInUp {
+      -webkit-animation-name: zoomInUp;
+      animation-name: zoomInUp;
+    }
 
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
+    .animated {
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
 
-    
-    
-       
     .color-change-2x {
-	animation: color-change-2x 2s linear infinite alternate both;
-}
-    
-    
+      animation: color-change-2x 2s linear infinite alternate both;
+    }
 
-@keyframes color-change-2x {
-  0% {
-    background: #19dcea;
-  }
-  100% {
-    background: #b22cff;
-  }
-}
- 
-    
-    
-    
+    @keyframes color-change-2x {
+      0% {
+        background: #19dcea;
+      }
+
+      100% {
+        background: #b22cff;
+      }
+    }
+
     /* ----------------------------------------------
   Generated by AnimatiSS
   Licensed under FreeBSD License
   URL: https://xsgames.co/animatiss
   Twitter: @xsgames_
 ---------------------------------------------- */
-
-.tracking-in-expand-forward-top{animation:tracking-in-expand-forward-top 0.7s linear both} @keyframes tracking-in-expand-forward-top{0%{letter-spacing:-.2em;transform:translateZ(-700px) translateY(-100px);opacity:0}40%{opacity:.6}100%{transform:translateZ(0) translateY(0);opacity:1}}
-    
-    #container1 {
-	padding: 0px;
-	margin: 0px;
-	overflow: hidden;
-}
-
-canvas {
-	width: 100%;
-	height: 100%;
-}
-    
-    #presentacion1a {
-      
-      background-image: radial-gradient(circle at 75.98% 68.19%, #ffb600 0, #ffbf00 8.33%, #f9c700 16.67%, #e5cf00 25%, #d0d500 33.33%, #b9db00 41.67%, #a1e000 50%, #86e42a 58.33%, #64e843 66.67%, #2feb5a 75%, #00ee71 83.33%, #00f087 91.67%, #00f29f 100%);
-      
+    .tracking-in-expand-forward-top {
+      animation: tracking-in-expand-forward-top 0.7s linear both
     }
-    
-    
+
+    @keyframes tracking-in-expand-forward-top {
+      0% {
+        letter-spacing: -.2em;
+        transform: translateZ(-700px) translateY(-100px);
+        opacity: 0
+      }
+
+      40% {
+        opacity: .6
+      }
+
+      100% {
+        transform: translateZ(0) translateY(0);
+        opacity: 1
+      }
+    }
+
+    html,
+    body {
+      padding: 0px;
+      margin: 0px;
+      overflow: hidden;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+    }
+
+    #presentacion1a {
+      background-image: radial-gradient(circle at 75.98% 68.19%, #ffb600 0, #ffbf00 8.33%, #f9c700 16.67%, #e5cf00 25%, #d0d500 33.33%, #b9db00 41.67%, #a1e000 50%, #86e42a 58.33%, #64e843 66.67%, #2feb5a 75%, #00ee71 83.33%, #00f087 91.67%, #00f29f 100%);
+    }
+
     swiper-container {
-	position: absolute;    
-	top: 0;
-      left: 0;    
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 85vh;
     }
@@ -333,7 +332,6 @@ canvas {
     swiper-slide {
       text-align: center;
       font-size: 18px;
-   
       display: flex;
       justify-content: center;
       align-items: center;
@@ -345,400 +343,391 @@ canvas {
       height: 90%;
       object-fit: cover;
     }
-    
+
     .cardT {
-  position: relative;
-  width: 190px;
-  height: 254px;
-  background-color: #000;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  padding: 12px;
-  gap: 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  color: white;
-}
+      position: relative;
+      width: 190px;
+      height: 254px;
+      background-color: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      padding: 12px;
+      gap: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+    }
 
-.cardT::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  left: -5px;
-  margin: auto;
-  width: 200px;
-  height: 264px;
-  border-radius: 10px;
-  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
-  z-index: -10;
-  pointer-events: none;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+    .cardT::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      left: -5px;
+      margin: auto;
+      width: 200px;
+      height: 264px;
+      border-radius: 10px;
+      background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+      z-index: -10;
+      pointer-events: none;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
 
-.cardT::after {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
-  transform: translate3d(0, 0, 0) scale(0.95);
-  filter: blur(20px);
-}
+    .cardT::after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+      transform: translate3d(0, 0, 0) scale(0.95);
+      filter: blur(20px);
+    }
 
-.headingT {
-  font-size: 20px;
-  text-transform: capitalize;
-  font-weight: 700;
-}
+    .headingT {
+      font-size: 20px;
+      text-transform: capitalize;
+      font-weight: 700;
+    }
 
-.cardT p:not(.headingT) {
-  font-size: 14px;
-}
+    .cardT p:not(.headingT) {
+      font-size: 14px;
+    }
 
-.cardT p:last-child {
-  color: #e81cff;
-  font-weight: 600;
-}
+    .cardT p:last-child {
+      color: #e81cff;
+      font-weight: 600;
+    }
 
-.cardT:hover::after {
-  filter: blur(30px);
-}
+    .cardT:hover::after {
+      filter: blur(30px);
+    }
 
-.cardT:hover::before {
-  transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
-}
+    .cardT:hover::before {
+      transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+    }
 
+    .e-card {
+      margin: 100px auto;
+      background: transparent;
+      box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
+      position: relative;
+      width: 240px;
+      height: 330px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
 
- .e-card {
-  margin: 100px auto;
-  background: transparent;
-  box-shadow: 0px 8px 28px -9px rgba(0,0,0,0.45);
-  position: relative;
-  width: 240px;
-  height: 330px;
-  border-radius: 16px;
-  overflow: hidden;
-}
+    .wave {
+      position: absolute;
+      width: 540px;
+      height: 700px;
+      opacity: 0.6;
+      left: 0;
+      top: 0;
+      margin-left: -50%;
+      margin-top: -70%;
+      background: linear-gradient(744deg, #af40ff, #5b42f3 60%, #00ddeb);
+    }
 
-.wave {
-  position: absolute;
-  width: 540px;
-  height: 700px;
-  opacity: 0.6;
-  left: 0;
-  top: 0;
-  margin-left: -50%;
-  margin-top: -70%;
-  background: linear-gradient(744deg,#af40ff,#5b42f3 60%,#00ddeb);
-}
+    .icon {
+      width: 3em;
+      margin-top: -1em;
+      padding-bottom: 1em;
+    }
 
-.icon {
-  width: 3em;
-  margin-top: -1em;
-  padding-bottom: 1em;
-}
+    .infotop {
+      text-align: center;
+      font-size: 20px;
+      position: absolute;
+      top: 5.6em;
+      left: 0;
+      right: 0;
+      color: rgb(255, 255, 255);
+      font-weight: 600;
+    }
 
-.infotop {
-  text-align: center;
-  font-size: 20px;
-  position: absolute;
-  top: 5.6em;
-  left: 0;
-  right: 0;
-  color: rgb(255, 255, 255);
-  font-weight: 600;
-}
+    .name {
+      font-size: 14px;
+      font-weight: 100;
+      position: relative;
+      top: 1em;
+      text-transform: lowercase;
+    }
 
-.name {
-  font-size: 14px;
-  font-weight: 100;
-  position: relative;
-  top: 1em;
-  text-transform: lowercase;
-}
+    .wave:nth-child(2),
+    .wave:nth-child(3) {
+      top: 210px;
+    }
 
-.wave:nth-child(2),
-.wave:nth-child(3) {
-  top: 210px;
-}
+    .playing .wave {
+      border-radius: 40%;
+      animation: wave 3000ms infinite linear;
+    }
 
-.playing .wave {
-  border-radius: 40%;
-  animation: wave 3000ms infinite linear;
-}
+    .wave {
+      border-radius: 40%;
+      animation: wave 55s infinite linear;
+    }
 
-.wave {
-  border-radius: 40%;
-  animation: wave 55s infinite linear;
-}
+    .playing .wave:nth-child(2) {
+      animation-duration: 4000ms;
+    }
 
-.playing .wave:nth-child(2) {
-  animation-duration: 4000ms;
-}
+    .wave:nth-child(2) {
+      animation-duration: 50s;
+    }
 
-.wave:nth-child(2) {
-  animation-duration: 50s;
-}
+    .playing .wave:nth-child(3) {
+      animation-duration: 5000ms;
+    }
 
-.playing .wave:nth-child(3) {
-  animation-duration: 5000ms;
-}
+    .wave:nth-child(3) {
+      animation-duration: 45s;
+    }
 
-.wave:nth-child(3) {
-  animation-duration: 45s;
-}
+    @keyframes wave {
+      0% {
+        transform: rotate(0deg);
+      }
 
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
 
-  100% {
-    transform: rotate(360deg);
-  }
-}   
-    
-    
-    
     .containerC {
-  color: white;
-  position: relative;
-  font-family: sans-serif;
-}
+      color: white;
+      position: relative;
+      font-family: sans-serif;
+    }
 
-.containerC::before,
-.containerC::after {
-  content: "";
-  background-color: #fab5704c;
-  position: absolute;
-}
+    .containerC::before,
+    .containerC::after {
+      content: "";
+      background-color: #fab5704c;
+      position: absolute;
+    }
 
-.containerC::before {
-  border-radius: 50%;
-  width: 6rem;
-  height: 6rem;
-  top: 30%;
-  right: 7%;
-}
+    .containerC::before {
+      border-radius: 50%;
+      width: 6rem;
+      height: 6rem;
+      top: 30%;
+      right: 7%;
+    }
 
-.containerC::after {
-  content: "";
-  position: absolute;
-  height: 3rem;
-  top: 8%;
-  right: 5%;
-  border: 1px solid;
-}
+    .containerC::after {
+      content: "";
+      position: absolute;
+      height: 3rem;
+      top: 8%;
+      right: 5%;
+      border: 1px solid;
+    }
 
-.containerC .boxC {
-  width: 11.875em;
-  height: 15.875em;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.074);
-  border: 1px solid rgba(255, 255, 255, 0.222);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  border-radius: 0.7rem;
-  transition: all ease 0.3s;
-}
+    .containerC .boxC {
+      width: 11.875em;
+      height: 15.875em;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.074);
+      border: 1px solid rgba(255, 255, 255, 0.222);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-radius: 0.7rem;
+      transition: all ease 0.3s;
+    }
 
-.containerC .boxC {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+    .containerC .boxC {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-.containerC .boxC .titleC {
-  font-size: 2rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-}
+    .containerC .boxC .titleC {
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+    }
 
-.containerC .boxC div strong {
-  display: block;
-  margin-bottom: 0.5rem;
-}
+    .containerC .boxC div strong {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
 
-.containerC .boxC div p {
-  margin: 0;
-  font-size: 0.9em;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-}
+    .containerC .boxC div p {
+      margin: 0;
+      font-size: 0.9em;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+    }
 
-.containerC .boxC div span {
-  font-size: 0.7rem;
-  font-weight: 300;
-}
+    .containerC .boxC div span {
+      font-size: 0.7rem;
+      font-weight: 300;
+    }
 
-.containerC .boxC div span:nth-child(3) {
-  font-weight: 500;
-  margin-right: 0.2rem;
-}
+    .containerC .boxC div span:nth-child(3) {
+      font-weight: 500;
+      margin-right: 0.2rem;
+    }
 
-.containerC .boxC:hover {
-  box-shadow: 0px 0px 20px 1px #ffbb763f;
-  border: 1px solid rgba(255, 255, 255, 0.454);
-}
+    .containerC .boxC:hover {
+      box-shadow: 0px 0px 20px 1px #ffbb763f;
+      border: 1px solid rgba(255, 255, 255, 0.454);
+    }
 
-    
-  .cardR {
-  position: absolute;
-  width: 190px;
-  height: 254px;
-  border: 4px solid rgba(255, 255, 255, 0.3);
-  border-radius: 0.8em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: 0.5s;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+    .cardR {
+      position: absolute;
+      width: 190px;
+      height: 254px;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-radius: 0.8em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.5s;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-.cardR:hover {
-  scale: 1.05;
-  rotate: 3deg;
-}
+    .cardR:hover {
+      scale: 1.05;
+      rotate: 3deg;
+    }
 
-.cardR::after {
-  content: '';
-  width: 93%;
-  height: 95%;
-  position: absolute;
-  border-radius: 0.7em;
-  background-color: rgba(255, 255, 255, 0.1);
-  z-index: 0;
-}
+    .cardR::after {
+      content: '';
+      width: 93%;
+      height: 95%;
+      position: absolute;
+      border-radius: 0.7em;
+      background-color: rgba(255, 255, 255, 0.1);
+      z-index: 0;
+    }
 
-.shadowR {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(315deg, #03a9f4, #ff0058);
-  z-index: -1;
-  filter: blur(25px);
-}
+    .shadowR {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(315deg, #03a9f4, #ff0058);
+      z-index: -1;
+      filter: blur(25px);
+    }
 
-.txtR {
-  position: absolute;
-  font-weight: 800;
-  font-size: 1.6em;
-  color: #fff;
-}
+    .txtR {
+      position: absolute;
+      font-weight: 800;
+      font-size: 1.6em;
+      color: #fff;
+    }
 
-.cardR:hover .shadowR {
-  animation: rotate 3s linear infinite;
-}
+    .cardR:hover .shadowR {
+      animation: rotate 3s linear infinite;
+    }
 
-@keyframes rotate {
-  0% {
-    rotate: 0deg;
-    background: linear-gradient(315deg, #03a9f4, #ff0058);
-  }
+    @keyframes rotate {
+      0% {
+        rotate: 0deg;
+        background: linear-gradient(315deg, #03a9f4, #ff0058);
+      }
 
-  50% {
-    rotate: 180deg;
-    background: linear-gradient(45deg, #ffbc00, #ff0058);
-  }
+      50% {
+        rotate: 180deg;
+        background: linear-gradient(45deg, #ffbc00, #ff0058);
+      }
 
-  100% {
-    rotate: 360deg;
-    background: linear-gradient(315deg, #4dff03, #00d0ff);
-  }
-}  
-    
-    
- .cardL {
-  overflow: visible;
-  position: relative;
-  width: 190px;
-  height: 254px;
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
-}
+      100% {
+        rotate: 360deg;
+        background: linear-gradient(315deg, #4dff03, #00d0ff);
+      }
+    }
 
-.cardL:before,
-.cardL:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  background: #fff;
-  transition: 0.5s;
-  z-index: -99;
-}
+    .cardL {
+      overflow: visible;
+      position: relative;
+      width: 190px;
+      height: 254px;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+    }
 
-.detailsL {
-  position: absolute;
-  left: -10px;
-  right: 0;
-  bottom: 5px;
-  height: 60px;
-  text-align: center;
-  text-transform: uppercase;
-}
+    .cardL:before,
+    .cardL:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+      background: #fff;
+      transition: 0.5s;
+      z-index: -99;
+    }
 
-/*Image*/
-.imgboxL {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  bottom: 10px;
-  right: 10px;
-  background: #222;
-  transition: 0.5s;
-  z-index: 1;
-}
+    .detailsL {
+      position: absolute;
+      left: -10px;
+      right: 0;
+      bottom: 5px;
+      height: 60px;
+      text-align: center;
+      text-transform: uppercase;
+    }
 
-.imgL {
-  background: #4158D0;
-  background-image:  url("https://www.cartasaldirector.org/wp-content/uploads/2016/03/santa-teresita-de-jesus.jpg");
- background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+    /*Image*/
+    .imgboxL {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      bottom: 10px;
+      right: 10px;
+      background: #222;
+      transition: 0.5s;
+      z-index: 1;
+    }
 
-/*Text*/
-.titleL {
-  font-weight: 600;
-  font-size: 20px;
-  color: #777;
-}
+    .imgL {
+      background: #4158D0;
+      background-image: url("https://www.cartasaldirector.org/wp-content/uploads/2016/03/santa-teresita-de-jesus.jpg");
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
 
-.captionL {
-  font-weight: 500;
-  font-size: 16px;
-  color: #4158D0;
-  display: block;
-  margin-top: 5px;
-}
+    /*Text*/
+    .titleL {
+      font-weight: 600;
+      font-size: 20px;
+      color: #777;
+    }
 
-/*Hover*/
-.cardL:hover .imgboxL {
-  bottom: 80px;
-}
+    .captionL {
+      font-weight: 500;
+      font-size: 16px;
+      color: #4158D0;
+      display: block;
+      margin-top: 5px;
+    }
 
-.cardL:hover:before {
-  transform: rotate(20deg);
-}
+    /*Hover*/
+    .cardL:hover .imgboxL {
+      bottom: 80px;
+    }
 
-.cardL:hover:after {
-  transform: rotate(10deg);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
-}   
-    
-    
-    
-    
+    .cardL:hover:before {
+      transform: rotate(20deg);
+    }
+
+    .cardL:hover:after {
+      transform: rotate(10deg);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+    }
   </style>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
@@ -768,89 +757,95 @@ Forked from:
 https://quasar.dev/vue-components/carousel#example--vertical-mode
 -->
 
-                                            <canvas id="glscreen"></canvas>                                         
-                                                                                
-           <div id="container1" class="" style="width: 100%; height: 100vh; margin: auto;  max-width: 100%;  background-image: radial-gradient(circle at 75.98% 68.19%, #ffb600 0, #ffbf00 8.33%, #f9c700 16.67%, #e5cf00 25%, #d0d500 33.33%, #b9db00 41.67%, #a1e000 50%, #86e42a 58.33%, #64e843 66.67%, #2feb5a 75%, #00ee71 83.33%, #00f087 91.67%, #00f29f 100%);">                                           
-                                                                      
-    
- <swiper-container class="mySwiper" pagination="true" pagination-type="progressbar" navigation="true" autoplay-delay="3500" autoplay-disable-on-interaction="false">
-    <swiper-slide> <h2 class="tituloN">Bienvenido a María Alegra</h2></swiper-slide>
-    <swiper-slide> <div style="border: 20px solid transparent; padding: 10px 10px 15px 10px;">
-     <div class="cardT">
-  <p class="headingT">
-    Es una iniciativa que pretende 
-  </p>
-  <p>
-    Acabar con la
-  </p>
-  <p>Depresión
-</p></div>                                                                                        
-                                                                                             <p></p></div></swiper-slide>
-                     
-    <swiper-slide><div class="e-card playing">
-  <div class="image"></div>
-  
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  
+  <canvas id="glscreen"></canvas>
 
-      <div class="infotop">
+  <div id="container1" class="" style="width: 100%; height: 100vh; margin: auto;  max-width: 100%;  background-image: radial-gradient(circle at 75.98% 68.19%, #ffb600 0, #ffbf00 8.33%, #f9c700 16.67%, #e5cf00 25%, #d0d500 33.33%, #b9db00 41.67%, #a1e000 50%, #86e42a 58.33%, #64e843 66.67%, #2feb5a 75%, #00ee71 83.33%, #00f087 91.67%, #00f29f 100%);">
 
-   <br>      
- A través de la fe.
-<br>
-<div class="name">y la psicología</div>
-  </div>
-</div></swiper-slide>
-    <swiper-slide><div class="containerC">
-  <div class="boxC">
-    <span class="titleC">Visón:</span>
-    <div>
-      <strong>Llegar a todas </strong>
-      <p>las parroquias</p>
-      <span>Del</span> <span>mundo</span>
-    </div>
-  </div>
-</div>
-</swiper-slide>
-    <swiper-slide><div class="cardR">
-        <div class="txtR">Misión :)<p>Ayudar</p></div>
-        <div class="shadowR"></div>
-    </div></swiper-slide>
-    <swiper-slide><div class="cardL">
-    <div class="imgboxL">
-        <div class="imgL"></div>
-    </div>
-    <div class="detailsL">
-        <h2 class="titleL">San Teresita</h2>
-        <span class="captionL">De Liseux</span>
-    </div>
-</div></swiper-slide>
-    <swiper-slide>Slide 7</swiper-slide>
-    <swiper-slide>Slide 8</swiper-slide>
-    <swiper-slide>Slide 9</swiper-slide>
-                                      
-  </swiper-container>
-  
-   <br>
-<br>		   
-		   
-    
-<a href="#" id="buttonNa">Continuar</a>        
+    <swiper-container class="mySwiper" pagination="true" pagination-type="progressbar" navigation="true" autoplay-delay="3500" autoplay-disable-on-interaction="false">
+      <swiper-slide>
+        <h2 class="tituloN">Bienvenido a María Alegra</h2>
+      </swiper-slide>
+      <swiper-slide>
+        <div style="border: 20px solid transparent; padding: 10px 10px 15px 10px;">
+          <div class="cardT">
+            <p class="headingT">
+              Es una iniciativa que pretende
+            </p>
+            <p>
+              Acabar con la
+            </p>
+            <p>Depresión
+            </p>
+          </div>
+          <p></p>
+        </div>
+      </swiper-slide>
 
-    
+      <swiper-slide>
+        <div class="e-card playing">
+          <div class="image"></div>
+
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+
+          <div class="infotop">
+
+            <br>
+            A través de la fe.
+            <br>
+            <div class="name">y la psicología</div>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="containerC">
+          <div class="boxC">
+            <span class="titleC">Visón:</span>
+            <div>
+              <strong>Llegar a todas </strong>
+              <p>las parroquias</p>
+              <span>Del</span> <span>mundo</span>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="cardR">
+          <div class="txtR">Misión :)<p>Ayudar</p>
+          </div>
+          <div class="shadowR"></div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="cardL">
+          <div class="imgboxL">
+            <div class="imgL"></div>
+          </div>
+          <div class="detailsL">
+            <h2 class="titleL">San Teresita</h2>
+            <span class="captionL">De Liseux</span>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>Slide 7</swiper-slide>
+      <swiper-slide>Slide 8</swiper-slide>
+      <swiper-slide>Slide 9</swiper-slide>
+
+    </swiper-container>
+
+    <br>
+    <br>
+
+    <a href="#" id="buttonNa">Continuar</a>
+
     <a id="mia">Saber más..</a>
-                                                                                      
-               
-   </div>                                                                        
-               
-               
+
+  </div>
+
   <div id="loaderWrapper" class="container" hidden>
     <img src="https://mariavguadalupe.github.io/Bienvenida3.gif" alt="Cargando..." style="width: 100%; height: auto; margin: auto;  max-width: 100%;">
   </div>
-
-
 
   <div id="q-app" style="min-height: 98vh; background: #EEEEEE;" hidden>
 
@@ -2827,10 +2822,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       }
       if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
         // La página ha sido instalada      
-                                       
       } else {
-       
-                                    
         document.getElementById('banner1').style.display = 'block';
         if (bowser.name !== "Chrome") {
           document.getElementById('btninstalar').style.display = 'none';
@@ -2880,139 +2872,109 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
     });
   </script>
 
- 
   <script>
-    
-    
     // this template is pretty old, and the comments no longer reflect my knowledge accurately.  But this template is what helped me learn to code with WebGL
+    // set up global javascript variables
+    var canvas, gl; // canvas and webgl context
+    var shaderScript;
+    var shaderSource;
+    var vertexShader; // Vertex shader.  Not much happens in that shader, it just creates the vertex's to be drawn on
+    var fragmentShader; // this shader is where the magic happens. Fragment = pixel.  Vertex = kind of like "faces" on a 3d model.  
+    var buffer;
+    /* Variables holding the location of uniform variables in the WebGL. We use this to send info to the WebGL script. */
+    var locationOfTime;
+    var locationOfResolution;
+    var startTime = new Date().getTime(); // Get start time for animating
+    var currentTime = 0;
 
-// set up global javascript variables
+    function init() {
+      // standard canvas setup here, except get webgl context
+      canvas = document.getElementById('glscreen');
+      gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      // give WebGL it's viewport
+      gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+      // kind of back-end stuff
+      buffer = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+      gl.bufferData(
+        gl.ARRAY_BUFFER,
+        new Float32Array([
+          -1.0, -1.0,
+          1.0, -1.0,
+          -1.0, 1.0,
+          -1.0, 1.0,
+          1.0, -1.0,
+          1.0, 1.0
+        ]),
+        gl.STATIC_DRAW
+      ); // ^^ That up there sets up the vertex's used to draw onto. I think at least, I haven't payed much attention to vertex's yet, for all I know I'm wrong.
+      shaderScript = document.getElementById("2d-vertex-shader");
+      shaderSource = shaderScript.text;
+      vertexShader = gl.createShader(gl.VERTEX_SHADER); //create the vertex shader from script
+      gl.shaderSource(vertexShader, shaderSource);
+      gl.compileShader(vertexShader);
+      shaderScript = document.getElementById("2d-fragment-shader");
+      shaderSource = shaderScript.text;
+      fragmentShader = gl.createShader(gl.FRAGMENT_SHADER); //create the fragment from script
+      gl.shaderSource(fragmentShader, shaderSource);
+      gl.compileShader(fragmentShader);
+      program = gl.createProgram(); // create the WebGL program.  This variable will be used to inject our javascript variables into the program.
+      gl.attachShader(program, vertexShader); // add the shaders to the program
+      gl.attachShader(program, fragmentShader); // ^^
+      gl.linkProgram(program); // Tell our WebGL application to use the program
+      gl.useProgram(program); // ^^ yep, but now literally use it.
+      /* 
+      
+      Alright, so here we're attatching javascript variables to the WebGL code.  First we get the location of the uniform variable inside the program. 
+      
+      We use the gl.getUniformLocation function to do this, and pass thru the program variable we created above, as well as the name of the uniform variable in our shader.
+      
+      */
+      locationOfResolution = gl.getUniformLocation(program, "u_resolution");
+      locationOfTime = gl.getUniformLocation(program, "u_time");
+      /*
+      
+      Then we simply apply our javascript variables to the program. 
+      Notice, it gets a bit tricky doing this.  If you're editing a float value, gl.uniformf works. 
+      
+      But if we want to send over an array of floats, for example, we'd use gl.uniform2f.  We're specifying that we are sending 2 floats at the end.  
+      
+      You can also send it over to the program as a vector, by using gl.uniform2fv.
+      To read up on all of the different gl.uniform** stuff, to send any variable you want, I'd recommend using the table (found on this site, but you need to scroll down about 300px) 
+      
+      https://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html#uniforms
+      
+      */
+      gl.uniform2f(locationOfResolution, canvas.width, canvas.height);
+      gl.uniform1f(locationOfTime, currentTime);
+      render();
+    }
 
-var canvas, gl; // canvas and webgl context
-
-var shaderScript;
-var shaderSource;
-var vertexShader; // Vertex shader.  Not much happens in that shader, it just creates the vertex's to be drawn on
-var fragmentShader; // this shader is where the magic happens. Fragment = pixel.  Vertex = kind of like "faces" on a 3d model.  
-var buffer;
-
-
-/* Variables holding the location of uniform variables in the WebGL. We use this to send info to the WebGL script. */
-var locationOfTime;
-var locationOfResolution;
-
-var startTime = new Date().getTime(); // Get start time for animating
-var currentTime = 0;
-
-function init() {
-	// standard canvas setup here, except get webgl context
-	canvas = document.getElementById('glscreen');
-	gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-	canvas.width  = window.innerWidth;
-	canvas.height = window.innerHeight;
-	
-	// give WebGL it's viewport
-	gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-
-	// kind of back-end stuff
-	buffer = gl.createBuffer();
-	gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-	gl.bufferData(
-		gl.ARRAY_BUFFER, 
-		new Float32Array([
-			-1.0, -1.0, 
-			1.0, -1.0, 
-			-1.0,  1.0, 
-			-1.0,  1.0, 
-			1.0, -1.0, 
-			1.0,  1.0]), 
-		gl.STATIC_DRAW
-	); // ^^ That up there sets up the vertex's used to draw onto. I think at least, I haven't payed much attention to vertex's yet, for all I know I'm wrong.
-
-	shaderScript = document.getElementById("2d-vertex-shader");
-	shaderSource = shaderScript.text;
-	vertexShader = gl.createShader(gl.VERTEX_SHADER); //create the vertex shader from script
-	gl.shaderSource(vertexShader, shaderSource);
-	gl.compileShader(vertexShader);
-
-	shaderScript   = document.getElementById("2d-fragment-shader");
-	shaderSource   = shaderScript.text;
-	fragmentShader = gl.createShader(gl.FRAGMENT_SHADER); //create the fragment from script
-	gl.shaderSource(fragmentShader, shaderSource);
-	gl.compileShader(fragmentShader);
-
-	program = gl.createProgram(); // create the WebGL program.  This variable will be used to inject our javascript variables into the program.
-	gl.attachShader(program, vertexShader); // add the shaders to the program
-	gl.attachShader(program, fragmentShader); // ^^
-	gl.linkProgram(program);	 // Tell our WebGL application to use the program
-	gl.useProgram(program); // ^^ yep, but now literally use it.
-	
-	
-	/* 
-	
-	Alright, so here we're attatching javascript variables to the WebGL code.  First we get the location of the uniform variable inside the program. 
-	
-	We use the gl.getUniformLocation function to do this, and pass thru the program variable we created above, as well as the name of the uniform variable in our shader.
-	
-	*/
-	locationOfResolution = gl.getUniformLocation(program, "u_resolution");
-	locationOfTime = gl.getUniformLocation(program, "u_time");
-	
-	
-	/*
-	
-	Then we simply apply our javascript variables to the program. 
-	Notice, it gets a bit tricky doing this.  If you're editing a float value, gl.uniformf works. 
-	
-	But if we want to send over an array of floats, for example, we'd use gl.uniform2f.  We're specifying that we are sending 2 floats at the end.  
-	
-	You can also send it over to the program as a vector, by using gl.uniform2fv.
-	To read up on all of the different gl.uniform** stuff, to send any variable you want, I'd recommend using the table (found on this site, but you need to scroll down about 300px) 
-	
-	https://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html#uniforms
-	
-	*/
-	gl.uniform2f(locationOfResolution, canvas.width, canvas.height);
-	gl.uniform1f(locationOfTime, currentTime);
-
-	render();
-}
-
-function render() {
-	var now = new Date().getTime();
-	currentTime = (now - startTime) / 1000; // update the current time for animations
-	
-	
-	gl.uniform1f(locationOfTime, currentTime); // update the time uniform in our shader
-
-	window.requestAnimationFrame(render, canvas); // request the next frame
-
-	positionLocation = gl.getAttribLocation(program, "a_position"); // do stuff for those vertex's
-	gl.enableVertexAttribArray(positionLocation);
-	gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
-	gl.drawArrays(gl.TRIANGLES, 0, 6);
-}
-
-window.addEventListener('load', function(event){
-	init();
-});
-
-window.addEventListener('resize', function(event){
-	// just re-doing some stuff in the init here, to enable resizing.
-	
-	canvas.width  = window.innerWidth;
-	canvas.height = window.innerHeight;
-	gl.viewport(0, 0, window.innerWidth, window.innerHeight);
-	locationOfResolution = gl.getUniformLocation(program, "u_resolution");
-});
-    
-   
+    function render() {
+      var now = new Date().getTime();
+      currentTime = (now - startTime) / 1000; // update the current time for animations
+      gl.uniform1f(locationOfTime, currentTime); // update the time uniform in our shader
+      window.requestAnimationFrame(render, canvas); // request the next frame
+      positionLocation = gl.getAttribLocation(program, "a_position"); // do stuff for those vertex's
+      gl.enableVertexAttribArray(positionLocation);
+      gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
+      gl.drawArrays(gl.TRIANGLES, 0, 6);
+    }
+    window.addEventListener('load', function(event) {
+      init();
+    });
+    window.addEventListener('resize', function(event) {
+      // just re-doing some stuff in the init here, to enable resizing.
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      gl.viewport(0, 0, window.innerWidth, window.innerHeight);
+      locationOfResolution = gl.getUniformLocation(program, "u_resolution");
+    });
   </script>
 
-
-
-
-<script id="2d-fragment-shader" type="x-shader/x-fragment">// <![CDATA[
+  <script id="2d-fragment-shader" type="x-shader/x-fragment">// <![CDATA[
 
 #ifdef GL_ES
 precision mediump float;
@@ -3032,79 +2994,53 @@ void main() {
     gl_FragColor = vec4(color,1.0);
 }
 // ]]></script>
-<script id="2d-vertex-shader" type="x-shader/x-vertex">// <![CDATA[
+  <script id="2d-vertex-shader" type="x-shader/x-vertex">// <![CDATA[
 attribute vec2 a_position;
   void main() {
     gl_Position = vec4(a_position, 0, 1);
   }
 // ]]></script>
 
+  <script>
+    document.getElementById('container1').style.backgroundImage = "radial-gradient(circle at 75.98% 68.19%, #ffb600 0, #ffbf00 8.33%, #f9c700 16.67%, #e5cf00 25%, #d0d500 33.33%, #b9db00 41.67%, #a1e000 50%, #86e42a 58.33%, #64e843 66.67%, #2feb5a 75%, #00ee71 83.33%, #00f087 91.67%, #00f29f 100%)";
+    window.addEventListener("load", fun_gradiente);
 
-
-<script>
-  
-
-document.getElementById('container1').style.backgroundImage = "radial-gradient(circle at 75.98% 68.19%, #ffb600 0, #ffbf00 8.33%, #f9c700 16.67%, #e5cf00 25%, #d0d500 33.33%, #b9db00 41.67%, #a1e000 50%, #86e42a 58.33%, #64e843 66.67%, #2feb5a 75%, #00ee71 83.33%, #00f087 91.67%, #00f29f 100%)";
-
-
-window.addEventListener("load", fun_gradiente);
     function fun_gradiente() {
-document.getElementById('container1').style.backgroundImage = "none";
-	    
+      document.getElementById('container1').style.backgroundImage = "none";
     }
-  
-  
-  
-      const botonNa = document.getElementById("buttonNa");
-      const divConta1 = document.getElementById("container1");
-      const fondoColores = document.getElementById("glscreen");
-      const divQ2 = document.getElementById('q-app');
-      
-  
-botonNa.addEventListener("click", () => {
+    const botonNa = document.getElementById("buttonNa");
+    const divConta1 = document.getElementById("container1");
+    const fondoColores = document.getElementById("glscreen");
+    const divQ2 = document.getElementById('q-app');
+    botonNa.addEventListener("click", () => {
+      fondoColores.style.display = 'none';
+      divConta1.style.display = 'none';
+      divQ2.style.display = 'block';
+      finicio();
+      var htmlElement = document.querySelector('html');
+      // Selecciona el elemento 'body'
+      var bodyElement = document.querySelector('body');
+      // Cambia el valor de la propiedad 'overflow' a 'auto' en 'html'
+      htmlElement.style.overflow = 'auto';
+      // Cambia el valor de la propiedad 'overflow' a 'auto' en 'body'
+      bodyElement.style.overflow = 'auto';
+    });
+  </script>
 
-    fondoColores.style.display = 'none';
-    divConta1.style.display = 'none';
-    divQ2.style.display = 'block';
-    finicio();
-  
-  
-     });
-  
-
-</script>
-
-
-
-  <script>  
-     
+  <script>
     if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://')) {
-        // La página ha sido instalada      
-        
+      // La página ha sido instalada      
       const divConta1 = document.getElementById("container1");
       const fondoColores = document.getElementById("glscreen");
       const divQ2 = document.getElementById('q-app');
+      fondoColores.style.display = 'none';
+      divConta1.style.display = 'none';
+      divQ2.style.display = 'block';
+    } else {}
+  </script>
 
-    fondoColores.style.display = 'none';
-    divConta1.style.display = 'none';
-    divQ2.style.display = 'block';
-  
-                                
-      } else {
-                                                             
-        
-      }  
-                                                             
-                                
-                                
-                                
-  </script> 
-                                                             
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>                                                             
-                                                             
-                                                             
-                                
-                                
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
 </body>
 
 </html>
