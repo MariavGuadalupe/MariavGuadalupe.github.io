@@ -159,7 +159,13 @@
     }
     
     /* Estilos para la animación del botón */
-    #buttonNa {
+   
+	  #buttonNa {
+	position: fixed;
+      bottom: 75px;
+	display: flex;	  
+z-index:3;
+		  
       background-color: #f2f2f2;
       color: #333;
       padding: 10px 20px;
@@ -298,7 +304,7 @@
 
 .tracking-in-expand-forward-top{animation:tracking-in-expand-forward-top 0.7s linear both} @keyframes tracking-in-expand-forward-top{0%{letter-spacing:-.2em;transform:translateZ(-700px) translateY(-100px);opacity:0}40%{opacity:.6}100%{transform:translateZ(0) translateY(0);opacity:1}}
     
-    html, body {
+    #container1 {
 	padding: 0px;
 	margin: 0px;
 	overflow: hidden;
@@ -314,6 +320,422 @@ canvas {
       background-image: radial-gradient(circle at 75.98% 68.19%, #ffb600 0, #ffbf00 8.33%, #f9c700 16.67%, #e5cf00 25%, #d0d500 33.33%, #b9db00 41.67%, #a1e000 50%, #86e42a 58.33%, #64e843 66.67%, #2feb5a 75%, #00ee71 83.33%, #00f087 91.67%, #00f29f 100%);
       
     }
+    
+    
+    swiper-container {
+	position: absolute;    
+	top: 0;
+      left: 0;    
+      width: 100%;
+      height: 85vh;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+   
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 90%;
+      object-fit: cover;
+    }
+    
+    .cardT {
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+.cardT::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -5px;
+  margin: auto;
+  width: 200px;
+  height: 264px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cardT::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.headingT {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.cardT p:not(.headingT) {
+  font-size: 14px;
+}
+
+.cardT p:last-child {
+  color: #e81cff;
+  font-weight: 600;
+}
+
+.cardT:hover::after {
+  filter: blur(30px);
+}
+
+.cardT:hover::before {
+  transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+}
+
+
+ .e-card {
+  margin: 100px auto;
+  background: transparent;
+  box-shadow: 0px 8px 28px -9px rgba(0,0,0,0.45);
+  position: relative;
+  width: 240px;
+  height: 330px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  width: 540px;
+  height: 700px;
+  opacity: 0.6;
+  left: 0;
+  top: 0;
+  margin-left: -50%;
+  margin-top: -70%;
+  background: linear-gradient(744deg,#af40ff,#5b42f3 60%,#00ddeb);
+}
+
+.icon {
+  width: 3em;
+  margin-top: -1em;
+  padding-bottom: 1em;
+}
+
+.infotop {
+  text-align: center;
+  font-size: 20px;
+  position: absolute;
+  top: 5.6em;
+  left: 0;
+  right: 0;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 100;
+  position: relative;
+  top: 1em;
+  text-transform: lowercase;
+}
+
+.wave:nth-child(2),
+.wave:nth-child(3) {
+  top: 210px;
+}
+
+.playing .wave {
+  border-radius: 40%;
+  animation: wave 3000ms infinite linear;
+}
+
+.wave {
+  border-radius: 40%;
+  animation: wave 55s infinite linear;
+}
+
+.playing .wave:nth-child(2) {
+  animation-duration: 4000ms;
+}
+
+.wave:nth-child(2) {
+  animation-duration: 50s;
+}
+
+.playing .wave:nth-child(3) {
+  animation-duration: 5000ms;
+}
+
+.wave:nth-child(3) {
+  animation-duration: 45s;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}   
+    
+    
+    
+    .containerC {
+  color: white;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.containerC::before,
+.containerC::after {
+  content: "";
+  background-color: #fab5704c;
+  position: absolute;
+}
+
+.containerC::before {
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  top: 30%;
+  right: 7%;
+}
+
+.containerC::after {
+  content: "";
+  position: absolute;
+  height: 3rem;
+  top: 8%;
+  right: 5%;
+  border: 1px solid;
+}
+
+.containerC .boxC {
+  width: 11.875em;
+  height: 15.875em;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.074);
+  border: 1px solid rgba(255, 255, 255, 0.222);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 0.7rem;
+  transition: all ease 0.3s;
+}
+
+.containerC .boxC {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.containerC .boxC .titleC {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.containerC .boxC div strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.containerC .boxC div p {
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.containerC .boxC div span {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+.containerC .boxC div span:nth-child(3) {
+  font-weight: 500;
+  margin-right: 0.2rem;
+}
+
+.containerC .boxC:hover {
+  box-shadow: 0px 0px 20px 1px #ffbb763f;
+  border: 1px solid rgba(255, 255, 255, 0.454);
+}
+
+    
+  .cardR {
+  position: absolute;
+  width: 190px;
+  height: 254px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.5s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cardR:hover {
+  scale: 1.05;
+  rotate: 3deg;
+}
+
+.cardR::after {
+  content: '';
+  width: 93%;
+  height: 95%;
+  position: absolute;
+  border-radius: 0.7em;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 0;
+}
+
+.shadowR {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg, #03a9f4, #ff0058);
+  z-index: -1;
+  filter: blur(25px);
+}
+
+.txtR {
+  position: absolute;
+  font-weight: 800;
+  font-size: 1.6em;
+  color: #fff;
+}
+
+.cardR:hover .shadowR {
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    rotate: 0deg;
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+  }
+
+  50% {
+    rotate: 180deg;
+    background: linear-gradient(45deg, #ffbc00, #ff0058);
+  }
+
+  100% {
+    rotate: 360deg;
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+  }
+}  
+    
+    
+ .cardL {
+  overflow: visible;
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+}
+
+.cardL:before,
+.cardL:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: #fff;
+  transition: 0.5s;
+  z-index: -99;
+}
+
+.detailsL {
+  position: absolute;
+  left: -10px;
+  right: 0;
+  bottom: 5px;
+  height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*Image*/
+.imgboxL {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.imgL {
+  background: #4158D0;
+  background-image:  url("https://www.cartasaldirector.org/wp-content/uploads/2016/03/santa-teresita-de-jesus.jpg");
+ background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*Text*/
+.titleL {
+  font-weight: 600;
+  font-size: 20px;
+  color: #777;
+}
+
+.captionL {
+  font-weight: 500;
+  font-size: 16px;
+  color: #4158D0;
+  display: block;
+  margin-top: 5px;
+}
+
+/*Hover*/
+.cardL:hover .imgboxL {
+  bottom: 80px;
+}
+
+.cardL:hover:before {
+  transform: rotate(20deg);
+}
+
+.cardL:hover:after {
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+}   
+    
     
     
     
@@ -349,11 +771,73 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
                                             <canvas id="glscreen"></canvas>                                         
                                                                                 
            <div id="container1" class="" style="width: 100%; height: 100vh; margin: auto;  max-width: 100%;  background-image: radial-gradient(circle at 75.98% 68.19%, #ffb600 0, #ffbf00 8.33%, #f9c700 16.67%, #e5cf00 25%, #d0d500 33.33%, #b9db00 41.67%, #a1e000 50%, #86e42a 58.33%, #64e843 66.67%, #2feb5a 75%, #00ee71 83.33%, #00f087 91.67%, #00f29f 100%);">                                           
-                                               <h1 class="tituloN">Bienvenido a María Alegra!</h1>
+                                                                      
     
-    <a href="#" id="buttonNa">Continuar</a>                                                                   
- 
-   
+ <swiper-container class="mySwiper" pagination="true" pagination-type="progressbar" navigation="true" autoplay-delay="3500" autoplay-disable-on-interaction="false">
+    <swiper-slide> <h2 class="tituloN">Bienvenido a María Alegra</h2></swiper-slide>
+    <swiper-slide> <div style="border: 20px solid transparent; padding: 10px 10px 15px 10px;">
+     <div class="cardT">
+  <p class="headingT">
+    Es una iniciativa que pretende 
+  </p>
+  <p>
+    Acabar con la
+  </p>
+  <p>Depresión
+</p></div>                                                                                        
+                                                                                             <p></p></div></swiper-slide>
+                     
+    <swiper-slide><div class="e-card playing">
+  <div class="image"></div>
+  
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  
+
+      <div class="infotop">
+
+   <br>      
+ A través de la fe.
+<br>
+<div class="name">y la psicología</div>
+  </div>
+</div></swiper-slide>
+    <swiper-slide><div class="containerC">
+  <div class="boxC">
+    <span class="titleC">Visón:</span>
+    <div>
+      <strong>Llegar a todas </strong>
+      <p>las parroquias</p>
+      <span>Del</span> <span>mundo</span>
+    </div>
+  </div>
+</div>
+</swiper-slide>
+    <swiper-slide><div class="cardR">
+        <div class="txtR">Misión :)<p>Ayudar</p></div>
+        <div class="shadowR"></div>
+    </div></swiper-slide>
+    <swiper-slide><div class="cardL">
+    <div class="imgboxL">
+        <div class="imgL"></div>
+    </div>
+    <div class="detailsL">
+        <h2 class="titleL">San Teresita</h2>
+        <span class="captionL">De Liseux</span>
+    </div>
+</div></swiper-slide>
+    <swiper-slide>Slide 7</swiper-slide>
+    <swiper-slide>Slide 8</swiper-slide>
+    <swiper-slide>Slide 9</swiper-slide>
+                                      
+  </swiper-container>
+  
+   <br>
+<br>		   
+		   
+    
+<a href="#" id="buttonNa">Continuar</a>        
 
     
     <a id="mia">Saber más..</a>
@@ -2614,7 +3098,11 @@ botonNa.addEventListener("click", () => {
                                 
                                 
                                 
-  </script>                              
+  </script> 
+                                                             
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>                                                             
+                                                             
+                                                             
                                 
                                 
 </body>
