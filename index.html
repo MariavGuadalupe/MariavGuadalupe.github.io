@@ -728,6 +728,54 @@
       transform: rotate(10deg);
       box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
     }
+    
+    
+    .cardEquipo {
+  background-color: rgba(243, 244, 246, 1);
+  padding: 2rem;
+  max-width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 20px 30px -20px rgba(5, 5, 5, 0.24);
+}
+
+.headerEquipo {
+  display: flex;
+  align-items: center;
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+
+.headerEquipo .imageEquipo {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  background-color: royalblue;
+  background-image: url("https://s3.us-east-1.amazonaws.com/doctoralia.com.mx/doctor/9826cd/9826cd9048597711ce81a196da4f59aa_220_square.jpg");
+  background-size: cover;
+     
+  
+}
+
+.nameEquipo {
+  margin-top: 0.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, 1);
+}
+
+.messageEquipo {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  margin-top: 1rem;
+  color: rgba(107, 114, 128, 1);
+}
+    
+    
+    
   </style>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
@@ -828,7 +876,22 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
           </div>
         </div>
       </swiper-slide>
-      <swiper-slide>Slide 7</swiper-slide>
+      <swiper-slide> 
+                                  
+      <div class="cardEquipo">
+        <div class="headerEquipo">
+          <div class="imageEquipo"></div>
+          <div>
+            <p class="nameEquipo">Mtra. Deyanira Hernández Lira</p>
+          </div>
+        </div>
+
+        <p class="messageEquipo">
+       Terapeuta complementario
+</div>                            
+                                  
+                                  
+      </swiper-slide>
       <swiper-slide>Slide 8</swiper-slide>
       <swiper-slide>Slide 9</swiper-slide>
 
