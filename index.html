@@ -846,7 +846,93 @@
 }   
     
     
-    
+.cardCont {
+  width: 350px;
+  height: 350px;
+  background: #E8EAEA;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.titleCont, .moreCont {
+  padding: 10px 15px;
+}
+
+.userCont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.user__contentCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.user__containerCont {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleCont {
+  font-weight: 900;
+  font-size: 1.3em;
+}
+
+.nameCont {
+  font-weight: 800;
+}
+
+.usernameCont {
+  font-size: .9em;
+  color: #64696e;
+}
+
+.imageCont {
+  width: 60px;
+  height: 60px;
+  background: rgb(22,19,70);
+  background: linear-gradient(295deg, rgba(22,19,70,1) 41%, rgba(89,177,237,1) 100%);
+  border-radius: 50%;
+  margin-right: 15px;
+   background-image: url("https://s3.us-east-1.amazonaws.com/doctoralia.com.mx/doctor/9826cd/9826cd9048597711ce81a196da4f59aa_220_square.jpg");
+ background-size: cover;
+}
+
+.followCont {
+  border: none;
+  border-radius: 25px;
+  background-color: #0f1113;
+  color: white;
+  padding: 8px 15px;
+  font-weight: 700;
+}
+
+.moreCont {
+  display: block;
+  text-decoration: none;
+  color: rgb(29, 155, 240);
+  font-weight: 800;
+}
+
+.userCont:hover {
+  background-color: #b3b6b6;
+}
+
+.moreCont:hover {
+  background-color: #b3b6b6;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.followCont:hover {
+  background-color: #2c3136;
+}    
     
     
     
@@ -978,7 +1064,50 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
                                 
                                 
       </swiper-slide>
-      <swiper-slide>Slide 9</swiper-slide>
+      <swiper-slide>
+      <div class="cardCont">
+  <p class="titleCont">Colaboradores:</p>
+  <div class="user__containerCont">
+    <div class="userCont">
+      <div class="imageCont"></div>
+      <div class="user__contentCont">
+        <div class="textCont">
+          <span class="nameCont">Mtra. Deyanira Hernández Lira </span>
+          <p class="usernameCont">Terapeuta complementario</p>
+        </div>
+        
+      </div>
+      
+    </div> 
+    <div class="userCont">
+     <div class="imageCont" style="background-image: url('https://i1.rgstatic.net/ii/profile.image/607293292953600-1521801412456_Q128prueba/Ramiro-Iglesias.jpg'); background-size: cover;"></div>
+      <div class="user__contentCont">
+        <div class="textCont">
+          <span class="nameCont">Name</span>
+          <p class="usernameCont">@namedlorem</p>
+        </div>
+        <button class="followCont">Follow</button>
+      </div>
+      
+    </div> 
+    <div class="userCont">
+      <div class="imageCont"></div>
+      <div class="user__contentCont">
+        <div class="textCont">
+          <span class="nameCont">Name</span>
+          <p class="usernameCont"></p>
+        </div>
+       
+      </div>
+      
+    </div> 
+
+  </div>
+  <a class="moreCont" href="#">See more</a>
+</div>                      
+                             
+                             
+     </swiper-slide>
 
     </swiper-container>
 
