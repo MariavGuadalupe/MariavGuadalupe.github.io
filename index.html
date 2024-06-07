@@ -728,214 +728,206 @@
       transform: rotate(10deg);
       box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
     }
-    
-    
+
     .cardEquipo {
-  background-color: rgba(243, 244, 246, 1);
-  padding: 1rem;
-  max-width: 370px;
-  border-radius: 10px;
-  box-shadow: 0 20px 30px -20px rgba(5, 5, 5, 0.24);
-}
+      background-color: rgba(243, 244, 246, 1);
+      padding: 1rem;
+      max-width: 370px;
+      border-radius: 10px;
+      box-shadow: 0 20px 30px -20px rgba(5, 5, 5, 0.24);
+    }
 
-.headerEquipo {
-  display: flex;
-  align-items: right;
-  grid-gap: 1rem;
-  gap: 1rem;
-}
+    .headerEquipo {
+      display: flex;
+      align-items: right;
+      grid-gap: 1rem;
+      gap: 1rem;
+    }
 
-.headerEquipo .imageEquipo {
-  height: 4rem;
-  width: 4rem;
-  border-radius: 9999px;
-  object-fit: cover;
-  background-color: royalblue;
-  background-image: url("https://s3.us-east-1.amazonaws.com/doctoralia.com.mx/doctor/9826cd/9826cd9048597711ce81a196da4f59aa_220_square.jpg");
-  background-size: cover;
-     
-  
-}
+    .headerEquipo .imageEquipo {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 9999px;
+      object-fit: cover;
+      background-color: royalblue;
+      background-image: url("https://s3.us-east-1.amazonaws.com/doctoralia.com.mx/doctor/9826cd/9826cd9048597711ce81a196da4f59aa_220_square.jpg");
+      background-size: cover;
+    }
 
-.nameEquipo {
-  margin-top: 0.25rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgba(55, 65, 81, 1);
-}
+    .nameEquipo {
+      margin-top: 0.25rem;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      font-weight: 600;
+      --tw-text-opacity: 1;
+      color: rgba(55, 65, 81, 1);
+    }
 
-.messageEquipo {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  margin-top: 1rem;
-  color: rgba(107, 114, 128, 1);
-}
-    
-    
- /*Magic card*/
-.cardPrin {
- width: 290px;
- height: 254px;
- background: #f5f5f5;
- overflow: visible;
- box-shadow: 0 5px 20px 2px rgba(0,0,0,0.1);
- display: flex;
- flex-direction: column;
- align-items: center;
-}
+    .messageEquipo {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      margin-top: 1rem;
+      color: rgba(107, 114, 128, 1);
+    }
 
-.card-infoPrin {
- display: flex;
- flex-direction: column;
- align-items: center;
- gap: 2em;
- padding: 0 1rem;
-}
+    /*Magic card*/
+    .cardPrin {
+      width: 290px;
+      height: 254px;
+      background: #f5f5f5;
+      overflow: visible;
+      box-shadow: 0 5px 20px 2px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-.card-imgPrin {
- --size: 100px;
- width: var(--size);
- height: var(--size);
- border-radius: 50%;
- transform: translateY(-50%);
- background: #42caff;
- background: linear-gradient(to bottom, #42caff 0%, #e81aff 100%);
- position: relative;
- transition: all .3s ease-in-out;
- background-image: url("https://mariavguadalupe.github.io/Alegra512.png");
- background-size: cover;
- 
-}
+    .card-infoPrin {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2em;
+      padding: 0 1rem;
+    }
 
-.card-imgPrin::before {
- content: "";
- border-radius: inherit;
- position: absolute;
- top: 50%;
- left: 50%;
- width: 90%;
- height: 90%;
- transform: translate(-50%, -50%);
- border: 1rem solid #e8e8e8;
-}
+    .card-imgPrin {
+      --size: 100px;
+      width: var(--size);
+      height: var(--size);
+      border-radius: 50%;
+      transform: translateY(-50%);
+      background: #42caff;
+      background: linear-gradient(to bottom, #42caff 0%, #e81aff 100%);
+      position: relative;
+      transition: all .3s ease-in-out;
+      background-image: url("https://mariavguadalupe.github.io/Alegra512.png");
+      background-size: cover;
+    }
 
-/*Text*/
-.text-titlePrin {
- text-transform: uppercase;
- font-size: 0.75em;
- color: #42caff;
- letter-spacing: 0.05rem;
-}
+    .card-imgPrin::before {
+      content: "";
+      border-radius: inherit;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 90%;
+      height: 90%;
+      transform: translate(-50%, -50%);
+      border: 1rem solid #e8e8e8;
+    }
 
-.text-bodyPrin {
- font-size: .8em;
- text-align: center;
- color: #6f6d78;
- font-weight: 400;
- font-style: italic;
-}
+    /*Text*/
+    .text-titlePrin {
+      text-transform: uppercase;
+      font-size: 0.75em;
+      color: #42caff;
+      letter-spacing: 0.05rem;
+    }
 
-/*Hover*/
-.cardPrin:hover .card-imgPrin {
- --size: 110px;
- width: var(--size);
- height: var(--size);
-}   
-    
-    
-.cardCont {
-  width: 350px;
-  height: 350px;
-  background: #E8EAEA;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+    .text-bodyPrin {
+      font-size: .8em;
+      text-align: center;
+      color: #6f6d78;
+      font-weight: 400;
+      font-style: italic;
+    }
 
-.titleCont, .moreCont {
-  padding: 10px 15px;
-}
+    /*Hover*/
+    .cardPrin:hover .card-imgPrin {
+      --size: 110px;
+      width: var(--size);
+      height: var(--size);
+    }
 
-.userCont {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 15px;
-}
+    .cardCont {
+      width: 350px;
+      height: 350px;
+      background: #E8EAEA;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-.user__contentCont {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 1;
-}
+    .titleCont,
+    .moreCont {
+      padding: 10px 15px;
+    }
 
-.user__containerCont {
-  display: flex;
-  flex-direction: column;
-}
+    .userCont {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 15px;
+    }
 
-.titleCont {
-  font-weight: 900;
-  font-size: 1.3em;
-}
+    .user__contentCont {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-grow: 1;
+    }
 
-.nameCont {
-  font-weight: 800;
-}
+    .user__containerCont {
+      display: flex;
+      flex-direction: column;
+    }
 
-.usernameCont {
-  font-size: .9em;
-  color: #64696e;
-}
+    .titleCont {
+      font-weight: 900;
+      font-size: 1.3em;
+    }
 
-.imageCont {
-  width: 60px;
-  height: 60px;
-  background: rgb(22,19,70);
-  background: linear-gradient(295deg, rgba(22,19,70,1) 41%, rgba(89,177,237,1) 100%);
-  border-radius: 50%;
-  margin-right: 15px;
-   background-image: url("https://s3.us-east-1.amazonaws.com/doctoralia.com.mx/doctor/9826cd/9826cd9048597711ce81a196da4f59aa_220_square.jpg");
- background-size: cover;
-}
+    .nameCont {
+      font-weight: 800;
+    }
 
-.followCont {
-  border: none;
-  border-radius: 25px;
-  background-color: #0f1113;
-  color: white;
-  padding: 8px 15px;
-  font-weight: 700;
-}
+    .usernameCont {
+      font-size: .9em;
+      color: #64696e;
+    }
 
-.moreCont {
-  display: block;
-  text-decoration: none;
-  color: rgb(29, 155, 240);
-  font-weight: 800;
-}
+    .imageCont {
+      width: 60px;
+      height: 60px;
+      background: rgb(22, 19, 70);
+      background: linear-gradient(295deg, rgba(22, 19, 70, 1) 41%, rgba(89, 177, 237, 1) 100%);
+      border-radius: 50%;
+      margin-right: 15px;
+      background-image: url("https://s3.us-east-1.amazonaws.com/doctoralia.com.mx/doctor/9826cd/9826cd9048597711ce81a196da4f59aa_220_square.jpg");
+      background-size: cover;
+    }
 
-.userCont:hover {
-  background-color: #b3b6b6;
-}
+    .followCont {
+      border: none;
+      border-radius: 25px;
+      background-color: #0f1113;
+      color: white;
+      padding: 8px 15px;
+      font-weight: 700;
+    }
 
-.moreCont:hover {
-  background-color: #b3b6b6;
-  border-radius: 0px 0px 15px 15px;
-}
+    .moreCont {
+      display: block;
+      text-decoration: none;
+      color: rgb(29, 155, 240);
+      font-weight: 800;
+    }
 
-.followCont:hover {
-  background-color: #2c3136;
-}    
-    
-    
-    
+    .userCont:hover {
+      background-color: #b3b6b6;
+    }
+
+    .moreCont:hover {
+      background-color: #b3b6b6;
+      border-radius: 0px 0px 15px 15px;
+    }
+
+    .followCont:hover {
+      background-color: #2c3136;
+    }
   </style>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
@@ -971,22 +963,17 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
     <swiper-container class="mySwiper" pagination="true" pagination-type="progressbar" navigation="true" autoplay-delay="3500" autoplay-disable-on-interaction="false">
       <swiper-slide>
-        <h2 class="tituloN">Bienvenido a María Alegra</h2>
+        <h2 class="tituloN">Bienvenido</h2>
       </swiper-slide>
       <swiper-slide>
-        <div style="border: 20px solid transparent; padding: 10px 10px 15px 10px;">
-          <div class="cardT">
-            <p class="headingT">
-              Es una iniciativa que pretende
-            </p>
-            <p>
-              Acabar con la
-            </p>
-            <p>Depresión
-            </p>
+              <div class="cardPrin">
+          <div class="card-imgPrin"></div>
+          <div class="card-infoPrin">
+            <p class="text-bodyPrin">Es una iniciativa que pretende ayudar a combatir la depresión</p>
+            <p class="text-titlePrin"></p>
           </div>
-          <p></p>
         </div>
+
       </swiper-slide>
 
       <swiper-slide>
@@ -1036,78 +1023,83 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
           </div>
         </div>
       </swiper-slide>
-      <swiper-slide> 
-                                  
-      <div class="cardEquipo">
-        <div class="headerEquipo">
-          <div class="imageEquipo"></div>
-          <div>
-            <p class="nameEquipo">Mtra. Deyanira Hernández Lira</p>
+      <swiper-slide>
+
+        <div class="cardEquipo">
+          <div class="headerEquipo">
+            <div class="imageEquipo"></div>
+            <div>
+              <p class="nameEquipo">Mtra. Deyanira Hernández Lira</p>
+            </div>
           </div>
+
+          <p class="messageEquipo">
+            Terapeuta complementario
         </div>
 
-        <p class="messageEquipo">
-       Terapeuta complementario
-</div>                            
-                                  
-                                  
       </swiper-slide>
       <swiper-slide>
-       <div class="cardPrin">
-<div class="card-imgPrin"></div>
-  <div class="card-infoPrin">
-    <p class="text-bodyPrin">Es una iniciativa que pretende ayudar a combatir la depresión</p>
-    <p class="text-titlePrin">Dona ahora</p>
-  </div>
-</div>                        
-                                
-                                
-                                
-      </swiper-slide>
-      <swiper-slide>
-      <div class="cardCont" style="text-align: left;">
-  <p class="titleCont">Colaboradores:</p>
-  <div class="user__containerCont">
-    <div class="userCont">
-      <div class="imageCont"></div>
-      <div class="user__contentCont">
-        <div class="textCont">
-          <span class="nameCont">Mtra. Deyanira Hernández Lira </span>
-          <p class="usernameCont">Terapeuta complementario</p>
-        </div>
-        
-      </div>
-      
-    </div> 
-    <div class="userCont">
-     <div class="imageCont" style="background-image: url('https://i1.rgstatic.net/ii/profile.image/607293292953600-1521801412456_Q128prueba/Ramiro-Iglesias.jpg'); background-size: cover;"></div>
-      <div class="user__contentCont">
-        <div class="textCont">
-          <span class="nameCont">Name</span>
-          <p class="usernameCont">@namedlorem</p>
-        </div>
-        <button class="followCont">Follow</button>
-      </div>
-      
-    </div> 
-    <div class="userCont">
-      <div class="imageCont"></div>
-      <div class="user__contentCont">
-        <div class="textCont">
-          <span class="nameCont">Name</span>
-          <p class="usernameCont"></p>
-        </div>
-       
-      </div>
-      
-    </div> 
 
-  </div>
-  <a class="moreCont" href="#">See more</a>
-</div>                      
-                             
-                             
-     </swiper-slide>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="cardCont" style="text-align: left;">
+          <p class="titleCont">Colaboradores:</p>
+          <div class="user__containerCont">
+            <div class="userCont">
+              <div class="imageCont"></div>
+              <div class="user__contentCont">
+                <div class="textCont">
+                  <span class="nameCont">Mtra. Deyanira Hernández Lira </span>
+                  <p class="usernameCont">Terapeuta complementario</p>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="userCont">
+              <div class="imageCont" style="background-image: url('https://i1.rgstatic.net/ii/profile.image/607293292953600-1521801412456_Q128prueba/Ramiro-Iglesias.jpg'); background-size: cover;"></div>
+              <div class="user__contentCont">
+                <div class="textCont">
+                  <span class="nameCont">Name</span>
+                  <p class="usernameCont">@namedlorem</p>
+                </div>
+                <button class="followCont">Follow</button>
+              </div>
+
+            </div>
+            <div class="userCont">
+              <div class="imageCont"></div>
+              <div class="user__contentCont">
+                <div class="textCont">
+                  <span class="nameCont">Name</span>
+                  <p class="usernameCont"></p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+          <a class="moreCont" href="#">See more</a>
+        </div>
+
+      </swiper-slide>
+
+      <swiper-slide>
+        <div style="border: 20px solid transparent; padding: 10px 10px 15px 10px;">
+          <div class="cardT">
+            <p class="headingT">
+              Es una iniciativa que pretende
+            </p>
+            <p>
+              Acabar con la
+            </p>
+            <p>Depresión
+            </p>
+          </div>
+          <p></p>
+        </div>
+      </swiper-slide>
 
     </swiper-container>
 
@@ -1116,7 +1108,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
     <a href="#" id="buttonNa">Continuar</a>
 
-    <a id="mia">Saber más..</a>
+    <a id="mia"></a>
 
   </div>
 
@@ -3313,15 +3305,13 @@ attribute vec2 a_position;
       fondoColores.style.display = 'none';
       divConta1.style.display = 'none';
       divQ2.style.display = 'block';
-     var htmlElement = document.querySelector('html');
+      var htmlElement = document.querySelector('html');
       // Selecciona el elemento 'body'
       var bodyElement = document.querySelector('body');
       // Cambia el valor de la propiedad 'overflow' a 'auto' en 'html'
       htmlElement.style.overflow = 'visible';
       // Cambia el valor de la propiedad 'overflow' a 'auto' en 'body'
-      bodyElement.style.overflow = 'visible';                                                        
-                                                             
-                                                             
+      bodyElement.style.overflow = 'visible';
     } else {}
   </script>
 
