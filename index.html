@@ -579,8 +579,8 @@
 
     .cardR {
       position: absolute;
-      width: 310px;
-      height: 374px;
+      width: 290px;
+      height: 314px;
       border: 4px solid rgba(255, 255, 255, 0.3);
       border-radius: 0.8em;
       display: flex;
@@ -618,7 +618,7 @@
 
     .txtR {
       position: absolute;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 1.6em;
       color: #fff;
     }
@@ -1046,8 +1046,81 @@
     
     
     
-    
-    
+.card-containerNar {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.cardNar {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.cardNar .front-contentNar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
+}
+
+.cardNar .front-contentNar p {
+  font-size: 32px;
+  font-weight: 700;
+  opacity: 1;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
+}
+
+.cardNar .contentNar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+  color: #e8e8e8;
+  padding: 5px;
+  line-height: 1.5;
+  border-radius: 5px;
+  pointer-events: none;
+  transform: translateX(-96%);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.cardNar .contentNar .headingNar {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.cardNar:hover .contentNar {
+  transform: translateY(0);
+}
+
+.cardNar:hover .front-contentNar {
+  transform: translateX(-30%);
+}
+
+.cardNar:hover .front-contentNar p {
+  opacity: 0;
+}
+
+
     
     
     
@@ -1121,22 +1194,42 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       <swiper-slide>
         <div class="containerC">
           <div class="boxC">
-            <span class="titleC">Visón:</span>
+            <span class="titleC">Visión:</span>
             <div>
-              <strong>Llegar a todas </strong>
-              <p>las parroquias</p>
-              <span>Del</span> <span>mundo</span>
+              <strong>Terminar con el mal de la depresión </strong>
+              <p>a través de la fe</p>
+              <span></span> <span></span>
             </div>
           </div>
         </div>
       </swiper-slide>
       <swiper-slide>
         <div class="cardR">
-          <div class="txtR"><p>Misión :)</p><br><p>Ayudar a los más pobres </p><p> a tener acceso a una terapia</p>
+          <div class="txtR"><p>Misión :)  </p><p>  Ayudar a los más pobres a tener<br> acceso a terapia</p>
           </div>
           <div class="shadowR"></div>
         </div>
       </swiper-slide>
+                              
+       <swiper-slide>
+        <div class="card-containerNar">
+  <div class="cardNar">
+  <div class="front-contentNar">
+    <p>Objetivo</p>
+  </div>
+  <div class="contentNar">
+    <p class="headingNar">Que toda persona tenga acceso<br> a una terapia</p>
+    <p>
+     y se eviten muertes por suicidio.
+    </p>
+  </div>
+</div>
+</div>
+
+      </swiper-slide>                        
+                              
+                              
+                              
       
       <swiper-slide>
         <div class="cardCont" style="text-align: left; max-width:330px;">
@@ -1180,9 +1273,6 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
      
         </div>
 
-      </swiper-slide>
-
-      <swiper-slide>
         
       </swiper-slide>
 
@@ -1213,7 +1303,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
             </svg>
             <span class="tooltip-socialUl">Facebook</span>
         </a>
-        <a href="mailto:example@example.com?subject=Hello&body=This%20is%20the%20body%20of%20the%20email.">
+        <a href="mailto:amorvguadalupe@gmail.com?subject=Hello">
             <svg
           class="fill-stone-700 group-hover:fill-[#58b0e0]"
           height="15"
@@ -1237,10 +1327,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 </div>
       </swiper-slide>
                           
-      <swiper-slide>
-        
-
-      </swiper-slide>
+     
       
                                           
                                           
