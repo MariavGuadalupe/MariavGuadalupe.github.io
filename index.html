@@ -1792,8 +1792,13 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
                         </div>
                         <q-separator></q-separator>
                         <q-card-actions>
-                          <q-btn round icon="article" class="small" style="background: #8ae0db"></q-btn>
-                          <q-btn flat color="primary" href="https://es.catholic.net/op/articulos/60123/cat/874/donde-hay-mas-alegria-alli-tambien-hay-mas-verdad.html">
+                          <q-btn icon="mdi-youtube" color="red">
+                            <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                              <q-video src="https://www.youtube.com/embed/qYnyCEFrmMY?rel=0"></q-video>
+
+                            </q-popup-proxy>
+
+                          </q-btn>                          <q-btn flat color="primary" href="https://es.catholic.net/op/articulos/60123/cat/874/donde-hay-mas-alegria-alli-tambien-hay-mas-verdad.html">
                             Leer articulo
                           </q-btn>
 
