@@ -1119,6 +1119,56 @@
     .cardNar:hover .front-contentNar p {
       opacity: 0;
     }
+    
+    
+   .loader3 {
+  position: relative;
+  width: 40px;
+  height: 60px;
+  animation: heartBeat 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.loader3:before,
+.loader3:after {
+  content: "";
+  background: red;
+  width: 40px;
+  height: 60px;
+  border-radius: 50px 50px 0 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: rotate(45deg);
+  transform-origin: 50% 68%;
+  box-shadow: 5px 4px 5px #0004 inset;
+}
+.loader3:after {
+  transform: rotate(-45deg);
+}
+@keyframes heartBeat {
+  0% {
+    transform: scale(0.95);
+  }
+  5% {
+    transform: scale(1.1);
+  }
+  39% {
+    transform: scale(0.85);
+  }
+  45% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+    
+    
+    
   </style>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
@@ -1152,9 +1202,16 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
   <div id="container1" class="" style="width: 100%; height: 100vh; margin: auto;  max-width: 100%;  background-image: radial-gradient(circle at 75.98% 68.19%, #ffb600 0, #ffbf00 8.33%, #f9c700 16.67%, #e5cf00 25%, #d0d500 33.33%, #b9db00 41.67%, #a1e000 50%, #86e42a 58.33%, #64e843 66.67%, #2feb5a 75%, #00ee71 83.33%, #00f087 91.67%, #00f29f 100%);">
 
-    <swiper-container class="mySwiper" pagination="true" pagination-type="progressbar" navigation="true" autoplay-delay="3800" autoplay-disable-on-interaction="true">
+<h2 id="b1" class="tituloN">Bienvenido</h2>
+
+<span id="loader3" class="loader3"></span>
+
+                                  
+<div id="swiperContainer" style="display: none;">
+    <swiper-container id="swiper1" class="mySwiper" pagination="true" pagination-type="progressbar" navigation="true" autoplay-delay="3800" autoplay-disable-on-interaction="true">
       <swiper-slide>
         <h2 class="tituloN">Bienvenido</h2>
+
       </swiper-slide>
       <swiper-slide>
         <div class="cardPrin">
@@ -1322,7 +1379,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
       </swiper-slide>
 
     </swiper-container>
-
+</div>
     <br>
     <br>
 
@@ -3348,23 +3405,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
     })
   </script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var divQ = document.getElementById('q-app');
-      //  var loaderWrapper = document.getElementById('loaderWrapper');
-      //var pres = document.getElementById('presentacion');
-      var btnomit = document.getElementById('omit');
-      //  pres.style.display = 'block';
-      btnomit.style.display = 'block';
-      setTimeout(function() {
-        //pres.style.display = 'none';
-        // loaderWrapper.style.display = 'none';
-        divQ.style.display = 'block';
-        finicio();
-        //window.addEventListener("load", finicio);                                 
-      }, 1);
-    });
-  </script>
+
 
   <script>
     // this template is pretty old, and the comments no longer reflect my knowledge accurately.  But this template is what helped me learn to code with WebGL
@@ -3542,6 +3583,24 @@ attribute vec2 a_position;
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var preloader = document.getElementById('loader3');
+ var men1 = document.getElementById('b1');
+                                                                                   
+                                                                                   
+                                                                                   
+      setTimeout(function() {
+        var swiperContainer = document.getElementById('swiperContainer');
+        swiperContainer.style.display = 'block';
+        men1.style.display = 'none';                                                                            preloader.style.display = 'none';    
+
+       
+      }, 4000); // Retraso de 4 segundos en milisegundos
+    });
+                                                                                   
+  </script>                                                                 
+                                                                                   
 </body>
 
 </html>
