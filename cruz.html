@@ -1128,8 +1128,8 @@
 
     .loader3 {
   position: fixed;
-  width: 70px;
-  height: 140px;
+  width: 10px;
+  height: 20px;
   animation: heartBeat 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -1137,12 +1137,12 @@
 .loader3:after {
   content: "";
   background: yellow;
-  width: 75px;
-  height: 10px;
+  width: 25px;
+  height: 5px;
   
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: -7px;
+  bottom: 7px;
   transform: rotate(90deg);
   transform-origin: 50% 68%;
   box-shadow: 0.0.1px 0.1px 0.1px 2px #0004 ;
@@ -1173,8 +1173,8 @@
     
 .loader4 {
   position: fixed;
-  width: 70px;
-  height: 180px;
+  width: 10px;
+  height: 20px;
   animation: heartBeat2 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -1182,12 +1182,12 @@
 .loader4:after {
   content: "";
   background: yellow;
-  width: 75px;
-  height: 10px;
+  width: 25px;
+  height: 5px;
   
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: -7px;
+  bottom: 7px;
   transform: rotate(90deg);
   transform-origin: 50% 68%;
   box-shadow: 0.0.1px 0.1px 0.1px 2px #0004 ;
@@ -1215,6 +1215,54 @@
     transform: scale(0.9);
   }
 }
+    
+    .loader5 {
+  position: relative;
+  width: 40px;
+  height: 60px;
+  animation: heartBeat 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.loader5:before,
+.loader5:after {
+  content: "";
+  background: red;
+  width: 40px;
+  height: 60px;
+  border-radius: 50px 50px 0 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: rotate(45deg);
+  transform-origin: 50% 68%;
+  box-shadow: 5px 4px 5px #0004 inset;
+}
+.loader5:after {
+  transform: rotate(-45deg);
+}
+@keyframes heartBeat {
+  0% {
+    transform: scale(0.95);
+  }
+  5% {
+    transform: scale(1.1);
+  }
+  39% {
+    transform: scale(0.85);
+  }
+  45% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+    
+    
   </style>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
@@ -1252,7 +1300,9 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
     <span id="loader3" class="loader3"> </span>
                                       
-   <span id="loader4" class="loader4"></span>                                     <br>
+   <span id="loader4" class="loader4"></span>
+                                     
+<span id="loader5" class="loader5"></span>                                     <br>
 
     <div id="swiperContainer" style="display: none;">
       <swiper-container id="swiper1" class="mySwiper" pagination="true" pagination-type="progressbar" navigation="true" autoplay-delay="3800" autoplay-disable-on-interaction="true">
@@ -3643,6 +3693,7 @@ attribute vec2 a_position;
     document.addEventListener('DOMContentLoaded', function() {
       var preloader = document.getElementById('loader3');
 let preloader2 = document.getElementById('loader4');
+let preloader3 = document.getElementById('loader5');
 
                                                                                    var men1 = document.getElementById('b1');
       setTimeout(function() {
@@ -3650,7 +3701,9 @@ let preloader2 = document.getElementById('loader4');
         swiperContainer.style.display = 'block';
         men1.style.display = 'none';
         preloader.style.display = 'none';
-  preloader2.style.display = 'none';                                                                                 
+  preloader2.style.display = 'none';                                         
+  
+  preloader3.style.display = 'none';                                                                                 
       }, 4000); // Retraso de 4 segundos en milisegundos
     });
   </script>
