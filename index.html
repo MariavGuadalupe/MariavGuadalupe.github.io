@@ -1555,7 +1555,7 @@
 
               </q-banner>
 
-              <q-btn color="purple" @click="showCustom" label="cookies" v-show="true"></q-btn>
+              <q-btn color="purple" id="btncookies" @click="showCustom" label="cookies" v-show="false"></q-btn>
             </div>                                                                          
 
             <div class="q-pa-md q-gutter-sm">
@@ -3601,15 +3601,18 @@ attribute vec2 a_position;
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      var preloader = document.getElementById('loader3');
-      var men1 = document.getElementById('b1');
+      let preloader = document.getElementById('loader3');
+      let men1 = document.getElementById('b1');
+       let btncokies = document.getElementById('btncookies');                                                                            
       setTimeout(function() {
         var swiperContainer = document.getElementById('swiperContainer');
         swiperContainer.style.display = 'block';
         men1.style.display = 'none';
         preloader.style.display = 'none';
+        btncokies.click();                                                                           
       }, 4000); // Retraso de 4 segundos en milisegundos
     });
+                                                                                   
   </script>
 
 </body>
