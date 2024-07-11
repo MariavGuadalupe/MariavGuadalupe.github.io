@@ -1555,8 +1555,8 @@
 
               </q-banner>
 
-              <q-btn color="purple" @click="showCustom" label="notificacion" v-show="false"></q-btn>
-            </div>
+              <q-btn color="purple" @click="showCustom" label="cookies" v-show="true"></q-btn>
+            </div>                                                                          
 
             <div class="q-pa-md q-gutter-sm">
 
@@ -3303,42 +3303,17 @@
         }
 
         function showCustom() {
-          $q.notify({
-            spinner: false,
-            message: '<div style="width: 90%;  border: 0px solid transparent; max-width: 300px; height: 40%; ">    En Chrome puedes instalar lA wEB- App </div>',
-            color: 'grey-8',
-            progress: true,
-            position: 'top',
-            timeout: 10000,
-            avatar: 'https://mariavguadalupe.github.io/AvatarAngel1.png',
-            html: true,
-            actions: [{
-              label: 'Instalar',
-              color: 'yellow',
-              handler: () => {
-                let deferredPrompt;
-                window.addEventListener('beforeinstallprompt', (e) => {
-                  e.preventDefault();
-                  deferredPrompt = e;
-                });
-                document.getElementById('btninstalar').addEventListener('click', () => {
-                  // alert('dentro');
-                  if (deferredPrompt) {
-                    deferredPrompt.prompt();
-                    deferredPrompt.userChoice.then((choiceResult) => {
-                      if (choiceResult.outcome === 'accepted') {
-                        console.log('La página se ha instalado correctamente');
-                        document.getElementById('btninstalar').style.display = 'none';
-                        document.getElementById('banner1').style.display = 'none';
-                      }
-                      deferredPrompt = null;
-                    });
-                  }
-                });
-              }
-            }]
-          })
-        }
+                          
+        $q.notify({
+          message: '<div><br>Al continuar navegando, aceptas la <a href="/politica-cookies">Política de Cookies</a>. Puedes gestionar tus preferencias en cualquier momento a través de la configuración de tu navegador.</div>',
+          color: 'primary',
+          multiLine: true,
+          html: true,                                                                                             actions: [
+            { label: 'Aceptar', color: 'yellow', handler: () => { /* ... */ } }
+          ]
+        })
+         }
+                                                       
         return {
           atras1,
           adelante1,
