@@ -71,7 +71,7 @@
       e.preventDefault();
       promptEvent = e;
     });
- >
+
     const aside = document.querySelector('.q-drawer.q-drawer--left.q-drawer--on-top.q-drawer--mobile.q-drawer--top-padding');
     aside.style.opacity = "0.8";
     aside.style.background = "#B2EBF2";
