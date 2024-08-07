@@ -1,5 +1,4 @@
-  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/quasar.umd.prod.js"></script>
+
 
 
     const {
@@ -91,43 +90,6 @@
         btnModal.click();
       }
     }
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.9.4/bowser.min.js"></script>
-
-  <script type="application/javascript" src="https://sdki.truepush.com/sdk/v2.0.4/app.js" async></script>
-
-    var truepush = window.truepush || [];
-    truepush.push(function() {
-      truepush.Init({
-        id: "64e110cabdb78352b845fe0f"
-      }, function(error) {
-        if (error) console.error(error);
-      })
-    })
- 
-  <script id="2d-vertex-shader" type="x-shader/x-vertex">
-        attribute vec2 a_position;
-        void main() {
-            gl_Position = vec4(a_position, 0, 1);
-        }
-    </script>
-
-    <script id="2d-fragment-shader" type="x-shader/x-fragment">
-        #ifdef GL_ES
-        precision mediump float;
-        #endif
-
-        uniform vec2 u_resolution;
-        uniform float u_time;
-
-        void main() {
-            vec2 st = gl_FragCoord.xy / u_resolution.xy;
-            st.x *= u_resolution.x / u_resolution.y;
-            vec3 color = vec3(st.x, st.y, abs(sin(u_time)));
-            gl_FragColor = vec4(color, 1.0);
-        }
-    </script>
 
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -291,8 +253,7 @@
     }
   });
 
-<!-- Cargar el script externo de manera segura con HTTPS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js" crossorigin="anonymous"></script>
+
 
 
   document.addEventListener('DOMContentLoaded', () => {
