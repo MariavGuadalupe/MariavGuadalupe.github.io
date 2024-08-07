@@ -1,7 +1,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/quasar.umd.prod.js"></script>
 
-  <script>
+
     const {
       useQuasar,
       QSpinnerGears
@@ -46,9 +46,7 @@
       config: {}
     })
     app.mount('#q-app')
-  </script>
-
-  <script>
+ 
     let deferredPrompt;
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
@@ -67,17 +65,13 @@
         });
       }
     });
-  </script>
 
-  <script>
     let promptEvent;
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       promptEvent = e;
     });
-  </script>
-
-  <script>
+ >
     const aside = document.querySelector('.q-drawer.q-drawer--left.q-drawer--on-top.q-drawer--mobile.q-drawer--top-padding');
     aside.style.opacity = "0.8";
     aside.style.background = "#B2EBF2";
@@ -97,12 +91,12 @@
         btnModal.click();
       }
     }
-  </script>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.9.4/bowser.min.js"></script>
 
   <script type="application/javascript" src="https://sdki.truepush.com/sdk/v2.0.4/app.js" async></script>
-  <script>
+
     var truepush = window.truepush || [];
     truepush.push(function() {
       truepush.Init({
@@ -111,8 +105,7 @@
         if (error) console.error(error);
       })
     })
-  </script>
-
+ 
   <script id="2d-vertex-shader" type="x-shader/x-vertex">
         attribute vec2 a_position;
         void main() {
@@ -136,7 +129,7 @@
         }
     </script>
 
-    <script>
+
         document.addEventListener('DOMContentLoaded', () => {
             let canvas = document.getElementById('glscreen');
             let gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
@@ -227,12 +220,7 @@
 
             init();
         });
-    </script>
-                                      
-                                      
-                                      
-                                      
-    <script>
+ 
    document.addEventListener('DOMContentLoaded', () => {
             // Obtén referencias a los elementos del DOM
             const container1 = document.getElementById('container1');
@@ -269,9 +257,7 @@
             // Llame a la función de gradiente después de la carga
             window.addEventListener('load', resetBackground);
         });
-  </script>
 
- <script>
   // Función para manipular elementos de manera segura
   function manipulateDOM() {
     const divConta1 = document.getElementById("container1");
@@ -304,13 +290,11 @@
       manipulateDOM();
     }
   });
-</script>
 
 <!-- Cargar el script externo de manera segura con HTTPS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js" crossorigin="anonymous"></script>
 
 
-  <script>
   document.addEventListener('DOMContentLoaded', () => {
     const preloader = document.getElementById('loader3');
     const men1 = document.getElementById('b1');
@@ -336,5 +320,4 @@ btnCookies.click();
       console.warn('Uno o más elementos necesarios no están presentes en el DOM.');
     }
   });
-</script>
 
