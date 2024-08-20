@@ -17,10 +17,10 @@
   </script>
 
   <style>
-    #ytplayer {
-      max-width: 580px;
-      max-height: 326px;
-      min-height: 326px;
+    #vid{
+      width: 400px;
+      height: 400px;
+      
     }
   </style>
 
@@ -52,8 +52,10 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
           <h3 class="text-center">Nuestro Señor Jesús </h3>
 
           <div class="row justify-center items-center">
-            <div id="ytplayer"></div>
+<iframe width="400" height="400" src="https://www.youtube.com/embed/Dd7YbWyPcQo" title="Sobre el miedo y el amor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+
+            
           </div>
 
           <br>
@@ -105,14 +107,14 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
               <q-carousel-slide name="f5" class="column no-wrap flex-center">
                 <div class="q-mt-md text-center">
                   <h6> El Reino de Dios es la situación que resulta cuando de verdad
-                    se hace la voluntad de Dios.</h6>
+                    se hace ​la voluntad de Dios.</h6>
                 </div>
               </q-carousel-slide>
 
               <q-carousel-slide name="f6" class="column no-wrap flex-center">
                 <div class="q-mt-md text-center">
                   <h6> ¿Y cuál es la voluntad de Dios? Según la revelación de Jesús, la
-                    voluntad de Dios es nuestra
+                    voluntad de ​Dios es nuestra
                     felicidad.</h6>
                 </div>
               </q-carousel-slide>
@@ -127,7 +129,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
               <q-carousel-slide name="f8" class="column no-wrap flex-center">
                 <div class="q-mt-md text-center">
-                  <h6>El Reino de Dios, incluye la justicia y la paz entre todos, la sanación y la integridad en todas partes, la plenitud disfrutada para todos."</h6>
+                  <h6>El Reino de Dios, incluye la justicia y la paz entre todos, la ​sanación y la integridad en todas partes, la plenitud disfrutada para todos."</h6>
                 </div>
               </q-carousel-slide>
 
@@ -237,38 +239,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
   <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/quasar.umd.prod.js"></script>
 
-  <script>
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/player_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    var player;
-
-    function onYouTubePlayerAPIReady() {
-      player = new YT.Player('ytplayer', {
-        //Parametros del video
-        playerVars: {
-          'autoplay': 1,
-          'controls': 1,
-          'autohide': 1,
-          'wmode': 'opaque',
-          'mute': 1
-        },
-        height: '95%',
-        width: '95%',
-        //Id del video
-        videoId: 'Dd7YbWyPcQo',
-        events: {
-          'onReady': onPlayerReady
-        }
-      });
-    }
-
-    function onPlayerReady() {
-      //Ajustar volumen
-      // player.setVolume(10);
-    }
-  </script>
+  
   <script>
     /*
         Example kicking off the UI. Obviously, adapt this to your specific needs.
@@ -291,7 +262,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
         }
 
         function goBack() {
-          window.location.href = "https://mariavguadalupe.github.io/";
+          window.location.href = "https://maria-alegra.web.app/#";
         }
         return {
           dialog,
@@ -317,4 +288,4 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
 </body>
 
-                </html>
+</html>
