@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
+<!--
+    WARNING! Make sure that you match all Quasar related
+    tags to the same version! (Below it's "@2.12.5")
+  -->
 
 <head>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
@@ -7,7 +11,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sagrario</title>
+  <title>Buscador católico</title>
 
   <script type="module">
     import {
@@ -15,14 +19,6 @@
     } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
     window.menuController = menuController;
   </script>
-
-  <style>
-    #vid{
-      width: 400px;
-      height: 400px;
-      
-    }
-  </style>
 
 </head>
 
@@ -42,178 +38,77 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
             <q-btn label="" outline rounded padding="none" icon="keyboard_arrow_left" color="white" text-color="black" @click="goBack()"></q-btn>
 
-            <q-toolbar-title>Sagrario en vivo </q-toolbar-title>
+            <q-toolbar-title>Mi Parroquia</q-toolbar-title>
 
-            <q-btn flat round dense icon="img:https://mariavguadalupe.github.io/Alegra512.svg" />
+            <q-btn flat round dense icon="" />
           </q-toolbar>
         </q-header>
         <q-page-container>
 
-          <h3 class="text-center">Nuestro Señor Jesús </h3>
+          <div style="background-color: #; padding: 20px; border-radius: 10px;">
 
-          <div class="row justify-center items-center">
-<iframe width="400" height="400" src="https://www.youtube.com/embed/Dd7YbWyPcQo" title="Sobre el miedo y el amor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-            
           </div>
 
-          <br>
+          <q-card class="my-card">
+            <q-item>
+              <q-item-section avatar>
+                <q-avatar size="90px">
+                  <img src="https://scontent.fmex3-2.fna.fbcdn.net/v/t39.30808-6/449508716_875177741297590_6001957827696807722_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=-44-Uvugj_8Q7kNvgFaqz3E&_nc_ht=scontent.fmex3-2.fna&oh=00_AYDM1V5h4o1zawQUggILNj9J4GNUo45ACzn9sAORTiO3eQ&oe=66CAD694">
+                </q-avatar>
+              </q-item-section>
 
-          <q-fab v-model="fab1" color="purple" icon="music_note" direction="right" padding="xs">
-            <q-fab-action padding="5px" external-label label-position="top" color="primary" @click="musica" icon="play_arrow"></q-fab-action>
+              <q-item-section>
+                <q-item-label style="font-size: 28px;">Parroquia de San Pablo Apóstol</q-item-label>
+                <q-item-label caption style="font-size: 20px;">II Vicaria Diócesis de Texcoco A.R</q-item-label>
+              </q-item-section>
+            </q-item>
 
-            <q-fab-action padding="5px" color="orange" @click="pausa" icon="pause"></q-fab-action>
+          </q-card>
 
-          </q-fab>
+          <q-card class="my-card">
+            <q-parallax src="https://experiencia.edomex.gob.mx/sites/default/files/2020-07/san%20miguel%201.jpg" :height="380" />
 
-          <q-responsive :ratio="1" style="width: auto; max-width: 100%; height: 300px;">
-            <q-carousel v-model="slide" transition-prev="scale" transition-next="scale" swipeable animated control-color="white" navigation-icon="radio_button_unchecked" navigation padding arrows animated v-model="slide" navigation infinite :autoplay="autoplay" arrows transition-prev="slide-right" transition-next="slide-left" height="300px" @mouseenter="autoplay = false" @mouseleave="autoplay = true" class="shadow-1 rounded-borders">
-              <q-carousel-slide name="style" class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
-                  <h6> "Dios es Amor"</h6>
-                </div>
-              </q-carousel-slide>
-              <q-carousel-slide name="tv" class="column no-wrap flex-center">
+            <q-card-section>
 
-                <div class="q-mt-md text-center">
-                  <h6> "Dios no manda cosas imposibles, sino que, al mandar, te enseña a que hagas cuanto puedes, y a que pidas lo que no puedes".</h6>
-                </div>
-              </q-carousel-slide>
+            </q-card-section>
+          </q-card>
 
-              <q-carousel-slide name="tv1" class="column no-wrap flex-center">
+          
+    <q-card class="my-card">
+      <q-card-section horizontal>
+        <q-img
+          class="col-5"
+          src="https://cdn.quasar.dev/img/parallax1.jpg"
+        ></q-img>
 
-                <div class="q-mt-md text-center">
-                  <h6> "Conocerse a sí mismo es el fruto que se desprende maduro de conocer a Dios a través de Jesucristo."
-                    Estanislao Martín Rincón.</h6>
-                </div>
-              </q-carousel-slide>
+        <q-card-section>
+          {{ lorem }}
+        </q-card-section>
+      </q-card-section>
 
-              <q-carousel-slide name="tv2" class="column no-wrap flex-center">
+      <q-separator></q-separator>
 
-                <div class="q-mt-md text-center">
-                  <h6> "Contemplar consiste en complacerse en lo que se ama y se conoce al mismo tiempo."
-                    Estanislao Martín Rincón</h6>
-                </div>
-              </q-carousel-slide>
+      <q-card-actions>
+        <q-btn flat round icon="event"></q-btn>
+        <q-btn flat>
+          5:30PM
+        </q-btn>
+        <q-btn flat>
+          7:00PM
+        </q-btn>
+        <q-btn flat color="primary">
+          Reserve
+        </q-btn>
+      </q-card-actions>
+    </q-card>
 
-              <q-carousel-slide name="tv4" class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
-                  <h6> “El Reino de Dios es Dios que cumple su voluntad sin oposición del pecado humano y de los
-                    poderes de las tinieblas […]"</h6>
-                </div>
-              </q-carousel-slide>
-
-              <q-carousel-slide name="f5" class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
-                  <h6> El Reino de Dios es la situación que resulta cuando de verdad
-                    se hace ​la voluntad de Dios.</h6>
-                </div>
-              </q-carousel-slide>
-
-              <q-carousel-slide name="f6" class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
-                  <h6> ¿Y cuál es la voluntad de Dios? Según la revelación de Jesús, la
-                    voluntad de ​Dios es nuestra
-                    felicidad.</h6>
-                </div>
-              </q-carousel-slide>
-
-              <q-carousel-slide name="f7" class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
-                  <h6>Dios quiere la plenitud y la salvación de toda criatura
-                    y de todos y cada uno de los
-                    seres humanos.</h6>
-                </div>
-              </q-carousel-slide>
-
-              <q-carousel-slide name="f8" class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
-                  <h6>El Reino de Dios, incluye la justicia y la paz entre todos, la ​sanación y la integridad en todas partes, la plenitud disfrutada para todos."</h6>
-                </div>
-              </q-carousel-slide>
-
-              <q-carousel-slide name="f9" class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
-                  <h6>"A Dios le interesa todo lo nuestro: nuestros cuerpos, nuestras familias, nuestros trabajos y esfuerzos para mejorarnos a nosotros mismos y al mundo.." P.Ramiro Pellitero </h6>
-                </div>
-              </q-carousel-slide>
-
-              <q-carousel-slide name="f10" class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
-                  <h6>“¿Puede una madre olvidarse del hijo de sus entrañas? Pues aunque una madre se olvidara, yo nunca podría olvidarme de ti” (Isaías 49, 15).</h6>
-                </div>
-              </q-carousel-slide>
-
-              <q-carousel-slide name="f11" class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
-                  <h6> “Jesús, mi alegría es amarte a ti" Santa Teresa del Niño Jesús (Poesía 45/7).</h6>
-                </div>
-              </q-carousel-slide>
-
-              <q-carousel-slide name="f12" class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
-                  <h6>“La alegría está íntimamente unida al amor; ambos son frutos inseparables del Espíritu Santo” (cf. Ga 5, 23)”</h6>
-                </div>
-              </q-carousel-slide>
-
-              <q-carousel-slide name="f13" class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
-                  <h6>"El hombre, y toda la creación a través de él, está destinado a la gloria de Dios” (CIC, nº 353)</h6>
-                </div>
-              </q-carousel-slide>
-
-              <q-carousel-slide name="f14" class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
-                  <h6>Oración humilde: Señor ayúdame o pecaré.</h6>
-                </div>
-              </q-carousel-slide>
-
-              <q-carousel-slide name="f15" class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
-                  <h6>Dios que sueña con nosotros. Como si se dijera: “Qué bonito cuando estemos todos juntos, cuando estemos allí" Como sueñan los novios."
-                    P. Ramiro Pellitero Iglesias</h6>
-                </div>
-              </q-carousel-slide>
-
-              <q-carousel-slide name="f16" class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
-                  <h6>"Contemplar consiste en complacerse en lo que se ama y se conoce al mismo tiempo."
-                    Estanislao Martín Rincón</h6>
-                </div>
-              </q-carousel-slide>
-
-              <q-carousel-slide class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
-                  <h6>"Contemplar consiste en complacerse en lo que se ama y se conoce al mismo tiempo."
-                    Estanislao Martín Rincón</h6>
-                </div>
-              </q-carousel-slide>
-
-              <q-carousel-slide name="layers" class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
-                  <h6> "El camino de Dios es de renuncia, de mortificación, de entrega, pero no de tristeza o de apocamiento (S. JOSEMARÍA ESCRIVÁ, Amigos de Dios, 128).
-                    "</h6>
-
-                </div>
-              </q-carousel-slide>
-              <q-carousel-slide name="map" class="column no-wrap flex-center">
-
-                <div class="q-mt-md text-center">
-                  <h6> "El amor produce en el hombre la perfecta alegría. En efecto, sólo disfruta de veras el que vive en caridad (SANTO TOMÁS, Sobre la caridad, 1. c., 205).
-                    "</h6>
-                </div>
-              </q-carousel-slide>
-              <q-carousel-slide name="larga" class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
-                  <h6> "Al nacer el Señor, los ángeles cantan llenos de gozo: Gloria a Dios en el cielo, y proclaman: y en la tierra paz a los hombres que ama el Señor [...]."(SAN LEÓN MAGNO, Sermón 1, en la Natividad Señor).
-                    "</h6>
-                </div>
-              </q-carousel-slide>
-
-            </q-carousel>
-          </q-responsive>
-
+      <h5>Ubicación</h5>    
+          
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15038.537261152855!2d-98.91569194869588!3d19.557307207979687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1e8bef51a89e7%3A0x7b9c9a548654b524!2sSan%20Pablito%20Calmimilolco%2C%2056272%20Chiconcuac%20de%20Ju%C3%A1rez%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1724195474573!5m2!1ses-419!2smx" width="420" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+          
+          
+          
+          
         </q-page-container>
       </q-layout>
 
@@ -221,25 +116,10 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
   </div>
 
-  <audio id="cancion" src="https://mariavguadalupe.github.io/Bendito,_bendito,_bendito_sea_Dios.mp3"></audio>
-
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/5uK5UNdzOWT47tcq2VLsek?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-  
-  <script>
-    document.getElementById("cancion");
-  </script>
-
   <!-- Add the following at the end of your body tag -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-
-  </script>
-
   <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/quasar@2.12.5/dist/quasar.umd.prod.js"></script>
 
-  
   <script>
     /*
         Example kicking off the UI. Obviously, adapt this to your specific needs.
@@ -250,33 +130,14 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
     } = Vue
     const app = Vue.createApp({
       setup() {
-        const dialog = ref(false)
-        const position = ref('top')
-
-        function musica() {
-          cancion.play();
-        }
-
-        function pausa() {
-          cancion.pause();
-        }
-
         function goBack() {
-          window.location.href = "https://maria-alegra.web.app/#";
+          window.location.href = "/index.html";
         }
         return {
-          dialog,
-          position,
-          open(pos) {
-            position.value = pos
-            dialog.value = true
-          },
           goBack,
-          musica,
-          pausa,
+          tab: ref('mails'),
           slide: ref('style'),
-          lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.',
-          autoplay: ref(true)
+          lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.'
         }
       }
     })
