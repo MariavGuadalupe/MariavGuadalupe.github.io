@@ -48,9 +48,8 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
           <div style="background-color: #; padding: 20px; border-radius: 10px;">
 
           </div>
-
-          <q-card class="my-card">
-            <q-item>
+          
+          <q-item>
               <q-item-section avatar>
                 <q-avatar size="90px">
                   <img src="https://scontent.fmex3-2.fna.fbcdn.net/v/t39.30808-6/449508716_875177741297590_6001957827696807722_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=-44-Uvugj_8Q7kNvgFaqz3E&_nc_ht=scontent.fmex3-2.fna&oh=00_AYDM1V5h4o1zawQUggILNj9J4GNUo45ACzn9sAORTiO3eQ&oe=66CAD694">
@@ -63,7 +62,10 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
               </q-item-section>
             </q-item>
 
-          </q-card>
+          
+          
+
+      
 
           <q-card class="my-card">
             <q-parallax src="https://experiencia.edomex.gob.mx/sites/default/files/2020-07/san%20miguel%201.jpg" :height="380" />
@@ -72,17 +74,72 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
 
             </q-card-section>
           </q-card>
+<br>
+          
+           <q-banner inline-actions rounded class="bg-orange text-white">
+    <h7> AVISOS PARROQUIALES.</h7>
 
+     
+    </q-banner>
+          
+          <br>
+          
+          <q-carousel
+      v-model="slide"
+      transition-prev="scale"
+      transition-next="scale"
+      swipeable
+      animated
+      control-color="white"
+      navigation
+      padding
+      arrows
+      height="300px"
+      class="bg-primary text-white shadow-1 rounded-borders"
+    >
+      <template v-slot:navigation-icon="{ active, btnProps, onClick }">
+        <q-btn v-if="active" size="lg" icon="home" color="yellow" flat round dense @click="onClick"></q-btn>
+        <q-btn v-else size="sm" :icon="btnProps.icon" color="white" flat round dense @click="onClick"></q-btn>
+      </template>
+
+      <q-carousel-slide name="style" class="column no-wrap flex-center">
+        <q-icon name="style" size="56px"></q-icon>
+        <div class="q-mt-md text-center">
+          {{ lorem }}
+        </div>
+      </q-carousel-slide>
+      <q-carousel-slide name="tv" class="column no-wrap flex-center">
+        <q-icon name="live_tv" size="56px"></q-icon>
+        <div class="q-mt-md text-center">
+          {{ lorem }}
+        </div>
+      </q-carousel-slide>
+      <q-carousel-slide name="layers" class="column no-wrap flex-center">
+        <q-icon name="layers" size="56px"></q-icon>
+        <div class="q-mt-md text-center">
+          {{ lorem }}
+        </div>
+      </q-carousel-slide>
+      <q-carousel-slide name="map" class="column no-wrap flex-center">
+        <q-icon name="terrain" size="56px"></q-icon>
+        <div class="q-mt-md text-center">
+          {{ lorem }}
+        </div>
+      </q-carousel-slide>
+    </q-carousel>
+          
+          
+          <br>
           
     <q-card class="my-card">
       <q-card-section horizontal>
         <q-img
           class="col-5"
-          src="https://cdn.quasar.dev/img/parallax1.jpg"
+          src="https://www.sanaguspolanco.org/sites/default/files/01-img/oficina2.jpg"
         ></q-img>
 
         <q-card-section>
-          {{ lorem }}
+          Horarios de oficina Parroquial
         </q-card-section>
       </q-card-section>
 
@@ -137,7 +194,7 @@ https://quasar.dev/vue-components/carousel#example--vertical-mode
           goBack,
           tab: ref('mails'),
           slide: ref('style'),
-          lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.'
+          lorem: 'Pastorales'
         }
       }
     })
